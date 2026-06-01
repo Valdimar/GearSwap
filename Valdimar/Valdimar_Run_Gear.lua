@@ -88,7 +88,7 @@ function init_gear_sets()
     sets.Enmity.SIRDT = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head="Fu. Bandeau +1",
+        head={ name="Fu. Bandeau +1"},
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
