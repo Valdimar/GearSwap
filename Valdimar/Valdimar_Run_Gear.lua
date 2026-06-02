@@ -105,7 +105,7 @@ function init_gear_sets()
     sets.Enmity.DT = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head="Fu. Bandeau +1",
+        head={ name=Fu. Bandeau +1",
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -212,7 +212,7 @@ function init_gear_sets()
 
 	-- Gear for specific elemental nukes.
 	sets.element.Dark = {
-		head="Pixie Hairpin +1",
+		head={ name=Pixie Hairpin +1",
 		ring2={ name="Archon Ring"
 	}
 
@@ -319,7 +319,7 @@ function init_gear_sets()
 	
 	sets.precast.WS.SomeAcc = {
 		ammo={ name="Voluspa Tathlum"},
-        head="Adhemar Bonnet +1",
+        head={ name=Adhemar Bonnet +1",
 		neck={ name="Fotia Gorget",
 		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
@@ -334,7 +334,7 @@ function init_gear_sets()
 	}
 	sets.precast.WS.Acc = {
 		ammo={ name="C. Palug Stone",
-		head="Dampening Tam",
+		head={ name=Dampening Tam",
 		neck={ name="Fotia Gorget",
 		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
@@ -502,7 +502,7 @@ function init_gear_sets()
 	}	
 	sets.midcast.FastRecast.DT = {
 		ammo={ name="Staunch Tathlum"},
-        head="Fu. Bandeau +1",
+        head={ name=Fu. Bandeau +1",
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -517,7 +517,7 @@ function init_gear_sets()
 	}
 	sets.midcast.FastRecast.SIRD = {
 		ammo={ name="Staunch Tathlum"},
-        head="Fu. Bandeau +1",
+        head={ name=Fu. Bandeau +1",
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -1139,7 +1139,7 @@ function init_gear_sets()
 	--------------------------------------
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {
-		head="Frenzy Sallet",
+		head={ name=Frenzy Sallet",
 	}
 	sets.buff.Battuta = {
 		hands={name="Turms Mittens +1",
