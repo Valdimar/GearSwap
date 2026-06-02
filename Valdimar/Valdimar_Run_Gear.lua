@@ -74,15 +74,15 @@ function init_gear_sets()
 		head={ name="Meghanada Visor +2"},
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Genmei Earring"},
-		ear2="Trux Earring",
+		ear2={ name="Trux Earring",
 		body={ name="Emet Harness +1"},
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Defending Ring"},
 		back=gear.Ogma_Emnity,
-		waist="Audumbla Sash",
+		waist={ name="Audumbla Sash",
 		legs=gear.CarmineLegs_HP,
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 		
     sets.Enmity.SIRDT = {
@@ -96,10 +96,10 @@ function init_gear_sets()
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Moonbeam Ring"},
 		ring1={ name="Gelatinous Ring +1"},
-		back="Moonlight Cape",
-		waist="Audumbla Sash",
+		back={ name="Moonlight Cape",
+		waist={ name="Audumbla Sash",
 		legs=gear.CarmineLegs_HP,
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 
     sets.Enmity.DT = {
@@ -113,10 +113,10 @@ function init_gear_sets()
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Moonbeam Ring"},
 		ring1={ name="Gelatinous Ring +1"},
-        back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Eri. Leg Guards +1",
-		feet="Erilaz Greaves +1"
+        back={ name="Moonlight Cape",
+		waist={ name="Flume Belt +1",
+		legs={ name="Eri. Leg Guards +1",
+		feet={ name="Erilaz Greaves +1"},
 	}
 		
 	--------------------------------------
@@ -165,7 +165,7 @@ function init_gear_sets()
 	}
 	
     sets.precast.JA['Vivacious Pulse'] = set_combine(sets.Enmity, {
-		head={ name="Erilaz Galea"},
+		head={ name="Erilaz Galea +1"},
 		legs={ name="Rune. Trousers +2"},
 		waist={ name="Bishop Sash"},
 		back={ name="Altruistic Cape"},
@@ -213,15 +213,15 @@ function init_gear_sets()
 	-- Gear for specific elemental nukes.
 	sets.element.Dark = {
 		head="Pixie Hairpin +1",
-		ring2="Archon Ring"
+		ring2={ name="Archon Ring"
 	}
 
 	-- Pulse sets, different stats for different rune modes, stat aligned.
     sets.precast.JA['Vivacious Pulse'] = {
-		head={ name="Erilaz Galea"},
-		neck="Incanter's Torque",
-		ring1="Stikini Ring +1",
-		ring2="Stikini Ring +1",
+		head={ name="Erilaz Galea +1"},
+		neck={ name="Incanter's Torque",
+		ring1={ name="Stikini Ring +1",
+		ring2={ name="Stikini Ring +1",
 		legs={ name="Rune. Trousers +2"},
 	}
     sets.precast.JA['Vivacious Pulse']['Ignis'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
@@ -236,18 +236,18 @@ function init_gear_sets()
 	
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-		ammo="Yamarang",
+		ammo={ name="Yamarang",
         head=gear.CarmineMArk_FC,
-		neck="Unmoving Collar +1",
-		ear1="Enchntr. Earring +1",
-		ear2="Handler's Earring +1",
+		neck={ name="Unmoving Collar +1",
+		ear1={ name="Enchntr. Earring +1",
+		ear2={ name="Handler's Earring +1",
         body=gear.herculean_waltz_body,
 		hands=gear.herculean_waltz_hands,
-		ring1="Valseur's Ring",
+		ring1={ name="Valseur's Ring",
 		ring2={ name="Defending Ring"},
-        back="Moonlight Cape",
-		waist="Chaac Belt",
-		legs="Dashing Subligar",
+        back={ name="Moonlight Cape",
+		waist={ name="Chaac Belt",
+		legs={ name="Dashing Subligar",
 		feet=gear.herculean_waltz_feet
 	}
         
@@ -260,40 +260,40 @@ function init_gear_sets()
 		
 	-- Fast cast sets for spells
     sets.precast.FC = {
-		ammo="Impatiens",
+		ammo={ name="Impatiens",
 		head={ name="Rune. Bandeau +2", priority=1},
-		neck="Voltsurge Torque",
-		ear1="Enchntr. Earring +1",
-		ear2="Loquac. Earring",
-		body="Dread Jupon",
-		hands="Leyline Gloves",
-		ring1="Lebeche Ring",
+		neck={ name="Voltsurge Torque",
+		ear1={ name="Enchntr. Earring +1",
+		ear2={ name="Loquac. Earring",
+		body={ name="Dread Jupon",
+		hands={ name="Leyline Gloves",
+		ring1={ name="Lebeche Ring",
 		ring2={ name="Kishar Ring", priority=2},
-		back="Moonlight Cape",
-		waist="Audumbla Sash",
-		legs="Rawhide Trousers",
+		back={ name="Moonlight Cape",
+		waist={ name="Audumbla Sash",
+		legs={ name="Rawhide Trousers",
 		feet={ name="Carmine Greaves +1", priority=4},
 	}
 			
 	sets.precast.FC.DT = {
-		ammo="Impatiens",
+		ammo={ name="Impatiens",
         head={ name="Rune. Bandeau +2"},
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
         body={ name="Runeist's Coat +3"},
-		hands="Leyline Gloves",
+		hands={ name="Leyline Gloves",
 		ring1={ name="Moonbeam Ring"},
 		ring1={ name="Gelatinous Ring +1"},
-        back="Moonlight Cape",
-		waist="Audumbla Sash",
-		legs="Eri. Leg Guards +1",
+        back={ name="Moonlight Cape",
+		waist={ name="Audumbla Sash",
+		legs={ name="Eri. Leg Guards +1",
 		feet="Carmine Greaves +1"
 	}
 		
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
-		waist="Siegel Sash",
-		legs="Futhark Trousers +1"
+		waist={ name="Siegel Sash",
+		legs={ name="Futhark Trousers +1"
 	} )
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {
 		neck='Magoraga Beads'
@@ -307,7 +307,7 @@ function init_gear_sets()
 		body={ name="Ashera Harness",},
 		hands={ name="Kurys Gloves"},
 		legs={ name="Eri. Leg Guards"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 		neck={ name="Anu Torque"},
 		waist={ name="Kasiri Belt"},
 		ear1={ name="Tuisto Earring"},
@@ -320,60 +320,60 @@ function init_gear_sets()
 	sets.precast.WS.SomeAcc = {
 		ammo={ name="Voluspa Tathlum"},
         head="Adhemar Bonnet +1",
-		neck="Fotia Gorget",
-		ear1="Moonshade Earring",
+		neck={ name="Fotia Gorget",
+		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
         body={ name="Ayanmo Corazza +2"},
 		hands={ name="Meg. Gloves +2"},
 		ring1={ name="Niqmaddu Ring"},
-		ring2="Regal Ring",
+		ring2={ name="Regal Ring",
         back=gear.Ogma_STRDA,
-		waist="Fotia Belt",
+		waist={ name="Fotia Belt",
 		legs={ name="Meg. Chausses +2"},
 		feet=gear.herculean_TA_feet,
 	}
 	sets.precast.WS.Acc = {
-		ammo="C. Palug Stone",
+		ammo={ name="C. Palug Stone",
 		head="Dampening Tam",
-		neck="Fotia Gorget",
-		ear1="Moonshade Earring",
+		neck={ name="Fotia Gorget",
+		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
 		body={ name="Ayanmo Corazza +2"},
 		hands={ name="Meg. Gloves +2"},
 		ring1={ name="Niqmaddu Ring"},
-		ring2="Regal Ring",
+		ring2={ name="Regal Ring",
 		back=gear.Ogma_STRDA,
-		waist="Fotia Belt",
+		waist={ name="Fotia Belt",
 		legs={ name="Meg. Chausses +2"},
 		feet=gear.herculean_TA_feet
 	}
 	sets.precast.WS.HighAcc = {
-		ammo="C. Palug Stone",
+		ammo={ name="C. Palug Stone",
 		head={ name="Meghanada Visor +2"},
-		neck="Fotia Gorget",
+		neck={ name="Fotia Gorget",
 		ear1={ name="Telos Earring"},
 		ear2={ name="Sherida Earring"},
 		body={ name="Ayanmo Corazza +2"},
 		hands={ name="Meg. Gloves +2"},
 		ring1={ name="Niqmaddu Ring"},
-		ring2="Regal Ring",
+		ring2={ name="Regal Ring",
 		back=gear.Ogma_STRDA,
-		waist="Fotia Belt",
+		waist={ name="Fotia Belt",
 		legs={ name="Meg. Chausses +2"},
 		feet=gear.herculean_acc_feet
 	}
 	sets.precast.WS.FullAcc = {
-		ammo="C. Palug Stone",
+		ammo={ name="C. Palug Stone",
 		head=gear.CarmineMArk_FC,
-		neck="Combatant's Torque",
+		neck={ name="Combatant's Torque",
 		ear1={ name="Telos Earring"},
 		ear2={ name="Mache Earring +1"},
 		body={ name="Meg. Cuirie +2"},
 		hands={ name="Meg. Gloves +2"},
-		ring1="Ramuh Ring +1",
-		ring2="Ramuh Ring +1",
+		ring1={ name="Ramuh Ring +1",
+		ring2={ name="Ramuh Ring +1",
 		back=gear.stp_jse_back,
-		waist="Fotia Belt",
+		waist={ name="Fotia Belt",
 		legs={ name="Meg. Chausses +2"},
 		feet=gear.herculean_acc_feet
 	}
@@ -510,10 +510,10 @@ function init_gear_sets()
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Moonbeam Ring"},
-        back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Eri. Leg Guards +1",
-		feet={ name="Erilaz Greaves"},
+        back={ name="Moonlight Cape",
+		waist={ name="Flume Belt +1",
+		legs={ name="Eri. Leg Guards +1",
+		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.midcast.FastRecast.SIRD = {
 		ammo={ name="Staunch Tathlum"},
@@ -525,13 +525,13 @@ function init_gear_sets()
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Moonbeam Ring"},
-        back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Eri. Leg Guards +1",
-		feet={ name="Erilaz Greaves"},
+        back={ name="Moonlight Cape",
+		waist={ name="Flume Belt +1",
+		legs={ name="Eri. Leg Guards +1",
+		feet={ name="Erilaz Greaves +1"},
 	}
     sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast,{
-		head={ name="Erilaz Galea"},
+		head={ name="Erilaz Galea +1"},
 		neck={ name="Incanter's Torque"},
 		body={ name="Runeist's Coat +3"},
 		hands={ name="Runeist's Mitons +2"},
@@ -563,7 +563,7 @@ function init_gear_sets()
 		hands={ name="Turms Mittens +1"}, }
 	) 
 	sets.midcast['Refresh'] = set_combine(sets.midcast['Enhancing Magic'],{
-		head={ name="Erilaz Galea",},
+		head={ name="Erilaz Galea +1",},
 		hands={ name="Regal Gauntlets"},
 		legs={ name="Futhark Trousers +3"},
 		waist={ name="Gishdubar Sash"}, }
@@ -589,33 +589,33 @@ function init_gear_sets()
     sets.midcast.Cure = {
 		ammo={ name="Staunch Tathlum"},
         head=gear.CarmineMArk_FC,
-		neck="Sacro Gorget",
-		ear1="Mendi. Earring",
-		ear2="Roundel Earring",
-        body="Vrikodara Jupon",
-		hands="Buremte Gloves",
-		ring1="Lebeche Ring",
-		ring2="Janniston Ring",
-        back="Tempered Cape +1",
-		waist="Luminary Sash",
-		legs="Carmine Cuisses +1",
+		neck={ name="Sacro Gorget",
+		ear1={ name="Mendi. Earring",
+		ear2={ name="Roundel Earring",
+        body={ name="Vrikodara Jupon",
+		hands={ name="Buremte Gloves",
+		ring1={ name="Lebeche Ring",
+		ring2={ name="Janniston Ring",
+        back={ name="Tempered Cape +1",
+		waist={ name="Luminary Sash",
+		legs={ name="Carmine Cuisses +1",
 		feet="Skaoi Boots"
 	}
 		
 	sets.midcast['Wild Carrot'] = set_combine(sets.midcast.Cure, {})
 		
 	sets.Self_Healing = {
-		hands="Buremte Gloves",
-		ring2="Kunaji Ring",
-		waist="Gishdubar Sash",
+		hands={ name="Buremte Gloves",
+		ring2={ name="Kunaji Ring",
+		waist={ name="Gishdubar Sash",
 		}
 	sets.Cure_Received = {
-		hands="Buremte Gloves",
-		ring2="Kunaji Ring",
-		waist="Gishdubar Sash",
+		hands={ name="Buremte Gloves",
+		ring2={ name="Kunaji Ring",
+		waist={ name="Gishdubar Sash",
 	}
 	sets.Self_Refresh = {
-		head={ name="Erilaz Galea",},
+		head={ name="Erilaz Galea +1",},
 		hands={ name="Regal Gauntlets"},
 		legs={ name="Futhark Trousers +3"},
 		waist={ name="Gishdubar Sash"},
@@ -627,10 +627,10 @@ function init_gear_sets()
 	}
 	
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {
-		ring2="Sheltered Ring",
+		ring2={ name="Sheltered Ring",
 	} )
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {
-		ring2="Sheltered Ring",
+		ring2={ name="Sheltered Ring",
 	} )
 
 	--------------------------------------
@@ -656,7 +656,7 @@ function init_gear_sets()
 	}
 		
     sets.idle.Sphere = set_combine(sets.idle,{
-		body="Mekosu. Harness"
+		body={ name="Mekosu. Harness"
 	} )
 			
 	sets.idle.Tank = {
@@ -727,9 +727,9 @@ function init_gear_sets()
     -- Extra defense sets.  Apply these on top of melee or defense sets.
     sets.Knockback = {}
     sets.MP = {
-		ear2="Ethereal Earring",
-		body="Erilaz Surcoat +1",
-		waist="Flume Belt +1"
+		ear2={ name="Ethereal Earring",
+		body={ name="Erilaz Surcoat +1",
+		waist={ name="Flume Belt +1"
 	}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
@@ -816,23 +816,23 @@ function init_gear_sets()
 	sets.defense.BDT = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Warder's Charm +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
 		body={ name="Futhark Coat +3",},
 		hands=gear.herculean_dt_hands,
-		ring1="Shadow Ring",
+		ring1={ name="Shadow Ring",
 		ring2={ name="Defending Ring"},
-        back="Moonlight Cape",
-		waist="Engraved Belt",
+        back={ name="Moonlight Cape",
+		waist={ name="Engraved Belt",
 		legs=gear.herculean_dt_legs,
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.BDT_HP = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
+        head={ name="Erilaz Galea +1"},
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -840,97 +840,97 @@ function init_gear_sets()
 		hands=gear.herculean_dt_hands,
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Moonbeam Ring"},
-        back="Moonlight Cape",
-		waist="Engraved Belt",
-		legs="Eri. Leg Guards +1",
-		feet={ name="Erilaz Greaves"},
+        back={ name="Moonlight Cape",
+		waist={ name="Engraved Belt",
+		legs={ name="Eri. Leg Guards +1",
+		feet={ name="Erilaz Greaves +1"},
 	}
 	
 	sets.defense.MEVA = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Warder's Charm +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
 		body={ name="Futhark Coat +3",},
-		hands="Erilaz Gauntlets +1",
-		ring1="Purity Ring",
-		ring2="Vengeful Ring",
+		hands={ name="Erilaz Gauntlets +1",
+		ring1={ name="Purity Ring",
+		ring2={ name="Vengeful Ring",
         back=gear.Ogma_Emnity,
-		waist="Engraved Belt",
+		waist={ name="Engraved Belt",
 		legs={ name="Rune. Trousers +2"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.MEVA_HP = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Warder's Charm +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
-		hands="Erilaz Gauntlets +1",
+		hands={ name="Erilaz Gauntlets +1",
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Moonbeam Ring"},
-        back="Moonlight Cape",
-		waist="Engraved Belt",
+        back={ name="Moonlight Cape",
+		waist={ name="Engraved Belt",
 		legs={ name="Rune. Trousers +2"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.Death = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Warder's Charm +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
 		body={ name="Futhark Coat +3",},
-		hands="Erilaz Gauntlets +1",
-		ring1="Purity Ring",
-		ring2="Vengeful Ring",
+		hands={ name="Erilaz Gauntlets +1",
+		ring1={ name="Purity Ring",
+		ring2={ name="Vengeful Ring",
         back=gear.Ogma_Emnity,
-		waist="Engraved Belt",
+		waist={ name="Engraved Belt",
 		legs={ name="Rune. Trousers +2"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.DTCharm = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Unmoving Collar +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Unmoving Collar +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
 		body={ name="Futhark Coat +3",},
-		hands="Erilaz Gauntlets +1",
-		ring1="Defending Ring",
-		ring2="Dark Ring",
+		hands={ name="Erilaz Gauntlets +1",
+		ring1={ name="Defending Ring",
+		ring2={ name="Dark Ring",
         back=gear.Ogma_Emnity,
-		waist="Engraved Belt",
+		waist={ name="Engraved Belt",
 		legs={ name="Rune. Trousers +2"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}		
 	sets.defense.Charm = {
 		sub={ name="Utu Grip"},
 		aammo={ name="Staunch Tathlum"},
-        head={ name="Erilaz Galea"},
-		neck="Unmoving Collar +1",
-		ear1="Sanare Earring",
+        head={ name="Erilaz Galea +1"},
+		neck={ name="Unmoving Collar +1",
+		ear1={ name="Sanare Earring",
 		ear2={ name="Odnowa Earring +1"},
 		body={ name="Futhark Coat +3",},
-		hands="Erilaz Gauntlets +1",
-		ring1="Purity Ring",
-		ring2="Vengeful Ring",
+		hands={ name="Erilaz Gauntlets +1",
+		ring1={ name="Purity Ring",
+		ring2={ name="Vengeful Ring",
         back=gear.Ogma_Emnity,
-		waist="Engraved Belt",
+		waist={ name="Engraved Belt",
 		legs={ name="Rune. Trousers +2"},
-		feet={ name="Erilaz Greaves"},
+		feet={ name="Erilaz Greaves +1"},
 	}	
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {
-		ear1="Brutal Earring"
+		ear1={ name="Brutal Earring"
 	}
 	sets.AccMaxTP = {
-		ear1="Telos Earring"
+		ear1={ name="Telos Earring"
 	}
 
 	--------------------------------------
