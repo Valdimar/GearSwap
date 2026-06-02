@@ -212,7 +212,7 @@ function init_gear_sets()
 
 	-- Gear for specific elemental nukes.
 	sets.element.Dark = {
-		head={ name=Pixie Hairpin +1",
+		head={ name="Pixie Hairpin +1",
 		ring2={ name="Archon Ring"
 	}
 
@@ -288,7 +288,7 @@ function init_gear_sets()
         back={ name="Moonlight Cape",
 		waist={ name="Audumbla Sash",
 		legs={ name="Eri. Leg Guards +1",
-		feet="Carmine Greaves +1"
+		feet={ name="Carmine Greaves +1"
 	}
 		
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
@@ -319,7 +319,7 @@ function init_gear_sets()
 	
 	sets.precast.WS.SomeAcc = {
 		ammo={ name="Voluspa Tathlum"},
-        head={ name=Adhemar Bonnet +1",
+        head={ name="Adhemar Bonnet +1",
 		neck={ name="Fotia Gorget",
 		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
@@ -334,7 +334,7 @@ function init_gear_sets()
 	}
 	sets.precast.WS.Acc = {
 		ammo={ name="C. Palug Stone",
-		head={ name=Dampening Tam",
+		head={ name="Dampening Tam",
 		neck={ name="Fotia Gorget",
 		ear1={ name="Moonshade Earring",
 		ear2={ name="Sherida Earring"},
@@ -502,7 +502,7 @@ function init_gear_sets()
 	}	
 	sets.midcast.FastRecast.DT = {
 		ammo={ name="Staunch Tathlum"},
-        head={ name=Fu. Bandeau +1",
+        head={ name="Fu. Bandeau +1",
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -517,7 +517,7 @@ function init_gear_sets()
 	}
 	sets.midcast.FastRecast.SIRD = {
 		ammo={ name="Staunch Tathlum"},
-        head={ name=Fu. Bandeau +1",
+        head={ name="Fu. Bandeau +1",
 		neck={ name="Loricate Torque +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -599,7 +599,7 @@ function init_gear_sets()
         back={ name="Tempered Cape +1",
 		waist={ name="Luminary Sash",
 		legs={ name="Carmine Cuisses +1",
-		feet="Skaoi Boots"
+		feet={ name="Skaoi Boots"
 	}
 		
 	sets.midcast['Wild Carrot'] = set_combine(sets.midcast.Cure, {})
@@ -719,7 +719,7 @@ function init_gear_sets()
 	}
 	
 	sets.latent_refresh_grip = {
-		sub="Oneiros Grip"
+		sub={ name="Oneiros Grip"
 	}
 	sets.DayIdle = {}
 	sets.NightIdle = {}
@@ -1139,7 +1139,7 @@ function init_gear_sets()
 	--------------------------------------
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {
-		head={ name=Frenzy Sallet",
+		head={ name="Frenzy Sallet",
 	}
 	sets.buff.Battuta = {
 		hands={name="Turms Mittens +1",
