@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None',}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
-	state.Weapons:options('Chango','DualWeapons','Greatsword','Greataxe','Scythe','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
+	state.Weapons:options('Chango','DualWeapons','Greatsword','Greataxe','Scythe','Shining','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
 
 	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
 	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
@@ -1405,11 +1405,13 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Chango = {
 		main={ name="Chango",},
-		--main={ name="Kaja Chopper",},
 		sub={ name="Utu Grip",}, }
 	sets.weapons.DualWeapons = {		
 		main={ name="Firangi",},
 		sub={ name="Reikiko",}, }  --- Set is ideal
+	sets.weapons.Shining = {
+		main={ name="Shining One"},
+		sub={ name="Utu Grip"}, }
 	sets.weapons.Greatsword = {
 		main={ name="Kaja Claymore",},
 		sub={ name="Utu Grip",}, }
@@ -1421,31 +1423,31 @@ function init_gear_sets()
 		sub={ name="Utu Grip",}, }
 	sets.weapons.DaggerProc = {
 		main={ name="Wind Knife +1",},
-		sub=empty} --
+		sub=empty}
 	sets.weapons.SwordProc = {
 		main={ name="Blizzard Brand +1",},
-		sub=empty} --
+		sub=empty}
 	sets.weapons.GreatSwordProc = {
 		main={ name="Claymore",},
-		sub={ name="Utu Grip",}, } --
+		sub={ name="Utu Grip",}, }
 	sets.weapons.ScytheProc = {
 		manin={ name="Lost Sickle +1",},
-		sub={ name="Utu Grip",}, }  --
+		sub={ name="Utu Grip",}, }
 	sets.weapons.PolearmProc = {
 		main={ name="Harpoon",},
-		sub={ name="Utu Grip",}, } --
+		sub={ name="Utu Grip",}, }
 	sets.weapons.KatanaProc = {
 		main={ name="Debahocho",},
 		sub=empty} --
 	sets.weapons.GreatKatanaProc = {
 		main={ name="Mutsunokami",},
-		sub={ name="Utu Grip",}, } --
+		sub={ name="Utu Grip",}, }
 	sets.weapons.ClubProc = {
 		main={ name="Trainee Hammer",},
 		sub=empty} --
 	sets.weapons.StaffProc = {
 		main={ name="Hapy Staff",},
-		sub={ name="Utu Grip",}, } --
+		sub={ name="Utu Grip",}, }
 
 end
 	
