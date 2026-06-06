@@ -490,7 +490,7 @@ function init_gear_sets()
 		ammo="Staunch Tathlum +1",
 		head="Loess Barbuta +1",
 		neck="Warder's Charm +1",
-		ear1={ name="Genmei Earring", },
+		ear1={ name="Genmei Earring",},
 		ear2="Ethereal Earring",
 		body="Tartarus Platemail",
 		hands="Sulev. Gauntlets +2",
@@ -680,13 +680,13 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WHM' then
-        set_macro_page(1, 12)
+        set_macro_page(1, 14)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(2, 12)
+        set_macro_page(2, 14)
     elseif player.sub_job == 'NIN' then
-        set_macro_page(3, 12)
+        set_macro_page(3, 14)
     else
-        set_macro_page(2, 12)
+        set_macro_page(2, 14)
     end
 		send_command('@wait 5;input /lockstyleset 1')
 end
