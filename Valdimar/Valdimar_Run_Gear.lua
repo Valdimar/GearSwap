@@ -8,7 +8,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT_HP','BDT_HP','MDT','BDT')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA','Death','Charm','DTCharm')
 	state.IdleMode:options('Normal','Tank','KiteTank','Sphere')
-	state.Weapons:options('None','Aettir','Lionheart','Epeolatry')
+	state.Weapons:options('Epeolatry','Aettir','Lionheart','Montante')
 	-- state.ZoneTanking:options('Normal','Dynamis')
 	
 	state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP'}
@@ -52,7 +52,7 @@ end
 function init_gear_sets()
 
     sets.Enmity = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Aqreqaq Bomblet"},
 		head={ name="Turms Cap +1"},
 		body={ name="Emet Harness +1"},
@@ -69,7 +69,7 @@ function init_gear_sets()
 	}
 		 
     sets.Enmity.SIRD = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
 		head={ name="Meghanada Visor +2"},
 		neck={ name="Loricate Torque +1"},
@@ -86,7 +86,7 @@ function init_gear_sets()
 	}
 		
     sets.Enmity.SIRDT = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Fu. Bandeau +1"},
 		neck={ name="Loricate Torque +1"},
@@ -103,7 +103,7 @@ function init_gear_sets()
 	}
 
     sets.Enmity.DT = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Fu. Bandeau +1"},
 		neck={ name="Loricate Torque +1"},
@@ -640,6 +640,7 @@ function init_gear_sets()
 	sets.resting = {}
 
     sets.idle = {
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -648,7 +649,7 @@ function init_gear_sets()
 		feet={ name="Turms Leggings +1"},
 		neck={ name="Loricate Torque +1"},
 		waist={ name="Flume Belt +1"},
-		ear1={ name="Genmei Earring"},
+		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Defending Ring"},
@@ -660,7 +661,7 @@ function init_gear_sets()
 	} )
 			
 	sets.idle.Tank = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -669,7 +670,7 @@ function init_gear_sets()
 		feet={ name="Turms Leggings +1"},
 		neck={ name="Loricate Torque +1"},
 		waist={ name="Flume Belt +1"},
-		ear1={ name="Genmei Earring"},
+		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Defending Ring"},
@@ -677,7 +678,7 @@ function init_gear_sets()
 	}
 
 	sets.idle.KiteTank = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Runeist's Coat +3"},
@@ -686,7 +687,7 @@ function init_gear_sets()
 		feet={ name="Turms Leggings +1"},
 		neck={ name="Loricate Torque +1"},
 		waist={ name="Flume Belt +1"},
-		ear1={ name="Genmei Earring"},
+		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Defending Ring"},
@@ -696,7 +697,7 @@ function init_gear_sets()
 	sets.idle.Weak = { }
 
 	sets.Kiting = {		
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -705,7 +706,7 @@ function init_gear_sets()
 		feet={ name="Turms Leggings +1"},
 		neck={ name="Loricate Torque +1"},
 		waist={ name="Flume Belt +1"},
-		ear1={ name="Genmei Earring"},
+		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
 		ring1={ name="Gelatinous Ring +1"},
 		ring2={ name="Defending Ring"},
@@ -713,6 +714,7 @@ function init_gear_sets()
 	}
 	
 	sets.latent_refresh = {
+		ammo={ name="Homiliary"},
 		head={ name="Rawhide Mask"},
 		body={ name="Runeist's Coat +3"},
 		waist={ name="Fucho-no-obi"}, 
@@ -736,21 +738,25 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Aettir = {
 		main={ name="Aettir"},
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 	}
 	sets.weapons.Lionheart = {
 		main={ name="Lionheart"},
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 	}
 	sets.weapons.Epeolatry = {
 		main={ name="Epeolatry"},
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
+	}
+	sets.weapons.Montante = {
+		main={ name="Montante +1"},
+		sub={ name="Refined Grip +1"},
 	}
 	
 	-- Defense Sets
 	
 	sets.defense.PDT = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -766,7 +772,7 @@ function init_gear_sets()
 		back=gear.Ogma_Emnity,
 	}
 	sets.defense.PDT_HP = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -782,7 +788,7 @@ function init_gear_sets()
 		back=gear.Ogma_Emnity, 
 	}
 	sets.defense.MDT = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Aya. Zucchetto +1"},
 		body={ name="Futhark Coat +3",},
@@ -798,7 +804,7 @@ function init_gear_sets()
 		back=gear.Ogma_Emnity,
 	}
 	sets.defense.MDT_HP = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Aya. Zucchetto +1"},
 		body={ name="Futhark Coat +3",},
@@ -814,7 +820,7 @@ function init_gear_sets()
 		back=gear.Ogma_Emnity,
 	}	
 	sets.defense.BDT = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Warder's Charm +1"},
@@ -830,7 +836,7 @@ function init_gear_sets()
 		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.BDT_HP = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Loricate Torque +1"},
@@ -847,7 +853,7 @@ function init_gear_sets()
 	}
 	
 	sets.defense.MEVA = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Warder's Charm +1"},
@@ -863,7 +869,7 @@ function init_gear_sets()
 		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.MEVA_HP = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Warder's Charm +1"},
@@ -878,7 +884,7 @@ function init_gear_sets()
 		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.Death = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Warder's Charm +1"},
@@ -894,7 +900,7 @@ function init_gear_sets()
 		feet={ name="Erilaz Greaves +1"},
 	}
 	sets.defense.DTCharm = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Unmoving Collar +1"},
@@ -910,7 +916,7 @@ function init_gear_sets()
 		feet={ name="Erilaz Greaves +1"},
 	}		
 	sets.defense.Charm = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		aammo={ name="Staunch Tathlum"},
         head={ name="Erilaz Galea +1"},
 		neck={ name="Unmoving Collar +1"},
@@ -938,7 +944,7 @@ function init_gear_sets()
 	--------------------------------------
 
     sets.engaged = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -954,7 +960,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
     sets.engaged.SomeAcc = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -970,7 +976,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.Acc = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -986,7 +992,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.HighAcc = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1002,7 +1008,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.FullAcc = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1018,7 +1024,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
     sets.engaged.DTLite = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1034,7 +1040,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
     sets.engaged.SomeAcc.DTLite = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1050,7 +1056,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.Acc.DTLite = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1066,7 +1072,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.HighAcc.DTLite = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1082,7 +1088,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.FullAcc.DTLite = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum",},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1098,7 +1104,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
     sets.engaged.Tank = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
@@ -1114,7 +1120,7 @@ function init_gear_sets()
 		back=gear.Ogma_DEXFITE,
 	}
 	sets.engaged.Tank_HP = {
-		sub={ name="Utu Grip"},
+		sub={ name="Refined Grip +1"},
 		ammo={ name="Yamarang"},
 		head={ name="Turms Cap +1"},
 		body={ name="Futhark Coat +3",},
