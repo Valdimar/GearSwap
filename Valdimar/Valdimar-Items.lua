@@ -9,6 +9,10 @@ sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}
 sets.precast.Item['Hallowed Water'] = {}
 sets.precast.Item['Holy Water'] = {}
 
+--Gear for all jobs
+gear.warp_stick = {main="Warp Cudgel",}
+gear.warp_ring = {right_ring="Warp Ring",}
+
 --Augmented items that you'll use among multiple jobs.
 
 gear.gada_enhancing_club = {name="Gada",augments={'Enh. Mag. eff. dur. +6','STR+3','Mag. Acc.+8','"Mag.Atk.Bns."+17','DMG:+7',}}
