@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None',}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
-	state.Weapons:options('Chango','DualWeapons','Greatsword','Greataxe','Scythe','Shining','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
+	state.Weapons:options('Chango','DualWeapons','Greatsword','Greataxe','Scythe','Shining','Savage','SavageTwo','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
 
 	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
 	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
@@ -1412,6 +1412,12 @@ function init_gear_sets()
 	sets.weapons.Shining = {
 		main={ name="Shining One"},
 		sub={ name="Utu Grip"}, }
+	sets.weapons.Savage = {
+		main={ name="Naegling"},
+		sub={ name="Reikiko"}, }
+	sets.weapons.SavageTwo = {
+		main={ name="Naegling"},
+		sub={ name="Blurred Shield +1"}, }
 	sets.weapons.Greatsword = {
 		main={ name="Kaja Claymore",},
 		sub={ name="Utu Grip",}, }
@@ -1463,4 +1469,5 @@ function select_default_macro_book()
     else
         set_macro_page(2, 1)
     end
+		send_command('@wait 5;input /lockstyleset 4')
 end
