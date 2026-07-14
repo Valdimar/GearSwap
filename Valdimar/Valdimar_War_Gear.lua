@@ -11,9 +11,6 @@ function user_job_setup()
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
 	state.Weapons:options('Chango','DualWeapons','SavageShd','Shining','LoxoticDual','LoxoticMace','Greatsword','Scythe','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
 
-	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
-	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
-
 	-- Additional local binds
 	-- CTRL  = ^
 	-- ALT   = !
@@ -41,7 +38,7 @@ function init_gear_sets()
 		ammo={ name="Aqreqaq Bomblet"},
 		head={ name="Rabid Visor"},
 		body={ name="Emet Harness +1"},
-		hands={ name="Pumm. Mufflers =2"},
+		hands={ name="Pumm. Mufflers +2"},
 		legs={ name="Nyame Flanchard"},
 		feet={ name="Nyame Sollerets"},
 		neck={ name="Moonlight Necklace"},
@@ -58,17 +55,50 @@ function init_gear_sets()
 	}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Berserk'] = {back="Cichol's Mantle"}
-	sets.precast.JA['Warcry'] = {}
-	sets.precast.JA['Defender'] = {}
-	sets.precast.JA['Aggressor'] = {}
-	sets.precast.JA['Mighty Strikes'] = {}
-	sets.precast.JA["Warrior's Charge"] = {}
-	sets.precast.JA['Tomahawk'] = {ammo="Thr. Tomahawk"}
-	sets.precast.JA['Retaliation'] = {}
-	sets.precast.JA['Restraint'] = {}
-	sets.precast.JA['Blood Rage'] = {}
-	sets.precast.JA['Brazen Rush'] = {}
+	sets.precast.JA['Berserk'] = {
+		body={ name="Pumm. Lorica +2"},
+		feet={ name="Agoge Calligae +3"},
+		back=gear.Cichol_VITDEF,
+	}
+	sets.precast.JA['Warcry'] = {
+		head={ name="Agoge Mask +3"},
+	}
+	sets.precast.JA['Defender'] = {
+		hands={ name="Agoge Mufflers +3"},
+	}
+	sets.precast.JA['Aggressor'] = {
+		head={ name="Pumm. Mask +2"},
+		body={ name="Agoge Lorica +3"},
+	}
+	sets.precast.JA['Mighty Strikes'] = {
+		hands={ name="Agoge Mufflers +3"},
+	}
+	sets.precast.JA["Warrior's Charge"] = {
+		legs={ name="Agoge Cuisses +3"},
+	}
+	sets.precast.JA['Tomahawk'] = {
+		ammo={ name="Thr. Tomahawk"},
+		legs={ name="Agoge Cuisses +3"},
+	}
+	sets.precast.JA['Retaliation'] = {
+		head={ name="Sakpata's Helm"},
+		body={ name="Sakpata's Plate"},
+		hands={ name="Pumm. Mufflers +2"},
+		legs={ name="Sakpata's Cuisses"},
+		feet={ name="Boii Calligae +1"},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Cryptic Earring"},
+		ring1={ name="Murky Ring"},
+		ring2={ name="Alabaster Ring"},
+	}
+	sets.precast.JA['Restraint'] = {
+		hands={ name="Boii Mufflers +1"},
+	}
+	sets.precast.JA['Blood Rage'] = {
+		body={ name="Boii Lorica +2"},
+	}
+	sets.precast.JA['Brazen Rush'] = {
+	}
 	sets.precast.JA['Provoke'] = set_combine(sets.Enmity,{})
                    
 	-- Waltz set (chr and vit)
