@@ -2,11 +2,11 @@ function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder','TF')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.HybridMode:options('Normal')
+    state.HybridMode:options('Normal','DTLite')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
-	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
+	state.IdleMode:options('Normal', 'PDT','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None',}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
 	state.Weapons:options('Chango','DualWeapons','SavageShd','Shining','LoxoticDual','LoxoticMace','Greatsword','Scythe','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
@@ -444,6 +444,21 @@ function init_gear_sets()
 		head="Twilight Helm",
 		body="Twilight Mail"}
 	)
+	sets.idle.DTLite = {
+		ammo={ name="Staunch Tathlum +1",},
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Warder's Charm +1",},
+		waist={ name="Flume Belt +1"},
+		ring1={ name="Murky Ring",},
+		ring2={ name="Moonbeam Ring",},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Odnowa Earring +1",},
+		back==gear.Cichol_DEXDA,
+	}
 	
 	-- Defense sets
 	sets.defense.PDT = {
