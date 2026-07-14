@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None',}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
-	state.Weapons:options('Chango','DualWeapons','SavageTwo','Shining','LoxoticMace','Greatsword','Greataxe','Scythe','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
+	state.Weapons:options('Chango','DualWeapons','SavageShd','Shining','LoxoticDual','LoxoticMace','Greatsword','Scythe','DaggerProc','SwordProc','GreatSwordProc','ScytheProc','PolearmProc','KatanaProc','GreatKatanaProc','ClubProc','StaffProc')
 
 	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
 	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
@@ -37,9 +37,25 @@ function init_gear_sets()
 	--------------------------------------
 	-- Precast Sets
 	
-    sets.Enmity = {}
+    sets.Enmity = {
+		ammo={ name="Aqreqaq Bomblet"},
+		head={ name="Rabid Visor"},
+		body={ name="Emet Harness +1"},
+		hands={ name="Pumm. Mufflers =2"},
+		legs={ name="Nyame Flanchard"},
+		feet={ name="Nyame Sollerets"},
+		neck={ name="Moonlight Necklace"},
+		waist={ name="Flume Belt +1"},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Cryptic Earring"},
+		ring1={ name="Murky Ring"},
+		ring2={ name="Pernicious Ring"},
+	}
 	sets.Knockback = {}
-	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
+	sets.passive.Twilight = {
+		head="Twilight Helm",
+		body="Twilight Mail"
+	}
 	
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = {back="Cichol's Mantle"}
@@ -234,11 +250,86 @@ function init_gear_sets()
 		back=gear.Cichol_STRWS,
 	}
 
-    sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS.SomeAcc, {})
-    sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-    sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Upheaval'] = {
+		sub={ name="Utu Grip",},
+		ammo={ name="Knobkierrie",},
+		head={ name="Agoge Mask +3",},
+		neck={ name="War. Beads +1",},
+		body={ name="Pumm. Lorica +2",},
+		hands={ name="Sulev. Gauntlets +2",},
+		waist={ name="Sailfi Belt +1",},
+		legs=gear.odyssean_wsd_legs,
+		feet={ name="Pumm. Calligae +2",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Regal Ring",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Thrud Earring",},
+		back=gear.Cichol_STRWS,
+	}
+    sets.precast.WS['Upheaval'].SomeAcc = {
+		sub={ name="Utu Grip",},
+		ammo={ name="Knobkierrie",},
+		head={ name="Agoge Mask +3",},
+		neck={ name="War. Beads +1",},
+		body={ name="Pumm. Lorica +2",},
+		hands={ name="Sulev. Gauntlets +2",},
+		waist={ name="Sailfi Belt +1",},
+		legs=gear.odyssean_wsd_legs,
+		feet={ name="Pumm. Calligae +2",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Regal Ring",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Thrud Earring",},
+		back=gear.Cichol_STRWS,
+	}
+    sets.precast.WS['Upheaval'].Acc = {
+		sub={ name="Utu Grip",},
+		ammo={ name="Knobkierrie",},
+		head={ name="Agoge Mask +3",},
+		neck={ name="War. Beads +1",},
+		body={ name="Pumm. Lorica +2",},
+		hands={ name="Sulev. Gauntlets +2",},
+		waist={ name="Sailfi Belt +1",},
+		legs=gear.odyssean_wsd_legs,
+		feet={ name="Pumm. Calligae +2",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Regal Ring",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Thrud Earring",},
+		back=gear.Cichol_STRWS,
+	}
+    sets.precast.WS['Upheaval'].FullAcc = {
+		sub={ name="Utu Grip",},
+		ammo={ name="Knobkierrie",},
+		head={ name="Agoge Mask +3",},
+		neck={ name="War. Beads +1",},
+		body={ name="Pumm. Lorica +2",},
+		hands={ name="Sulev. Gauntlets +2",},
+		waist={ name="Sailfi Belt +1",},
+		legs=gear.odyssean_wsd_legs,
+		feet={ name="Pumm. Calligae +2",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Regal Ring",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Thrud Earring",},
+		back=gear.Cichol_STRWS,
+	}
+    sets.precast.WS['Upheaval'].Fodder = {
+		sub={ name="Utu Grip",},
+		ammo={ name="Knobkierrie",},
+		head={ name="Agoge Mask +3",},
+		neck={ name="War. Beads +1",},
+		body={ name="Pumm. Lorica +2",},
+		hands={ name="Sulev. Gauntlets +2",},
+		waist={ name="Sailfi Belt +1",},
+		legs=gear.odyssean_wsd_legs,
+		feet={ name="Pumm. Calligae +2",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Regal Ring",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Thrud Earring",},
+		back=gear.Cichol_STRWS,
+	}
      
     sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -299,13 +390,12 @@ function init_gear_sets()
            
 	-- Idle sets
 	sets.idle = {
-		sub={ name="Utu Grip",},
 		ammo={ name="Staunch Tathlum +1",},
-		head={ name="Sakpata's Helm",},
-		body={ name="Sakpata's Plate",},
-		hands={ name="Sakpata's Gauntlets",},
-		legs={ name="Sakpata's Cuisses",},
-		feet={ name="Sakpata's Leggings",},
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
 		neck={ name="Warder's Charm +1",},
 		waist={ name="Flume Belt +1"},
 		ring1={ name="Murky Ring",},
@@ -313,7 +403,7 @@ function init_gear_sets()
 		ear1={ name="Alabaster Earring"},
 		ear2={ name="Odnowa Earring +1",},
 		back==gear.Cichol_DEXDA,
-		}
+	}
 		
 	sets.idle.Weak = set_combine(sets.idle, {
 		head="Twilight Helm",
@@ -328,17 +418,17 @@ function init_gear_sets()
 	-- Defense sets
 	sets.defense.PDT = {
 		ammo={ name="Staunch Tathlum +1",},
-		head={ name="Hjarrandi Helm",},
-		body={ name="Hjarrandi Breast.",},
-		hands={ name="Sulev. Gauntlets +2",},
-		legs={ name="Sulev. Cuisses +2",},
-		feet={ name="Hermes' Sandals",},
-		neck={ name="Loricate Torque +1",},
-		waist={ name="Ioskeha Belt +1",},
-		ear1={ name="Telos Earring",},
-		ear2={ name="Brutal Earring",},
-		ring1={ name="Murky Ring", },
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Warder's Charm +1",},
+		waist={ name="Flume Belt +1"},
+		ring1={ name="Murky Ring",},
 		ring2={ name="Moonbeam Ring",},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Odnowa Earring +1",},
 		back==gear.Cichol_DEXDA,
 	}
 		
@@ -348,19 +438,19 @@ function init_gear_sets()
 	} )
 
 	sets.defense.MDT = {
-		ammo="Staunch Tathlum +1",
-		head="Genmei Kabuto",
-		neck="Warder's Charm +1",
-		ear1="Genmei Earring",
-		ear2="Ethereal Earring",
-		body="Tartarus Platemail",
-		hands="Sulev. Gauntlets +2",
-		ring1="Moonbeam Ring",
-		ring2="Moonlight Ring",
-		back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Sulev. Cuisses +2",
-		feet="Amm Greaves"
+		ammo={ name="Staunch Tathlum +1",},
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Warder's Charm +1",},
+		waist={ name="Flume Belt +1"},
+		ring1={ name="Murky Ring",},
+		ring2={ name="Moonbeam Ring",},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Odnowa Earring +1",},
+		back==gear.Cichol_DEXDA,
 	}
 		
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {
@@ -369,23 +459,26 @@ function init_gear_sets()
 	} )
 		
 	sets.defense.MEVA = {
-		ammo="Staunch Tathlum +1",
-		head="Genmei Kabuto",
-		neck="Warder's Charm +1",
-		ear1="Genmei Earring",
-		ear2="Ethereal Earring",
-		body="Tartarus Platemail",
-		hands="Sulev. Gauntlets +2",
-		ring1="Moonbeam Ring",
-		ring2="Moonlight Ring",
-		back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Sulev. Cuisses +2",
-		feet="Amm Greaves"
+		ammo={ name="Staunch Tathlum +1",},
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Warder's Charm +1",},
+		waist={ name="Flume Belt +1"},
+		ring1={ name="Murky Ring",},
+		ring2={ name="Moonbeam Ring",},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Odnowa Earring +1",},
+		back==gear.Cichol_DEXDA,
 	}
 
 	sets.Kiting = {}
-	sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
+	sets.Reraise = {
+		head="Twilight Helm",
+		body="Twilight Mail"
+	}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {
 		head="Frenzy Sallet"
@@ -395,11 +488,11 @@ function init_gear_sets()
 	sets.engaged = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Hjarrandi Helm",},
-		body={ name="Sakpata's Plate",},
+		body={ name="Agoge Lorica +3",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
-		feet={ name="Sakpata's Leggings",},
-		neck={ name="Lissome Necklace",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads. +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
@@ -414,7 +507,7 @@ function init_gear_sets()
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Sakpata's Leggings",},
-		neck={ name="Lissome Necklace",},
+		neck={ name="War. Beads. +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
@@ -429,7 +522,7 @@ function init_gear_sets()
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Sakpata's Leggings",},
-		neck={ name="Lissome Necklace",},
+		neck={ name="War. Beads. +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
@@ -444,7 +537,7 @@ function init_gear_sets()
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Sakpata's Leggings",},
-		neck={ name="Lissome Necklace",},
+		neck={ name="War. Beads. +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
@@ -459,7 +552,7 @@ function init_gear_sets()
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Sakpata's Leggings",},
-		neck={ name="Lissome Necklace",},
+		neck={ name="War. Beads. +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
@@ -473,8 +566,28 @@ function init_gear_sets()
 		feet=gear.valorous_TH_feet,
 		waist="Chaac Belt",
 	})
-	sets.engaged.DW = {		
+	sets.engaged.DW = {
+		ammo={ name="Coiste Bodhar",},
+		head={ name="Hjarrandi Helm",},
+		body={ name="Agoge Lorica +3",},
+		hands={ name="Sakpata's Gauntlets",},
+		legs={ name="Pumm. Cuisses +3",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads. +1",},
+		waist={ name="Reiki Yotai",},
+		ear1={ name="Eabani Earring",},
+		ear2={ name="Brutal Earring",},
+		ring1={ name="Niqmaddu Ring",},
+		ring2={ name="Petrov Ring",},
+		back=gear.Cichol_DEXDA,	
 	}
+	
+	sets.engaged.PDT = {}
+	sets.engaged.SomeAcc.PDT = {}
+	sets.engaged.Acc.PDT = {}
+	sets.engaged.FullAcc.PDT = {}
+	sets.engaged.Fodder.PDT = {}
+
 --[[
     sets.engaged.Charge = {}
 	sets.engaged.SomeAcc.Charge = {}
@@ -1510,20 +1623,20 @@ function init_gear_sets()
 	sets.weapons.Shining = {
 		main={ name="Shining One"},
 		sub={ name="Utu Grip"}, }
-	sets.weapons.SavageTwo = {
+	sets.weapons.SavageShd = {
 		main={ name="Naegling"},
 		sub={ name="Blurred Shield +1"}, }
+	sets.weapons.LoxoticDual = {
+		main={ name="Loxotic Mace +1"},
+		sub={ name="Sangarius +1"}, }
 	sets.weapons.LoxoticMace = {
 		main={ name="Loxotic Mace +1"},
 		sub={ name="Blurred Shield +1"}, }
 	sets.weapons.Greatsword = {
 		main={ name="Kaja Claymore",},
 		sub={ name="Utu Grip",}, }
-	sets.weapons.Greataxe = {
-		main={ name="Kaja Chopper",},
-		sub={ name="Utu Grip",}, }
 	sets.weapons.Scythe = {
-		main={ name="Last Rest",},
+		main={ name="Kaja Scythe",},
 		sub={ name="Utu Grip",}, }
 	sets.weapons.DaggerProc = {
 		main={ name="Wind Knife +1",},
@@ -1552,7 +1665,6 @@ function init_gear_sets()
 	sets.weapons.StaffProc = {
 		main={ name="Hapy Staff",},
 		sub={ name="Utu Grip",}, }
-
 end
 	
 -- Select default macro book on initial load or subjob change.
