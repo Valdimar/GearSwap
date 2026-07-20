@@ -85,14 +85,14 @@ function init_gear_sets()
 		body={ name="Sakpata's Plate"},
 		hands={ name="Pumm. Mufflers +2"},
 		legs={ name="Sakpata's Cuisses"},
-		feet={ name="Boii Calligae +1"},
+		feet={ name="Boii Calligae +2"},
 		ear1={ name="Alabaster Earring"},
 		ear2={ name="Cryptic Earring"},
 		ring1={ name="Murky Ring"},
 		ring2={ name="Alabaster Ring"},
 	}
 	sets.precast.JA['Restraint'] = {
-		hands={ name="Boii Mufflers +1"},
+		hands={ name="Boii Mufflers +2"},
 	}
 	sets.precast.JA['Blood Rage'] = {
 		body={ name="Boii Lorica +2"},
@@ -422,7 +422,7 @@ function init_gear_sets()
 	sets.idle = {
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Nyame Helm",},
-		body={ name="Nyame Mail",},
+		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
 		legs={ name="Nyame Flanchard",},
 		feet={ name="Nyame Sollerets",},
@@ -447,7 +447,7 @@ function init_gear_sets()
 	sets.idle.DTLite = {
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Nyame Helm",},
-		body={ name="Nyame Mail",},
+		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
 		legs={ name="Nyame Flanchard",},
 		feet={ name="Nyame Sollerets",},
@@ -464,7 +464,7 @@ function init_gear_sets()
 	sets.defense.PDT = {
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Nyame Helm",},
-		body={ name="Nyame Mail",},
+		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
 		legs={ name="Nyame Flanchard",},
 		feet={ name="Nyame Sollerets",},
@@ -485,7 +485,7 @@ function init_gear_sets()
 	sets.defense.MDT = {
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Nyame Helm",},
-		body={ name="Nyame Mail",},
+		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
 		legs={ name="Nyame Flanchard",},
 		feet={ name="Nyame Sollerets",},
@@ -506,7 +506,7 @@ function init_gear_sets()
 	sets.defense.MEVA = {
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Nyame Helm",},
-		body={ name="Nyame Mail",},
+		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
 		legs={ name="Nyame Flanchard",},
 		feet={ name="Nyame Sollerets",},
@@ -532,7 +532,7 @@ function init_gear_sets()
     -- Engaged sets
 	sets.engaged = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Agoge Lorica +3",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -547,7 +547,7 @@ function init_gear_sets()
 	}
     sets.engaged.SomeAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Sakpata's Plate",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -562,7 +562,7 @@ function init_gear_sets()
 	}
 	sets.engaged.Acc = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Sakpata's Plate",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -577,7 +577,7 @@ function init_gear_sets()
 	}
     sets.engaged.FullAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Sakpata's Plate",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -592,7 +592,7 @@ function init_gear_sets()
 	}
     sets.engaged.Fodder = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Sakpata's Plate",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -613,7 +613,7 @@ function init_gear_sets()
 	})
 	sets.engaged.DW = {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Hjarrandi Helm",},
+		head={ name="Boii Mask +2",},
 		body={ name="Agoge Lorica +3",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
@@ -626,14 +626,15 @@ function init_gear_sets()
 		ring2={ name="Petrov Ring",},
 		back=gear.Cichol_DEXDA,	
 	}
-	
-	sets.engaged.PDT = {}
-	sets.engaged.SomeAcc.PDT = {}
-	sets.engaged.Acc.PDT = {}
-	sets.engaged.FullAcc.PDT = {}
-	sets.engaged.Fodder.PDT = {}
 
 --[[
+
+	sets.engaged.PDT = set_combine(sets.idle{})
+	sets.engaged.SomeAcc.PDT = set_combine(sets.idle{})
+	sets.engaged.Acc.PDT = set_combine(sets.idle{})
+	sets.engaged.FullAcc.PDT = set_combine(sets.idle{})
+	sets.engaged.Fodder.PDT = set_combine(sets.idle{})
+	
     sets.engaged.Charge = {}
 	sets.engaged.SomeAcc.Charge = {}
 	sets.engaged.Acc.Charge = {}
