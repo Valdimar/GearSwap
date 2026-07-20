@@ -34,7 +34,7 @@ gear.herculean_dt_hands = {name="Herculean Gloves",augments={'Attack+4','Damage 
 gear.herculean_phalanx_hands = {name="Herculean Gloves", augments={'DEX+14','"Counter"+1','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}
 gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+7','INT+6','"Treasure Hunter"+2','Accuracy+17 Attack+17','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
 gear.herculean_refresh_hands = {name="Herculean Gloves",augments={'Enmity+2','Pet: "Store TP"+4','"Refresh"+1',}}
-gear.herculean_waltz_hands = {name="Herculean Gloves",augments={'Rng.Acc.+16','"Waltz" potency +11%','AGI+1',}}
+gear.herculean_FCPhal_hands = {name="Herculean Gloves", augments={'"Fast Cast"+3','Accuracy+22','Phalanx +4','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 gear.herculean_waltz_body = {name="Herculean Vest",augments={'Attack+26','"Waltz" potency +11%','AGI+4','Accuracy+5',}}
 gear.herculean_wsd_body = {name="Herculean Vest",augments={'Accuracy+11','Weapon skill damage +5%','DEX+7',}}
 gear.herculean_TA_body = { name="Herculean Vest", augments={'"Triple Atk."+3','STR+6','Accuracy+12',}}
@@ -46,7 +46,7 @@ gear.herculean_refresh_feet = {name="Herculean Boots",augments={'CHR+2','MND+6',
 gear.herculean_wsd_feet = {name="Herculean Boots",augments={'Accuracy+23 Attack+23','Weapon skill damage +5%','DEX+10','Accuracy+10','Attack+1',}}
 gear.herculean_waltz_feet = {name="Herculean Boots",augments={'Attack+10','"Waltz" potency +10%','AGI+4','Accuracy+9',}}
 gear.herculean_nuke_feet = {name="Herculean Boots",augments={'"Mag.Atk.Bns."+23','Rng.Acc.+14','Phalanx +1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}}
-gear.herculean_TA_feet = { name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+4','DEX+9',}}
+gear.herculean_TA_feet = { name="Herculean Boots", augments={'Accuracy+21','"Triple Atk."+3','DEX+8','Attack+2',}}
 
 gear.merlinic_nuke_head = {name="Merlinic Hood",augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','INT+15','Mag. Acc.+3','"Mag.Atk.Bns."+13',}}
 gear.merlinic_nuke_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Occult Acumen"+4','INT+10','Mag. Acc.+2','"Mag.Atk.Bns."+15',}}
@@ -62,21 +62,30 @@ gear.merlinic_refresh_feet = {name="Merlinic Crackows",augments={'Pet: DEX+7','P
 gear.merlinic_occult_feet = {name="Merlinic Crackows",augments={'"Occult Acumen"+11','INT+8','Mag. Acc.+4',}}
 
 gear.odyssean_wsd_hands = {name="Odyssean Gauntlets",augments={'Accuracy+26','Weapon skill damage +4%','STR+6','Attack+14',}}
-gear.odyssean_stp_legs = {name="Odyssean Cuisses",augments={'Accuracy+28','"Store TP"+6','DEX+9',}}
+gear.odyssean_wsd_legs = { name="Odyssean Cuisses", augments={'Attack+17','Weapon skill damage +4%','VIT+10','Accuracy+1',}}
 gear.odyssean_fc_legs = {name="Odyssean Cuisses",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+12',}}
 
 -- Carmine Head
 gear.CarmineMask_FC = { name="Carmine Mask +1", augments = { 'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}
 -- Carmine Legs
 gear.CarmineLegs_HP = { name="Carmine Cuisses +1", augments={'HP+80','STR+12','INT+12',}}
+-- Carmine Feet
+gear.CarmineFeet_FC = { name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}}
 
 -- Acro Hands
-gear.acrogauntlets_Breath = {name="Acro Gauntlets", augments={'Pet: Breath+2',}}
+gear.acrohands_Br = {name="Acro Gauntlets", augments={'Pet: Breath+2',}}
 -- Acro Legs
-gear.acrolegs_Breath = {name="Acro Breeches", augments={'Pet: Breath+7',}}
+gear.acrolegs_Br = {name="Acro Breeches", augments={'Pet: Breath+7',}}
 -- Acro Feet
-gear.acrofeet_Breath = { name="Acro Leggings", augments={'Pet: Crit.hit rate +2',}}
+gear.acrofeet_Br = { name="Acro Leggings", augments={'Pet: Crit.hit rate +2',}}
 
+-- Lustra Items
+gear.LustraFeet_DPS = { name="Lustra. Leggings +1", augments={'Attack+20','STR+8','"Dbl.Atk."+3',}}
+
+-- Augmented Weapons
+gear.DigAxe_DoubleAtT = { name="Digirbalag", augments={'"Dbl.Atk."+2','Pet: Accuracy+5 Pet: Rng. Acc.+5','Pet: Attack+20 Pet: Rng.Atk.+20','DMG:+5',}}
+
+-- VALOROUS ITEMS --
 -- Valor Head
 gear.valorous_magical_wsd_head = {name="Valorous Mask",augments={'"Mag.Atk.Bns."+17','Weapon skill damage +5%','Attack+10',}}
 gear.valorous_wsd_head = {name="Valorous Mask",augments={'Accuracy+10 Attack+10','Weapon skill damage +4%','STR+4','Attack+10',}}
@@ -85,14 +94,17 @@ gear.valorous_pet_head = {name="Valorous Mask",augments={'Pet: "Mag.Atk.Bns."+25
 gear.valorous_pet_body = {name="Valorous Mail",augments={'Pet: "Mag.Atk.Bns."+26','"Dbl.Atk."+3','Pet: INT+8','Pet: Accuracy+13 Pet: Rng. Acc.+13','Pet: Attack+12 Pet: Rng.Atk.+12',}}
 gear.valorous_wsd_body = {name="Valorous Mail",augments={'Accuracy+25 Attack+25','Weapon skill damage +4%','Accuracy+10','Attack+12',}}
 gear.valorous_stp_body = {name="Valorous Mail",augments={'Accuracy+25','Attack+26','"Store TP"+7','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
+gear.valorous_pet_regen_body = {name="Valorous Mail", augments={'Pet: Accuracy+13 Pet: Rng. Acc.+13','Pet: "Regen"+4','Pet: STR+6','Pet: Attack+13 Pet: Rng.Atk.+13',}}
 -- Valor Hands
 gear.valorous_wsd_hands = {name="Valorous Mitts",augments={'Attack+22','Weapon skill damage +4%','Accuracy+12',}}
 gear.valorous_TH_hands = {name="Valorous Mitts",augments={'INT+12','Damage taken-2%','"Treasure Hunter"+1','Accuracy+5 Attack+5','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
 -- Valor Legs
 gear.valorous_STP_legs = {name="Valorous Hose",augments={'"Occult Acumen"+9','STR+11','"Store TP"+6','Accuracy+8 Attack+8','Mag. Acc.+5 "Mag.Atk.Bns."+5',}}
 gear.valorous_wsd_legs = {name="Valorous Hose", augments={'Weapon skill damage +3%','"Conserve MP"+1','Accuracy+13 Attack+13',}}
+gear.valorous_pet_regen_legs = {name="Valorous Hose", augments={'Pet: Attack+27 Pet: Rng.Atk.+27','Pet: "Regen"+3','Pet: VIT+4','Pet: Accuracy+10 Pet: Rng. Acc.+10',}}
+gear.valorous_TH_legs = {name="Valorous Hose", augments={'"Resist Silence"+3','"Fast Cast"+5','"Treasure Hunter"+1','Accuracy+20 Attack+20',}}
 -- Valor Feet
-gear.valorous_wsd_feet = {name="Valorous Greaves",augments={'Accuracy+25','Weapon skill damage +4%','STR+5',}}
+gear.valorous_wsd_feet = {name="Valorous Greaves", augments={'Crit. hit damage +3%','STR+14','Accuracy+14',}}
 gear.valorous_TH_feet = {name="Valorous Greaves", augments={'Magic burst dmg.+10%','VIT+6','"Treasure Hunter"+1','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
 
 -- Dragoon Capes
@@ -101,18 +113,19 @@ gear.Brig_DEXSTP = {}
 gear.Brig_STRcrit = {name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Crit.hit rate+10',}}
 gear.brig_STRDA = { name="Brigantia's mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
 gear.brig_DEXDA = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}
-gear.brig_WSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','"Regen"+5',}}
+gear.brig_STRWSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','"Regen"+5',}}
 gear.updraft_Breath = { name="Updraft Mantle", augments={'STR+3','Pet: Breath+9','Pet: Damage taken -3%',}}
 
 -- Rune Fencer Capes
-gear.Ogma_Emnity = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
+gear.Ogma_Emnity = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 gear.Ogma_EM_SIRD = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+10','Enmity+10','Spell interruption rate down-10%',}}
 gear.Ogma_STRDA = { name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Spell interruption rate down-10%',}}
 gear.Ogma_STRWSD = { name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+5','Weapon skill damage +10%',}}
 gear.Ogma_DEXWSD = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 gear.Ogma_DEXFITE = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-gear.Ogma_CASTEVADE= { name="Ogma's cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-gear.Evasion_Cape = { name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+6','"Dbl.Atk."+4',}}
+gear.Ogma_CASTEVADE = { name="Ogma's cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}}
+gear.Ogma_PARRY = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}}
+gear.Evasion_Cape = { name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+1',}}
 
 -- Warrior Capes
 gear.Cichol_STRDA = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Damage taken-5%',}}
