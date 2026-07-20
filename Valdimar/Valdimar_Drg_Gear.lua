@@ -105,10 +105,10 @@ function init_gear_sets()
 	}
 	
 	sets.precast.JA['Spirit Link'] = {
-		head={ name="Vishap Armet +2",},
-		hands={ name="Pel. Vambraces",},
+		head={ name="Vishap Armet +3",},
+		hands={ name="Pel. Vambraces +2",},
 		feet={ name="Ptero. Greaves +3",},
-		--ear1={ name="Pratik Earring",
+		ear1={ name="Pratik Earring"},
 	}
 	sets.precast.JA['Ancient Circle'] = {
 		legs={ name="Vishap Brais +3",},
@@ -138,8 +138,8 @@ function init_gear_sets()
 	-- Breath sets
 	sets.precast.JA['Restoring Breath'] = {
         head={ name="Ptero. Armet +3",},
-		hands={ name="Despair Fin. Gaunt.",},
-		legs={ name="Acro Breeches", augments={'Pet: Breath+7',},},
+		hands=gear.acrohands_Br,
+		legs=gear.acrolegs_Br,
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
@@ -148,33 +148,33 @@ function init_gear_sets()
 	}
 	sets.precast.JA['Smiting Breath'] = {
         head={ name="Ptero. Armet +3",},
-		hands={ name="Despair Fin. Gaunt.",},
-		legs={ name="Acro Breeches", augments={'Pet: Breath+7',},},
-		feet={ name="Ptero. Greaves +3",},
-		waist={ name="Glassblower's belt",},
-		neck={ name="Dgn. Collar +2",},
-		ear2={ name="Lancer's Earring",},
-		back=gear.Updraft_Breath
-	}
-	sets.HealingBreath = {
-        head={ name="Ptero. Armet +3",},
-		hands={ name="Despair Fin. Gaunt.",},
-		legs={ name="Acro Breeches", augments={'Pet: Breath+7',},},
+		hands=gear.acrohands_Br,
+		legs=gear.acrolegs_Br,
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
 		ear2={ name="Lancer's Earring",},
 		back=gear.Updraft_Breath,
 	}
-	sets.SmitingBreath = {
+	sets.HealingBreath = {{
         head={ name="Ptero. Armet +3",},
-		hands={ name="Despair Fin. Gaunt.",},
-		legs={ name="Acro Breeches", augments={'Pet: Breath+7',},},
+		hands=gear.acrohands_Br,
+		legs=gear.acrolegs_Br,
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
-		neck={ name="Adad Amulet", bag="wardrobe3"},
+		neck={ name="Dgn. Collar +2",},
 		ear2={ name="Lancer's Earring",},
-		back=gear.Updraft_Breath
+		back=gear.Updraft_Breath,
+	}
+	sets.SmitingBreath = {{
+        head={ name="Ptero. Armet +3",},
+		hands=gear.acrohands_Br,
+		legs=gear.acrolegs_Br,
+		feet={ name="Ptero. Greaves +3",},
+		waist={ name="Glassblower's belt",},
+		neck={ name="Dgn. Collar +2",},
+		ear2={ name="Lancer's Earring",},
+		back=gear.Updraft_Breath,
 	}
 
 	-- Fast cast sets for spells
