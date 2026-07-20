@@ -139,7 +139,7 @@ function init_gear_sets()
 	sets.precast.JA['Restoring Breath'] = {
         head={ name="Ptero. Armet +3",},
 		hands=gear.acrohands_Br,
-		legs=gear.acrolegs_Br,
+		legs={ name="Vishap Brais +3",},
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
@@ -149,7 +149,7 @@ function init_gear_sets()
 	sets.precast.JA['Smiting Breath'] = {
         head={ name="Ptero. Armet +3",},
 		hands=gear.acrohands_Br,
-		legs=gear.acrolegs_Br,
+		legs={ name="Vishap Brais +3",},
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
@@ -159,7 +159,7 @@ function init_gear_sets()
 	sets.HealingBreath = {{
         head={ name="Ptero. Armet +3",},
 		hands=gear.acrohands_Br,
-		legs=gear.acrolegs_Br,
+		legs={ name="Vishap Brais +3",},
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
@@ -169,7 +169,7 @@ function init_gear_sets()
 	sets.SmitingBreath = {{
         head={ name="Ptero. Armet +3",},
 		hands=gear.acrohands_Br,
-		legs=gear.acrolegs_Br,
+		legs={ name="Vishap Brais +3",},
 		feet={ name="Ptero. Greaves +3",},
 		waist={ name="Glassblower's belt",},
 		neck={ name="Dgn. Collar +2",},
