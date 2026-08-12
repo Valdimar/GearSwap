@@ -21,8 +21,8 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 	send_command('bind !r gs c cycle Weapons;gs c update')
 	
-	send_command('bind !w input /equip ring2 "Warp Ring";')
-	send_command('bind !q input /equip ring2 "Dim. Ring (Dem)";')
+	send_command('bind !w input /equip ring1 "Warp Ring";')
+	send_command('bind !q input /equip ring1 "Dim. Ring (Holla)";')
 	
 	select_default_macro_book()
 end
@@ -92,7 +92,7 @@ function init_gear_sets()
 		ring2={ name="Alabaster Ring"},
 	}
 	sets.precast.JA['Restraint'] = {
-		hands={ name="Boii Mufflers +2"},
+		hands={ name="Boii Mufflers +3"},
 	}
 	sets.precast.JA['Blood Rage'] = {
 		body={ name="Boii Lorica +2"},
@@ -168,9 +168,11 @@ function init_gear_sets()
 	}
 	
 	-- Ranged Sets
-	sets.precast.RA = {}
+	sets.precast.RA = {
+		range={ name="Antatail",},
+	}
 	sets.midcast.RA = {
-		range={ name="Halakaala",},
+		range={ name="Antatail",},
 	}
 
 	-- Weaponskill sets
@@ -209,7 +211,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Sulev. Leggings +2",},
@@ -224,7 +226,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Sulev. Leggings +2",},
@@ -239,7 +241,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Sulev. Leggings +2",},
@@ -254,7 +256,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Sulev. Leggings +2",},
@@ -269,7 +271,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Sulev. Leggings +2",},
@@ -284,12 +286,12 @@ function init_gear_sets()
 		sub={ name="Utu Grip",},
 		ammo={ name="Knobkierrie",},
 		head={ name="Agoge Mask +3",},
-		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads +1",},
 		ring1={ name="Niqmaddu Ring",},
 		ring2={ name="Regal Ring",},
 		ear1={ name="Moonshade Earring",},
@@ -302,7 +304,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Pumm. Calligae +2",},
@@ -318,7 +320,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Pumm. Calligae +2",},
@@ -334,7 +336,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Pumm. Calligae +2",},
@@ -350,7 +352,7 @@ function init_gear_sets()
 		head={ name="Agoge Mask +3",},
 		neck={ name="War. Beads +1",},
 		body={ name="Pumm. Lorica +2",},
-		hands={ name="Sulev. Gauntlets +2",},
+		hands={ name="Boii Mufflers +3"},
 		waist={ name="Sailfi Belt +1",},
 		legs=gear.odyssean_wsd_legs,
 		feet={ name="Pumm. Calligae +2",},
@@ -366,6 +368,12 @@ function init_gear_sets()
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+	sets.precast.WS['Fell Cleave'] = set_combine(sets.precast.WS, {})
+    sets.precast.WS['Fell Cleave'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Fell Cleave'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Fell Cleave'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Fell Cleave'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
     sets.precast.WS['Ruinator'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Ruinator'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -421,15 +429,15 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		ammo={ name="Staunch Tathlum +1",},
-		head={ name="Nyame Helm",},
+		head={ name="Sakpata's Helm",},
 		body={ name="Hjarrandi Breast.",},
-		hands={ name="Nyame Gauntlets",},
-		legs={ name="Nyame Flanchard",},
-		feet={ name="Nyame Sollerets",},
+		hands={ name="Sakpata's Gauntlets",},
+		legs={ name="Sakpata's Cuisses",},
+		feet={ name="Sakpata's Leggings",},
 		neck={ name="Warder's Charm +1",},
 		waist={ name="Flume Belt +1"},
 		ring1={ name="Murky Ring",},
-		ring2={ name="Moonbeam Ring",},
+		ring2={ name="Shneddick Ring"},
 		ear1={ name="Alabaster Earring"},
 		ear2={ name="Odnowa Earring +1",},
 		back==gear.Cichol_DEXDA,
@@ -533,79 +541,80 @@ function init_gear_sets()
 	sets.engaged = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Boii Mask +2",},
-		body={ name="Agoge Lorica +3",},
+		body={ name="Boii Lorica +2",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Pumm. Calligae +2",},
-		neck={ name="War. Beads. +1",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
 		ring1={ name="Niqmaddu Ring",},
-		ring2={ name="Petrov Ring",},
+		ring2={ name="Moonbeam Ring",},
 		back=gear.Cichol_DEXDA,
 	}
     sets.engaged.SomeAcc = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Boii Mask +2",},
-		body={ name="Sakpata's Plate",},
+		body={ name="Boii Lorica +2",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
-		feet={ name="Sakpata's Leggings",},
-		neck={ name="War. Beads. +1",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
 		ring1={ name="Niqmaddu Ring",},
-		ring2={ name="Petrov Ring",},
+		ring2={ name="Moonbeam Ring",},
 		back=gear.Cichol_DEXDA,
 	}
 	sets.engaged.Acc = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Boii Mask +2",},
-		body={ name="Sakpata's Plate",},
+		body={ name="Boii Lorica +2",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
-		feet={ name="Sakpata's Leggings",},
-		neck={ name="War. Beads. +1",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
 		ring1={ name="Niqmaddu Ring",},
-		ring2={ name="Petrov Ring",},
+		ring2={ name="Moonbeam Ring",},
 		back=gear.Cichol_DEXDA,
 	}
     sets.engaged.FullAcc = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Boii Mask +2",},
-		body={ name="Sakpata's Plate",},
+		body={ name="Boii Lorica +2",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
-		feet={ name="Sakpata's Leggings",},
-		neck={ name="War. Beads. +1",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
 		ring1={ name="Niqmaddu Ring",},
-		ring2={ name="Petrov Ring",},
+		ring2={ name="Moonbeam Ring",},
 		back=gear.Cichol_DEXDA,
 	}
     sets.engaged.Fodder = {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Boii Mask +2",},
-		body={ name="Sakpata's Plate",},
+		body={ name="Boii Lorica +2",},
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
-		feet={ name="Sakpata's Leggings",},
-		neck={ name="War. Beads. +1",},
+		feet={ name="Pumm. Calligae +2",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Ioskeha Belt +1",},
 		ear1={ name="Telos Earring",},
 		ear2={ name="Brutal Earring",},
 		ring1={ name="Niqmaddu Ring",},
-		ring2={ name="Petrov Ring",},
+		ring2={ name="Moonbeam Ring",},
 		back=gear.Cichol_DEXDA,
 	}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
+		ammo={ name="Per. Lucky Egg",},
 		hands=gear.valorous_TH_hands,
 		legs=gear.valorous_TH_legs,
 		feet=gear.valorous_TH_feet,
@@ -618,13 +627,13 @@ function init_gear_sets()
 		hands={ name="Sakpata's Gauntlets",},
 		legs={ name="Pumm. Cuisses +3",},
 		feet={ name="Pumm. Calligae +2",},
-		neck={ name="War. Beads. +1",},
+		neck={ name="War. Beads +1",},
 		waist={ name="Reiki Yotai",},
 		ear1={ name="Eabani Earring",},
-		ear2={ name="Brutal Earring",},
+		ear2={ name="Boii Earring",},
 		ring1={ name="Niqmaddu Ring",},
 		ring2={ name="Petrov Ring",},
-		back=gear.Cichol_DEXDA,	
+		back=gear.Cichol_DEXDA,
 	}
 
 --[[
@@ -1726,4 +1735,17 @@ function select_default_macro_book()
         set_macro_page(2, 1)
     end
 		send_command('@wait 5;input /lockstyleset 4')
+end
+
+function job_get_war_tracker_data()
+
+    return {
+        Berserk = 30,
+        Warcry = 20,
+        Defender = 20,
+        Aggressor = 20,
+        Retaliation = 20,
+        ["Blood Rage"] = 10,
+    }
+
 end
