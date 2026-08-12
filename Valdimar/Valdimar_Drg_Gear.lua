@@ -7,9 +7,9 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
-	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
+	state.IdleMode:options('Normal')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
-	state.Weapons:options('Trishula','Shining','Naegling')
+	state.Weapons:options('Trishula','Shining','Naegling','GaeBuide')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
     select_default_macro_book()
@@ -24,8 +24,8 @@ function user_job_setup()
 	send_command('bind @f7 gs c toggle AutoJumpMode')
 	send_command('bind @` gs c cycle SkillchainMode')
 	
-	send_command('bind !w input /equip ring2 "Warp Ring";')
-	send_command('bind !q input /equip ring2 "Dim. Ring (Dem)";')
+	send_command('bind !w input /equip ring1 "Warp Ring";')
+	send_command('bind !q input /equip ring1 "Dim. Ring (Holla)";')
 end
 
 -- Define sets and vars used by this job file.
@@ -45,11 +45,11 @@ function init_gear_sets()
 		head={ name="Hjarrandi Helm",},
 		neck={ name="Anu Torque",},
 		body={ name="Vishap Mail +3",},
-		hands={ name="Vishap F. G. +2",},
+		hands={ name="Vishap F. G. +3",},
 		waist={ name="Ioskeha Belt",},
 		legs={ name="Ptero. Brais +3",},
 		feet={ name="Ostro Greaves",},
-		ring1={ name="Petrov Ring",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
@@ -60,11 +60,11 @@ function init_gear_sets()
 		head={ name="Hjarrandi Helm",},
 		neck={ name="Anu Torque",},
 		body={ name="Vishap Mail +3",},
-		hands={ name="Vishap F. G. +2",},
+		hands={ name="Vishap F. G. +3",},
 		waist={ name="Ioskeha Belt",},
 		legs={ name="Ptero. Brais +3",},
 		feet={ name="Ostro Greaves",},
-		ring1={ name="Petrov Ring",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
@@ -75,11 +75,11 @@ function init_gear_sets()
 		head={ name="Hjarrandi Helm",},
 		neck={ name="Anu Torque",},
 		body={ name="Vishap Mail +3",},
-		hands={ name="Vishap F. G. +2",},
+		hands={ name="Vishap F. G. +3",},
 		waist={ name="Ioskeha Belt",},
 		legs={ name="Ptero. Brais +3",},
 		feet={ name="Ostro Greaves",},
-		ring1={ name="Petrov Ring",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
@@ -90,11 +90,11 @@ function init_gear_sets()
 		head={ name="Hjarrandi Helm",},
 		neck={ name="Anu Torque",},
 		body={ name="Vishap Mail +3",},
-		hands={ name="Vishap F. G. +2",},
+		hands={ name="Vishap F. G. +3",},
 		waist={ name="Ioskeha Belt",},
 		legs={ name="Ptero. Brais +3",},
 		feet={ name="Ostro Greaves",},
-		ring1={ name="Petrov Ring",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
@@ -276,163 +276,345 @@ function init_gear_sets()
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Ptero. Armet +3",},
+		head={ name="Peltast's Mezail +3",},
 		body={ name="Gleti's Cuirass",},
-		hands={ name="Sulev. Gauntlets +2",},
-		legs=={ name="Nyame Flanchard",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Gleti's Breeches",},
 		feet={ name="Nyame Sollerets",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
-		ear1={ name="Moonshade Earring",},
+		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
 		ring1={ name="Regal Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRDA, })
+		back=gear.brig_STRDA, 
+		} )
 	sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Ptero. Armet +3",},
+		head={ name="Peltast's Mezail +3",},
 		body={ name="Gleti's Cuirass",},
-		hands={ name="Sulev. Gauntlets +2",},
-		legs=={ name="Nyame Flanchard",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Gleti's Breeches",},
 		feet={ name="Nyame Sollerets",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
-		ear1={ name="Moonshade Earring",},
+		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
 		ring1={ name="Regal Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRDA, })
+		back=gear.brig_STRDA, 
+		} )
 	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Coiste Bodhar",},
-		head={ name="Ptero. Armet +3",},
+		head={ name="Peltast's Mezail +3",},
 		body={ name="Gleti's Cuirass",},
-		hands={ name="Sulev. Gauntlets +2",},
-		legs=={ name="Nyame Flanchard",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Gleti's Breeches",},
 		feet={ name="Nyame Sollerets",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
-		ear1={ name="Moonshade Earring",},
+		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
 		ring1={ name="Regal Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRDA, })
-		
+		back=gear.brig_STRDA, 
+		} )
 	sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS, {
 		ammo={ name="Knobkierrie",},
-		head={ name="Ptero. Armet +3",},
-		body={ name="Nyame Mail"},
-		hands={ name="Ptero. Fin. G. +3",},
-		legs=={ name="Vishap Brais +3",},
-		feet={ name="Nyame Sollerets",},
+		head={ name="Peltast's Mezail +3",},
+		body=gear.valorous_wsd_body,
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
-		ear2={ name="Sherida Earring",},
-		ring1={ name="Regal Ring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRWSD, })
+		back=gear.brig_STRWSD, 
+		} )
 	sets.precast.WS["Camlann's Torment"].SomeAcc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Knobkierrie",},
-		head={ name="Ptero. Armet +3",},
-		body={ name="Nyame Mail"},
-		hands={ name="Ptero. Fin. G. +3",},
-		legs=={ name="Vishap Brais +3",},
-		feet={ name="Nyame Sollerets",},
+		head={ name="Peltast's Mezail +3",},
+		body=gear.valorous_wsd_body,
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
-		ear2={ name="Sherida Earring",},
-		ring1={ name="Regal Ring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRWSD, })
+		back=gear.brig_STRWSD, 
+		} )
 	sets.precast.WS["Camlann's Torment"].Acc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Knobkierrie",},
-		head={ name="Ptero. Armet +3",},
-		body={ name="Nyame Mail"},
-		hands={ name="Ptero. Fin. G. +3",},
-		legs=={ name="Vishap Brais +3",},
-		feet={ name="Nyame Sollerets",},
+		head={ name="Peltast's Mezail +3",},
+		body=gear.valorous_wsd_body,
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
-		ear2={ name="Sherida Earring",},
-		ring1={ name="Regal Ring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Ephramad's Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_STRWSD, })
-	
+		back=gear.brig_STRWSD, 
+		} )
 	sets.precast.WS['Drakesbane'] = set_combine(sets.precast.WS, {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Blistering Sallet +1",},
 		body={ name="Hjarrandi Breast.",},
 		hands={ name="Flam. Manopolas +2",},
-		legs=={ name="Pelt. Cuissots +1",},
-		feet={ name="Sulev. Leggings +2",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
-		ear2={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
 		ring1={ name="Begrudging Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.Brig_STRDA, })
+		back=gear.Brig_STRcrit, 
+		} )
 	sets.precast.WS['Drakesbane'].SomeAcc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Blistering Sallet +1",},
 		body={ name="Hjarrandi Breast.",},
 		hands={ name="Flam. Manopolas +2",},
-		legs=={ name="Pelt. Cuissots +1",},
-		feet={ name="Sulev. Leggings +2",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
-		ear2={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
 		ring1={ name="Begrudging Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.Brig_STRDA, })
+		back=gear.Brig_STRcrit, 
+		} )
 	sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {
 		ammo={ name="Coiste Bodhar",},
 		head={ name="Blistering Sallet +1",},
 		body={ name="Hjarrandi Breast.",},
 		hands={ name="Flam. Manopolas +2",},
-		legs=={ name="Pelt. Cuissots +1",},
-		feet={ name="Sulev. Leggings +2",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Begrudging Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.Brig_STRcrit, 
+		} )
+		
+	sets.precast.WS['Leg Sweep'] = set_combine(sets.precast.WS, {
+		ammo={ name="Pemphredo Tathlum",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Null Loop",},
+		waist={ name="Incarnation Sash",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.Brig_STRcrit, 
+		} )
+	
+	sets.precast.WS['Leg Sweep'].SomeAcc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Pemphredo Tathlum",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Null Loop",},
+		waist={ name="Incarnation Sash",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.Brig_STRcrit, 
+		} )
+	
+	sets.precast.WS['Leg Sweep'].Acc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Pemphredo Tathlum",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Null Loop",},
+		waist={ name="Incarnation Sash",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.Brig_STRcrit, 
+		} )
+	
+	
+	sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Sailfi Belt +1",},
 		ear1={ name="Thrud Earring",},
 		ear2={ name="Moonshade Earring",},
-		ring1={ name="Begrudging Ring",},
+		ring1={ name="Regal Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.Brig_STRDA, })
+		back=gear.brig_STRWSD, 
+		} )
+	
+	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Moonshade Earring",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+	
+	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Moonshade Earring",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+	
+	
+	sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Moonshade Earring",},
+		ring1={ name="Ephramad's Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+	
+	sets.precast.WS['Sonic Thrust'].SomeAcc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Pelt. Cuissots +3",},
+		feet=gear.valorous_wsd_feet,
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Moonshade Earring",},
+		ring1={ name="Ephramad's Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+	
+	sets.precast.WS['Sonic Thrust'].Acc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Nyame Mail",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Thrud Earring",},
+		ear2={ name="Moonshade Earring",},
+		ring1={ name="Ephramad's Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+	
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Peltast's Plackart +3",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
 		
-	sets.precast.WS['Leg Sweep'] = set_combine(sets.precast.WS, { })
-	
-	sets.precast.WS['Leg Sweep'].SomeAcc = set_combine(sets.precast.WS.Acc, { })
-	
-	sets.precast.WS['Leg Sweep'].Acc = set_combine(sets.precast.WS.Acc, { })
-	
-	
-	sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, { })
-	
-	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, { })
-	
-	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, { })
-	
-	
-	sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS, { })
-	
-	sets.precast.WS['Sonic Thrust'].SomeAcc = set_combine(sets.precast.WS.Acc, { })
-	
-	sets.precast.WS['Sonic Thrust'].Acc = set_combine(sets.precast.WS.Acc, { })
+	sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Peltast's Plackart +3",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+		
+	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
+		ammo={ name="Knobkierrie",},
+		head={ name="Peltast's Mezail +3",},
+		body={ name="Peltast's Plackart +3",},
+		hands={ name="Ptero. Fin. G. +4",},
+		legs={ name="Vishap Brais +3",},
+		feet={ name="Sulev. Leggings +2",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Sailfi Belt +1",},
+		ear1={ name="Moonshade Earring",},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_STRWSD, 
+		} )
+		
 	-- Sets to return to when not performing an action.
 	
 	-- Resting sets
 	sets.resting = {
-		ammo={ name="Staunch Tathlum +1 +1",},
+		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Hjarrandi helm",},
 		body={ name="Hjarrandi Breast.",},		
 		hands={ name="Arke Manopolas",},
 		legs={ name="Arke Cosciales",},
 		feet={ name="Arke Gambieras",},
-		neck={ name="Loricate Torque +1",},
+		neck={ name="Dgn. Collar +2",},
 		waist={ name="Flume Belt +1",},
 		ear1={ name="Alabaster Earring"},
 		ear2={ name="Enmerkar Earring",},
@@ -447,18 +629,18 @@ function init_gear_sets()
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Hjarrandi helm",},
 		body={ name="Hjarrandi Breast.",},
-		hands={ name="Nyame Gauntlets",},
-		legs=gear.CarmineLegs_HP,
-		feet={ name="Nyame Sollerets",},
+		hands={ name="Gleti's Gauntlets",},
+		legs={ name="Gleti's Breeches",},
+		feet={ name="Gleti's Boots",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Flume Belt +1",},
 		ear1={ name="Alabaster Earring"},
-		ear2={ name="Odnowa Earring +1",},
+		ear2={ name="Eabani Earring"},
 		ring1={ name="Murky Ring",},
-		ring2={ name="Shneddick Ring",},
+		ring2={ name="Shneddick Ring"},
 		back=gear.brig_DEXDA,
 	}
-		
+
 	sets.idle.Refresh = {
 		body={ name="Chozor. Coslete",},
 	}
@@ -473,9 +655,12 @@ function init_gear_sets()
 		body="Twilight Mail"
 	} )
 	
+	sets.idle.PetRegen = set_combine(sets.idle, {
+	})
+	
 	-- Defense sets
 	sets.defense.PDT = {
-		ammo={ name="Staunch Tathlum +1 +1",},
+		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Hjarrandi helm",},
 		body={ name="Hjarrandi Breast.",},
 		hands={ name="Nyame Gauntlets",},
@@ -496,7 +681,7 @@ function init_gear_sets()
 	)
 
 	sets.defense.MDT = {
-		ammo="Staunch Tathlum +1 +1 +1",
+		ammo="Staunch Tathlum +1",
 		head="Loess Barbuta +1",
 		neck="Warder's Charm +1",
 		ear1={ name="Genmei Earring",},
@@ -514,7 +699,7 @@ function init_gear_sets()
 	})
 		
 	sets.defense.MEVA = {
-		ammo="Staunch Tathlum +1 +1 +1",
+		ammo="Staunch Tathlum +1",
 		head="Loess Barbuta +1",
 		neck="Warder's Charm +1",
 		body="Tartarus Platemail",
@@ -530,7 +715,7 @@ function init_gear_sets()
 	}
 
 	sets.Kiting = {
-		legs="Carmine Cuisses +1"
+		ring2={ name="Shneddick Ring"},
 	}
 	sets.Reraise = {
 		head="Twilight Helm",
@@ -551,11 +736,12 @@ function init_gear_sets()
 		body="Twilight Mail"
 	}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
+		ammo={ "Per. Lucky Egg",},
 		hands=gear.valorous_TH_hands,
 		legs=gear.valorous_TH_legs,
 		feet=gear.valorous_TH_feet,
 		waist="Chaac Belt",
-	})
+	} )
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {
@@ -570,11 +756,16 @@ function init_gear_sets()
 	sets.weapons.Naegling = {
 		main={ name="Naegling"},
 	}
+	sets.weapons.GaeBuide = {
+		main={ name="Gae Buide"},
+	}
 	
 	-- Ranged Sets
-	sets.precast.RA = {}
+	sets.precast.RA = {
+		range={ name="Halakaala",},
+	}
 	sets.midcast.RA = {
-		range={ name="Antitail",},
+		range={ name="Halakaala",},
 	}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
@@ -612,85 +803,72 @@ function init_gear_sets()
 	-- Normal melee group
 
 	sets.engaged = {
-		sub={ name="Utu Grip",},
-		ammo={ name="Volupsa Tathlum",},
+		ammo={ name="Coiste Bodhar",},
 		head={ name="Hjarrandi Helm",},
-		body={ name="Pelt. Plackart +2",},
-		hands={ name="Pel. Vambraces +2",},
-		legs={ name="Ptero. Brais +3",},
-		feet={ name="Pelt. Schyn. +2",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Ioskeha belt +1",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
-		ring1={ name="Murky Ring",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Niqmaddu Ring",},
 		back=gear.brig_DEXDA,		
 	}
     sets.engaged.SomeAcc = {
-		sub={ name="Utu Grip",},
-		ammo={ name="Volupsa Tathlum",},
+		ammo={ name="Coiste Bodhar",},
 		head={ name="Hjarrandi Helm",},
-		body={ name="Pelt. Plackart +2",},
-		hands={ name="Pel. Vambraces +2",},
-		legs={ name="Ptero. Brais +3",},
-		feet={ name="Pelt. Schyn. +2",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Ioskeha belt +1",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
-		ring1={ name="Murky Ring",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_DEXDA,
+		back=gear.brig_DEXDA,		
 	}
 	sets.engaged.Acc = {
-		sub={ name="Utu Grip",},
-		ammo={ name="Volupsa Tathlum",},
+		ammo={ name="Coiste Bodhar",},
 		head={ name="Hjarrandi Helm",},
-		body={ name="Pelt. Plackart +2",},
-		hands={ name="Pel. Vambraces +2",},
-		legs={ name="Ptero. Brais +3",},
-		feet={ name="Pelt. Schyn. +2",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Ioskeha belt +1",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
-		ring1={ name="Defending Ring",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_DEXDA,
+		back=gear.brig_DEXDA,		
 	}
     sets.engaged.FullAcc = {
-		sub={ name="Utu Grip",},
-		ammo={ name="Volupsa Tathlum",},
+		ammo={ name="Coiste Bodhar",},
 		head={ name="Hjarrandi Helm",},
-		body={ name="Pelt. Plackart +2",},
-		hands={ name="Pel. Vambraces +2",},
-		legs={ name="Ptero. Brais +3",},
-		feet={ name="Pelt. Schyn. +2",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
 		neck={ name="Dgn. Collar +2",},
 		waist={ name="Ioskeha belt +1",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
-		ring1={ name="Defending Ring",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_DEXDA,
+		back=gear.brig_DEXDA,		
 	}
-	sets.engaged.TH = {
-		sub={ name="Utu Grip",},
-		ammo={ name="Aurgelmir Orb",},
-		head={ name="Hjarrandi Helm",},
-		body={ name="Pelt. Plackart +2",},
+	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
+		ammo={ name="Per. Lucky Egg",},
 		hands=gear.valorous_TH_hands,
-		legs={ name="Ptero. Brais +3",},
-		feet=gear.valorous_TH_feet,	
-		neck={ name="Dgn. Collar +2",},
-		waist={ name="Ioskeha belt +1",},
-		ear1={ name="Sroda Earring",},
-		ear2={ name="Sherida Earring",},
-		ring1={ name="Defending Ring",},
-		ring2={ name="Niqmaddu Ring",},
-		back=gear.brig_DEXDA,
-	}
+		legs=gear.valorous_TH_legs,
+		feet=gear.valorous_TH_feet,
+		waist="Chaac Belt",
+	})
 
     sets.engaged.AM = {}
     sets.engaged.AM.SomeAcc = {}
@@ -698,11 +876,67 @@ function init_gear_sets()
     sets.engaged.AM.FullAcc = {}
     -- sets.engaged.AM.Fodder = {}
 	
-    sets.engaged.PDT = {}
-    sets.engaged.SomeAcc.PDT = {}
-	sets.engaged.Acc.PDT = {}
-    sets.engaged.FullAcc.PDT = {}
-    -- sets.engaged.Fodder.PDT = {}
+    sets.engaged.PDT = {
+		ammo={ name="Coiste Bodhar",},
+		head={ name="Hjarrandi Helm",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Ioskeha belt +1",},
+		ear1={ name="Sroda Earring",},
+		ear2={ name="Sherida Earring",},
+		ring1={ name="Moonbeam Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_DEXDA,		
+	}
+    sets.engaged.SomeAcc.PDT = {
+		ammo={ name="Coiste Bodhar",},
+		head={ name="Hjarrandi Helm",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Ioskeha belt +1",},
+		ear1={ name="Sroda Earring",},
+		ear2={ name="Sherida Earring",},
+		ring1={ name="Moonbeam Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_DEXDA,		
+	}
+	sets.engaged.Acc.PDT = {
+		ammo={ name="Coiste Bodhar",},
+		head={ name="Hjarrandi Helm",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Ioskeha belt +1",},
+		ear1={ name="Sroda Earring",},
+		ear2={ name="Sherida Earring",},
+		ring1={ name="Moonbeam Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_DEXDA,		
+	}
+    sets.engaged.FullAcc.PDT = {
+		ammo={ name="Coiste Bodhar",},
+		head={ name="Hjarrandi Helm",},
+		body={ name="Pelt. Plackart +3",},
+		hands={ name="Pel. Vambraces +3",},
+		legs={ name="Grace Haidate",},
+		feet={ name="Pelt. Schyn. +3",},
+		neck={ name="Dgn. Collar +2",},
+		waist={ name="Ioskeha belt +1",},
+		ear1={ name="Sroda Earring",},
+		ear2={ name="Sherida Earring",},
+		ring1={ name="Moonbeam Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		back=gear.brig_DEXDA,		
+	}
+    --sets.engaged.Fodder.PDT = {}
 	
     sets.engaged.AM.PDT = {}
     sets.engaged.AM.SomeAcc.PDT = {}
