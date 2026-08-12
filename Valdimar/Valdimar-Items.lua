@@ -35,7 +35,7 @@ gear.herculean_phalanx_hands = {name="Herculean Gloves", augments={'DEX+14','"Co
 gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+7','INT+6','"Treasure Hunter"+2','Accuracy+17 Attack+17','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
 gear.herculean_refresh_hands = {name="Herculean Gloves",augments={'Enmity+2','Pet: "Store TP"+4','"Refresh"+1',}}
 gear.herculean_FCPhal_hands = {name="Herculean Gloves", augments={'"Fast Cast"+3','Accuracy+22','Phalanx +4','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
-gear.herculean_waltz_body = {name="Herculean Vest",augments={'Attack+26','"Waltz" potency +11%','AGI+4','Accuracy+5',}}
+gear.herculean_phalanx_body = {name="Herculean Vest", augments={'Accuracy+12','Sklchn.dmg.+3%','Phalanx +5','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
 gear.herculean_wsd_body = {name="Herculean Vest",augments={'Accuracy+11','Weapon skill damage +5%','DEX+7',}}
 gear.herculean_TA_body = { name="Herculean Vest", augments={'"Triple Atk."+3','STR+6','Accuracy+12',}}
 gear.herculean_dt_legs = {name="Herculean Trousers",augments={'Attack+15','Damage taken-4%','STR+3','Accuracy+12',}}
@@ -72,6 +72,10 @@ gear.CarmineLegs_HP = { name="Carmine Cuisses +1", augments={'HP+80','STR+12','I
 -- Carmine Feet
 gear.CarmineFeet_FC = { name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}}
 
+--- Taeon Gear
+gear.Taeon_phalanx_legs = { name="Taeon Tights", augments={'DEF+19','"Fast Cast"+4','Phalanx +1',}}
+gear.Taeon_phalanx_feet = { name="Taeon Boots", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Spell interruption rate down -9%','Phalanx +1',}}
+
 -- Acro Hands
 gear.acrohands_Br = {name="Acro Gauntlets", augments={'Pet: Breath+2',}}
 -- Acro Legs
@@ -92,7 +96,7 @@ gear.valorous_wsd_head = {name="Valorous Mask",augments={'Accuracy+10 Attack+10'
 gear.valorous_pet_head = {name="Valorous Mask",augments={'Pet: "Mag.Atk.Bns."+25','Pet: "Regen"+3','Pet: INT+14','Pet: Accuracy+2 Pet: Rng. Acc.+2',}}
 -- Valor Body
 gear.valorous_pet_body = {name="Valorous Mail",augments={'Pet: "Mag.Atk.Bns."+26','"Dbl.Atk."+3','Pet: INT+8','Pet: Accuracy+13 Pet: Rng. Acc.+13','Pet: Attack+12 Pet: Rng.Atk.+12',}}
-gear.valorous_wsd_body = {name="Valorous Mail",augments={'Accuracy+25 Attack+25','Weapon skill damage +4%','Accuracy+10','Attack+12',}}
+gear.valorous_wsd_body = {name="Valorous Mail",augments={'Weapon skill damage +1%','Mag. Acc.+30','Quadruple Attack +3','Accuracy+18 Attack+18',}}
 gear.valorous_stp_body = {name="Valorous Mail",augments={'Accuracy+25','Attack+26','"Store TP"+7','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
 gear.valorous_pet_regen_body = {name="Valorous Mail", augments={'Pet: Accuracy+13 Pet: Rng. Acc.+13','Pet: "Regen"+4','Pet: STR+6','Pet: Attack+13 Pet: Rng.Atk.+13',}}
 -- Valor Hands
@@ -109,11 +113,11 @@ gear.valorous_TH_feet = {name="Valorous Greaves", augments={'Magic burst dmg.+10
 
 -- Dragoon Capes
 gear.Brig_STRSTP = { name="Brigantia's mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Store TP"+10',}}
-gear.Brig_DEXSTP = {}
+gear.Brig_DEXSTP = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}}
 gear.Brig_STRcrit = {name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Crit.hit rate+10',}}
 gear.brig_STRDA = { name="Brigantia's mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
 gear.brig_DEXDA = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}
-gear.brig_STRWSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','"Regen"+5',}}
+gear.brig_STRWSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 gear.updraft_Breath = { name="Updraft Mantle", augments={'STR+3','Pet: Breath+9','Pet: Damage taken -3%',}}
 
 -- Rune Fencer Capes
