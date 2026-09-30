@@ -62,7 +62,7 @@ function init_gear_sets()
 		 
     sets.Enmity.SIRD = {
 		ammo={ name="Staunch Tathlum +1"},
-        head={ name="Fu. Bandeau +2"},
+        head={ name="Fu. Bandeau +4"},
 		neck={ name="Unmoving Collar +1"},
 		body={ name="Emet Harness +1"},
 		hands={ hands="Kurys Gloves"},
@@ -78,7 +78,7 @@ function init_gear_sets()
 		
     sets.Enmity.SIRDT = {
 		ammo={ name="Staunch Tathlum +1"},
-        head={ name="Fu. Bandeau +2"},
+        head={ name="Fu. Bandeau +4"},
 		neck={ name="Unmoving Collar +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -95,7 +95,7 @@ function init_gear_sets()
 
     sets.Enmity.DT = {
 		ammo={ name="Staunch Tathlum +1"},
-        head={ name="Fu. Bandeau +1"},
+        head={ name="Fu. Bandeau +4"},
 		neck={ name="Unmoving Collar +1"},
 		ear1={ name="Tuisto Earring"},
 		ear2={ name="Odnowa Earring +1"},
@@ -158,7 +158,7 @@ function init_gear_sets()
     sets.precast.JA['Vivacious Pulse'] = set_combine(sets.Enmity, {
 		head={ name="Erilaz Galea +3"},
 		legs={ name="Rune. Trousers +3"},
-		waist={ name="Bishop Sash"},
+		waist={ name="Bishop's Sash"},
 		back={ name="Altruistic Cape"},
 		ear1={ name="Saxnot Earring"}, }
 	)
@@ -166,7 +166,7 @@ function init_gear_sets()
     sets.precast.JA['One For All'] = set_combine(sets.enmity, {
 		ammo={ name="Staunch Tathlum +1"},
 		head={ name="Runeist Bandeau +4"},
-		body={ name="Runeist Coat +3"},
+		body={ name="Runeist Coat +4"},
 		hands={ name="Regal Gauntlets"},
 		legs={ name="Futh. Trousers +3"},
 		feet={ name="Turms Leggings +1"},
@@ -265,7 +265,7 @@ function init_gear_sets()
 	-- Fast cast sets for spells
     sets.precast.FC = {
 		ammo={ name="Impatiens"},
-		head={ name="Rune. Bandeau +3"},
+		head={ name="Rune. Bandeau +4"},
 		neck={ name="Futhark Torque +2"},
 		body={ name="Erilaz Surcoat +3"},
 		hands=gear.herculean_FCPhal_hands,
@@ -281,7 +281,7 @@ function init_gear_sets()
 			
 	sets.precast.FC.DT = {
 		ammo={ name="Impatiens"},
-        head={ name="Rune. Bandeau +3"},
+        head={ name="Rune. Bandeau +4"},
 		neck={ name="Loricate Torque +1"},
         body={ name="Runeist Coat +4"},
 		hands={ name="Leyline Gloves"},
@@ -299,6 +299,20 @@ function init_gear_sets()
 		waist={ name="Siegel Sash"},
 		legs={ name="Futhark Trousers +4"},
 	} )
+	sets.precast.FC['Phalanx'] = set_combine(sets.precast.FC, {
+		ammo={ name="Staunch Tathlum +1"},
+		head={ name="Fu. Bandeau +4"},
+		body=gear.herculean_phalanx_body,
+		hands=gear.herculean_FCPhal_hands,
+		legs=gear.Taeon_phalanx_legs,
+		feet=gear.Taeon_phalanx_feet,
+		waist={ name="Olympus Sash",},
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Odnowa Earring +1"},
+		ring1={ name="Moonbeam Ring"},
+		ring2={ name="Murky Ring"},
+		back=gear.Ogma_CASTEVADE, 
+	} 	)
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {
 		neck={ name="Magoraga Beads"},
 	} )
@@ -594,7 +608,7 @@ function init_gear_sets()
 		hands=gear.herculean_FCPhal_hands,
 		legs=gear.Taeon_phalanx_legs,
 		feet=gear.Taeon_phalanx_feet,
-		waist={ name="Olympus Sash"},
+		waist={ name="Plat. Mog. Belt",},
 		ear1={ name="Alabaster Earring"},
 		ear2={ name="Odnowa Earring +1"},
 		ring1={ name="Moonbeam Ring"},
@@ -602,7 +616,7 @@ function init_gear_sets()
 		back=gear.Ogma_CASTEVADE, 
 	} 	)
     sets.midcast['Regen'] = set_combine(sets.midcast['Enhancing Magic'],{
-		neck={ name="Sanctity Necklace"},
+		neck={ name="Sacro Gorget"},
 		head={ name="Rune. Bandeau +4"},
 		hands={ name="Turms Mittens +1"},
 		waist={ name="Sroda Belt"},
@@ -862,7 +876,7 @@ function init_gear_sets()
         head={ name="Erilaz Galea +3"},
 		neck={ name="Warder's Charm +1"},
 		body={ name="Runeist Coat +4",},
-		hands={ name="Erilaz Gauntlets +1"},
+		hands={ name="Erilaz Gauntlets +3"},
 		waist={ name="Engraved Belt"},
 		legs={ name="Rune. Trousers +3"},
 		feet={ name="Erilaz Greaves +3"},
@@ -877,7 +891,7 @@ function init_gear_sets()
         head={ name="Erilaz Galea +3"},
 		neck={ name="Warder's Charm +1"},
 		body={ name="Runeist Coat +4",},
-		hands={ name="Erilaz Gauntlets +1"},
+		hands={ name="Erilaz Gauntlets +3"},
 		waist={ name="Engraved Belt"},
 		legs={ name="Rune. Trousers +3"},
 		feet={ name="Erilaz Greaves +3"},
@@ -892,7 +906,7 @@ function init_gear_sets()
         head={ name="Erilaz Galea +3"},
 		neck={ name="Warder's Charm +1"},
 		body={ name="Runeist Coat +4",},
-		hands={ name="Erilaz Gauntlets +1"},
+		hands={ name="Erilaz Gauntlets +3"},
 		waist={ name="Engraved Belt"},
 		legs={ name="Rune. Trousers +3"},
 		feet={ name="Erilaz Greaves +3"},
@@ -907,7 +921,7 @@ function init_gear_sets()
         head={ name="Erilaz Galea +3"},
 		neck={ name="Unmoving Collar +1"},
 		body={ name="Runeist Coat +4",},
-		hands={ name="Erilaz Gauntlets +1"},
+		hands={ name="Erilaz Gauntlets +3"},
 		waist={ name="Engraved Belt"},
 		legs={ name="Rune. Trousers +3"},
 		feet={ name="Erilaz Greaves +3"},
@@ -922,7 +936,7 @@ function init_gear_sets()
         head={ name="Erilaz Galea +3"},
 		neck={ name="Unmoving Collar +1"},
 		body={ name="Runeist Coat +4",},
-		hands={ name="Erilaz Gauntlets +1"},
+		hands={ name="Erilaz Gauntlets +3"},
 		waist={ name="Engraved Belt"},
 		legs={ name="Rune. Trousers +3"},
 		feet={ name="Erilaz Greaves +3"},
@@ -958,7 +972,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
     sets.engaged.SomeAcc = {
 		sub={ name="Refined Grip +1"},
@@ -974,7 +988,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.Acc = {
 		sub={ name="Utu Grip"},
@@ -990,7 +1004,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.HighAcc = {
 		sub={ name="Utu Grip"},
@@ -1006,7 +1020,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.FullAcc = {
 		sub={ name="Utu Grip"},
@@ -1022,7 +1036,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
     sets.engaged.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1038,7 +1052,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
     sets.engaged.SomeAcc.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1054,7 +1068,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.Acc.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1070,7 +1084,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.HighAcc.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1086,7 +1100,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 	sets.engaged.FullAcc.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1102,7 +1116,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 
 	sets.engaged.SomeAcc.Damage = sets.engaged.Damage
@@ -1124,7 +1138,7 @@ function init_gear_sets()
 		ear2={ name="Eabani Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXFITE,
+		back=gear.Ogma_DEXDA,
 	}
 
 	sets.engaged.SomeAcc.Tank = sets.engaged.Tank
