@@ -18,7 +18,7 @@ function user_job_setup()
 
 	-- Set up Jug Pet cycling and keybind Ctrl+F7
 	-- INPUT PREFERRED JUG PETS HERE
-	state.JugMode = M{['description']='Jug Mode', 'ScissorlegXerin','BlackbeardRandy','AttentiveIbuki','DroopyDortwin','WarlikePatrick','AcuexFamiliar','SweetCaroline'}
+	state.JugMode = M{['description']='Jug Mode', 'ScissorlegXerin','BouncingBertha','BlackbeardRandy','AttentiveIbuki','DroopyDortwin','WarlikePatrick','AcuexFamiliar','SweetCaroline'}
 	send_command('bind ^f7 gs c cycle JugMode')
 
 	-- Set up Monster Correlation Modes and keybind Alt+F7
@@ -69,7 +69,7 @@ function init_gear_sets()
 	}
 	sets.precast.JA.Spur = {
 		back="Artio's Mantle",
-		feet="Nukumi Ocreae +1"
+		feet="Nukumi Ocreae +2"
 	}
 	sets.SpurAxe = {
 		main="Skullrender"
@@ -96,9 +96,15 @@ function init_gear_sets()
 		feet="Ankusa Gaiters +3"
 	}
 
-	sets.precast.JA.Reward.Theta = set_combine(sets.precast.JA.Reward, {ammo="Pet Food Theta"} )
-	sets.precast.JA.Reward.Zeta = set_combine(sets.precast.JA.Reward, {ammo="Pet Food Zeta"} )
-	sets.precast.JA.Reward.Eta = set_combine(sets.precast.JA.Reward, {ammo="Pet Food Eta"} )
+	sets.precast.JA.Reward.Theta = set_combine(sets.precast.JA.Reward, {
+		ammo="Pet Food Theta",
+	} )
+	sets.precast.JA.Reward.Zeta = set_combine(sets.precast.JA.Reward, {
+		ammo="Pet Food Zeta",
+	} )
+	sets.precast.JA.Reward.Eta = set_combine(sets.precast.JA.Reward, {
+		ammo="Pet Food Eta",
+	} )
 	
 	sets.RewardAxe = {}
 	sets.RewardAxesDW = {}
@@ -334,7 +340,9 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.
 	sets.precast.WS['Ruinator'] = set_combine(sets.precast.WS, {} )
-	sets.precast.WS['Ruinator'].Mekira = set_combine(sets.precast.WS['Ruinator'], {head="Gavialis Helm"} )
+	sets.precast.WS['Ruinator'].Mekira = set_combine(sets.precast.WS['Ruinator'], {
+		head="Gavialis Helm",
+	} )
 	sets.precast.WS['Ruinator'].WSMidAcc = set_combine(sets.precast.WS.WSMidAcc, {} )
 	sets.precast.WS['Ruinator'].WSHighAcc = set_combine(sets.precast.WS.WSHighAcc, {} )
 
@@ -345,17 +353,17 @@ function init_gear_sets()
 	sets.precast.WS['Decimation'] = {
 		ammo={ name="Coiste Bodhar",},
 		head="Gleti's Mask",
-		neck="Baetyl Pendant",
-		ear1="Crematio Earring",
-		ear2="Friomisi Earring",
+		neck="Bst. collar +1",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		ring1="Shiva Ring +1",
-		ring2="Shiva Ring +1",
 		back="Toro Cape",
 		waist="Fotia Belt",
 		legs="Gleti's Breeches",
 		feet={ name="Lustra. Leggings +1", augments={'Attack+20','STR+8','"Dbl.Atk."+3',}},
+		ring1="Gere Ring",
+		ring2={ name="Niqmaddu Ring",},
+		ear1={ name="Sroda Earring",},
+		ear2={ name="Sherida Earring",},
 	}
 	sets.precast.WS['Decimation'].WSMidAcc = set_combine(sets.precast.WSMidAcc, {} 
 	)
@@ -385,104 +393,162 @@ function init_gear_sets()
 	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
 
 				-- PET SIC & READY MOVES
-	sets.midcast.Pet.WS = {main=gear.PHYKumbha1,sub=gear.PHYKumbha2,ammo="Voluspa Tathlum",
-		head="Totemic Helm +3",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
-		body="Taeon Tabard",hands="Nukumi Manoplas +1",ring1="Varar Ring +1",ring2="C. Palug Ring",
-		back="Artio's Mantle",waist="Incarnation Sash",legs=gear.valorous_physical_pet_legs,feet="Totemic Gaiters +1"}
+	sets.midcast.Pet.WS = {
+		main=gear.PHYKumbha1,
+		sub=gear.PHYKumbha2,
+		ammo="Voluspa Tathlum",
+		head="Totemic Helm +3",
+		neck="Shulmanu Collar",
+		ear1="Enmerkar Earring",
+		ear2="Domesticator's Earring",
+		body="Taeon Tabard",
+		hands="Nukumi Manoplas +2",
+		ring1="Varar Ring +1",
+		ring2="C. Palug Ring",
+		back="Artio's Mantle",
+		waist="Incarnation Sash",
+		legs=gear.valorous_physical_pet_legs,
+		feet="Totemic Gaiters +1"
+	}
 
-	sets.midcast.Pet.SomeAcc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub=gear.PHYKumbha2,hands="Regimen Mittens"} )
-	sets.midcast.Pet.Acc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub="Hunahpu",head="Totemic Helm +3",hands="Regimen Mittens"} )
-	sets.midcast.Pet.FullAcc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub="Hunahpu",head="Totemic Helm +3",hands="Regimen Mittens"} )
+	sets.midcast.Pet.SomeAcc = set_combine(sets.midcast.Pet.WS, {
+		main="Kerehcatl",
+		sub=gear.PHYKumbha2,
+		hands="Regimen Mittens",
+	} )
+	sets.midcast.Pet.Acc = set_combine(sets.midcast.Pet.WS, {
+		main="Kerehcatl",
+		sub="Hunahpu",
+		head="Totemic Helm +3",
+		hands="Regimen Mittens",
+	} )
+	sets.midcast.Pet.FullAcc = set_combine(sets.midcast.Pet.WS, {
+		main="Kerehcatl",
+		sub="Hunahpu",
+		head="Totemic Helm +3",
+		hands="Regimen Mittens",
+	} )
 				
-	sets.midcast.Pet.MagicReady = {main=gear.MABKumbha,sub=gear.PDTMABKumbha,ammo="Voluspa Tathlum",
-		head=gear.valorous_pet_head,neck="Adad Amulet",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
-		body=gear.valorous_pet_body,hands="Nukumi Manoplas +1",ring1="Varar Ring +1",ring2="Varar Ring +1",
-		back="Artio's Mantle",waist="Incarnation Sash",legs=gear.valorous_magical_pet_legs,feet=gear.valorous_magical_pet_feet}
+	sets.midcast.Pet.MagicReady = {
+		main=gear.MABKumbha,
+		sub=gear.PDTMABKumbha,
+		ammo="Voluspa Tathlum",
+		head=gear.valorous_pet_head,
+		neck="Adad Amulet",
+		ear1="Enmerkar Earring",
+		ear2="Domesticator's Earring",
+		body=gear.valorous_pet_body,
+		hands="Nukumi Manoplas +2",
+		ring1="Varar Ring +1",
+		ring2="Varar Ring +1",
+		back="Artio's Mantle",
+		waist="Incarnation Sash",
+		legs=gear.valorous_magical_pet_legs,
+		feet=gear.valorous_magical_pet_feet
+	}
 		
-	sets.midcast.Pet.DebuffReady = {main=gear.MABKumbha,sub=gear.PDTMABKumbha,ammo="Voluspa Tathlum",
-		head=gear.valorous_pet_head,neck="Adad Amulet",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
-		body=gear.valorous_pet_body,hands="Nukumi Manoplas +1",ring1="Varar Ring +1",ring2="Varar Ring +1",
-		back="Artio's Mantle",waist="Incarnation Sash",legs=gear.valorous_magical_pet_legs,feet=gear.valorous_magical_pet_feet}
+	sets.midcast.Pet.DebuffReady = {
+		main=gear.MABKumbha,
+		sub=gear.PDTMABKumbha,
+		ammo="Voluspa Tathlum",
+		head=gear.valorous_pet_head,
+		neck="Adad Amulet",
+		ear1="Enmerkar Earring",
+		ear2="Domesticator's Earring",
+		body=gear.valorous_pet_body,
+		hands="Nukumi Manoplas +2",
+		ring1="Varar Ring +1",
+		ring2="Varar Ring +1",
+		back="Artio's Mantle",
+		waist="Incarnation Sash",
+		legs=gear.valorous_magical_pet_legs,
+		feet=gear.valorous_magical_pet_feet
+	}
 
-	sets.midcast.Pet.ReadyRecast = {legs="Desultor Tassets"}
-	sets.midcast.Pet.ReadyRecastDW = {sub="Charmer's Merlin",legs="Desultor Tassets"}
+	sets.midcast.Pet.ReadyRecast = {
+		legs="Desultor Tassets",
+	}
+	sets.midcast.Pet.ReadyRecastDW = {
+		sub="Charmer's Merlin",
+		legs="Desultor Tassets",
+	}
 	sets.midcast.Pet.Neutral = {head="Totemic Helm +3"}
-	sets.midcast.Pet.Favorable = {head="Nukumi Cabasset"}
-	sets.midcast.Pet.TPBonus = {hands="Nukumi Manoplas +1"}
+	sets.midcast.Pet.Favorable = {head="Nukumi Cabasset +2"}
+	sets.midcast.Pet.TPBonus = {hands="Nukumi Manoplas +2"}
 
 	-- RESTING
 	sets.resting = {}
 
 	sets.idle = {
 		ammo={ name="Staunch Tathlum +1",},
-		head="Gleti's Mask",
-		neck={ name="Loricate Torque +1"},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		waist={ name="Flume Belt +1"},
-		legs="Gleti's Breeches",
-		feet="Gleti's Boots",
+		head={ name="Gleti's Mask",},
+		neck={ name="Warder's Charm +1",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		waist={ name="Flume Belt +1",},
+		legs={ name="Gleti's Breeches",},
+		feet={ name="Gleti's Boots",},
 		ring1={ name="Murky Ring",},
-		ring2={ name="Shneddick Ring"},
-		ear1={ name="Eabani Earring"},
+		ring2={ name="Shneddick Ring",},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		back="Null Shawl",
+		back={ name="Null Shawl",},
 	}
 
 	sets.idle.Refresh = {
-		main="Izizoeksi",
+		main={ name="Izizoeksi",},
 		sub=gear.PDTMABKumbha,
 		ammo={ name="Staunch Tathlum +1",},
-		head="Jumalik Helm",
-		neck="Loricate Torque +1",
-		hands="Macabre Gaunt. +1",
-		body="Jumalik Mail",
-		back="Solemnity Cape",
-		waist={ name="Flume Belt +1"},
-		legs="Gleti's Breeches",
-		feet="Gleti's Boots",
+		head={ name="Jumalik Helm",},
+		neck={ name="Loricate Torque +1",},
+		hands={ name="Macabre Gaunt. +1",},
+		body={ name="Jumalik Mail",},
+		back={ name="Solemnity Cape",},
+		waist={ name="Flume Belt +1",},
+		legs={ name="Gleti's Breeches",},
+		feet={ name="Gleti's Boots",},
 		ring1={ name="Murky Ring",},
-		ring2={ name="Shneddick Ring"},
-		ear1="Sanare Earring",
-		ear2="Genmei Earring",
+		ring2={ name="Shneddick Ring",},
+		ear1={ name="Sanare Earring",},
+		ear2={ name="Genmei Earring",},
 	}
 		
 	sets.idle.Reraise = set_combine(sets.idle, {
-		head="Twilight Helm",
-		body="Twilight Mail"} 
+		head={ name="Twilight Helm",
+		body={ name="Twilight Mail"} 
 	)
 
 	sets.idle.Pet = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
-		neck={ name="Loricate Torque +1"},
+		head={ name="Gleti's Mask",},
 		body=gear.valorous_pet_regen_body,
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
-		waist="Isa Belt",
+		hands={ name="Gleti's Gauntlets",},
 		legs=gear.valorous_pet_regen_legs,
-		feet="Gleti's Boots",
+		feet={ name="Gleti's Boots",},
+		neck={ name="Warder's Charm +1",},
+		waist={ name="Isa Belt",},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Petrov Ring",},
 		ear1={ name="Eabani Earring"},
 		ear2={ name="Sherida Earring",},
+		back={ name="Artio's Mantle",},
 	}
 
 	sets.idle.Pet.Engaged = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
-		neck="Shulmanu Collar",
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
+		head={ name="Gleti's Mask",},
+		neck={ name="Shulmanu Collar",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Gleti's Breeches",},
+		feet={ name="Gleti's Boots",},
+		waist={ name="Sailfi Belt +1",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
 		ear1={ name="Eabani Earring"},
 		ear2={ name="Sherida Earring",},
-		legs="Gleti's Breeches",
-		back="Null Mantle",
+		back={ name="Null Mantle",},
 	}
 
 	sets.idle.Pet.Engaged.DW = {
@@ -516,7 +582,7 @@ function init_gear_sets()
 		back="Moonlight Cape",
 		waist="Flume Belt +1",
 		legs="Tali'ah Sera. +2",
-		feet="Nukumi Ocreae +1"
+		feet="Nukumi Ocreae +2",
 	}
 
 	sets.defense.PetPDT = {
@@ -532,7 +598,7 @@ function init_gear_sets()
 		back="Pastoralist's Mantle",
 		waist="Isa Belt",
 		legs="Tali'ah Sera. +2",
-		feet="Ankusa Gaiters +3"
+		feet="Ankusa Gaiters +3",
 	}
 
 	sets.defense.PetMDT = {
@@ -548,13 +614,13 @@ function init_gear_sets()
 		back="Pastoralist's Mantle",
 		waist="Isa Belt",
 		legs="Tali'ah Sera. +2",
-		feet="Ankusa Gaiters +3"
+		feet="Ankusa Gaiters +3",
 	}
 
 	sets.defense.PetMEVA = sets.defense.PetMDT
 
 	sets.defense.PKiller = set_combine(sets.defense.PDT, {
-		body="Nukumi Gausape +1"} 
+		body="Nukumi Gausape +2"} 
 		)
 	sets.defense.Reraise = set_combine(sets.defense.PDT, {
 		head="Twilight Helm",
@@ -574,7 +640,7 @@ function init_gear_sets()
 		back="Engulfer Cape +1",
 		waist="Engraved Belt",
 		legs="Tali'ah Sera. +2",
-		feet="Nukumi Ocreae +1"
+		feet="Nukumi Ocreae +2"
 	}
 
 	sets.defense.MEVA = {
@@ -592,7 +658,9 @@ function init_gear_sets()
 		feet="Valorous Greaves"
 	}
 
-	sets.defense.MKiller = set_combine(sets.defense.MDT, {body="Nukumi Gausape +1"} )
+	sets.defense.MKiller = set_combine(sets.defense.MDT, {
+		body="Nukumi Gausape +2",
+	} )
 
 	sets.Kiting = {
 		feet="Skd. Jambeaux +1"
@@ -695,7 +763,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -712,7 +781,7 @@ function init_gear_sets()
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		back="Artio's Mantle",
-		waist="Isa Belt",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -729,7 +798,7 @@ function init_gear_sets()
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		back="Artio's Mantle",
-		waist="Isa Belt",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -745,7 +814,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -761,7 +831,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -778,7 +849,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -794,7 +866,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -810,7 +883,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -826,7 +900,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -842,7 +917,8 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring",},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",waist="Isa Belt",
+		back="Artio's Mantle",
+		waist={ name="Sailfi Belt +1",},
 		legs="Tali'ah Sera. +2",
 		feet="Gleti's Boots",
 		ring1={ name="Moonbeam Ring"},
@@ -896,10 +972,12 @@ function init_gear_sets()
 	sets.engaged.DW.PetTank.FullAcc = set_combine(sets.engaged.DW.FullAcc, {} )
 	sets.engaged.DW.PetTank.Fodder = set_combine(sets.engaged.DW.Fodder, {} )
 
-	sets.buff['Killer Instinct'] = {body="Nukumi Gausape +1"}
+	sets.buff['Killer Instinct'] = {
+		body="Nukumi Gausape +2",
+	}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {} )
 	sets.buff.Sleep = {
-		head="Frenzy Sallet"
+		head="Frenzy Sallet",
 	}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
 		hands=gear.valorous_TH_hands,
