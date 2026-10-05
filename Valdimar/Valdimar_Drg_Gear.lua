@@ -108,7 +108,10 @@ function init_gear_sets()
 		head={ name="Vishap Armet +4",},
 		hands={ name="Pel. Vambraces +3",},
 		feet={ name="Ptero. Greaves +4",},
+		neck={ name="Dgn. Collar +2",},
 		ear1={ name="Pratik Earring"},
+		ear2={ name="Pel. Earring +1",},
+		ring1={ name="Dreki Ring",},
 	}
 	sets.precast.JA['Ancient Circle'] = {
 		legs={ name="Vishap Brais +3",},
@@ -124,15 +127,19 @@ function init_gear_sets()
 	}
 	sets.precast.JA['Steady Wing'] = {
 		hands={ name="Despair Fin. Gaunt.",},
-		neck={ name="Dgn. Collar +2",},
 		legs={ name="Vishap Brais +3",},
 		feet={ name="Ptero. Greaves +4",},
+		neck={ name="Dgn. Collar +2",},
+		ring1={ name="Dreki Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		ear1={ name="Telos Earring",},
+		ear2={ name="Pel. Earring +1",},
 		back=gear.Updraft_Breath,
 	}
 	   sets.precast.JA['Angon'] = {
 	    ammo={ name="Angon",},
 		ear2={ name="Dragoon's Earring",},
-	    hands={ name="Ptero. Fin, G. +3",},
+	    hands={ name="Ptero. Fin, G. +4",},
 	}
 	
 	-- Breath sets
@@ -665,7 +672,7 @@ function init_gear_sets()
 		sub={ name="Utu Grip",},
 		ammo={ name="Staunch Tathlum +1",},
 		head={ name="Peltast's Mezail +3",},
-		body={ name="Nyame Mail",},
+		body={ name="Sacro Breastplate",},
 		hands={ name="Gleti's Gauntlets",},
 		legs={ name="Gleti's Breeches",},
 		feet={ name="Gleti's Boots",},
@@ -675,7 +682,7 @@ function init_gear_sets()
 		ear2={ name="Eabani Earring"},
 		ring1={ name="Murky Ring",},
 		ring2={ name="Shneddick Ring"},
-		back=gear.brig_DEXDA,
+		back=gear.brig_VITREGEN,
 	}
 
 	sets.idle.Refresh = {
@@ -693,6 +700,7 @@ function init_gear_sets()
 	} )
 	
 	sets.idle.PetRegen = set_combine(sets.idle, {
+		back=gear.brig_VITREGEN
 	})
 	
 	-- Defense sets
@@ -738,20 +746,19 @@ function init_gear_sets()
 		body="Twilight Mail",
 	})
 		
-	sets.defense.MEVA = {
+	sets.defense.MEVA = {		
 		ammo="Staunch Tathlum +1",
-		head="Loess Barbuta +1",
-		neck="Warder's Charm +1",
-		body="Tartarus Platemail",
-		hands="Sulev. Gauntlets +2",
+		head={ name="Nyame Helm",},
+		body={ name="Nyame Mail",},
+		hands={ name="Nyame Gauntlets",},
+		legs={ name="Nyame Flanchard",},
+		feet={ name="Nyame Sollerets",},
+		neck={ name="Warder's Charm +1",},
 		waist={ name="Plat. Mog. Belt",},
-		legs="Arke Cosc. +1",
-		feet="Amm Greaves",
-		ring1={ name="Moonbeam Ring",},
-		ring2={ name="Murky Ring",},
-		ear1="Genmei Earring",
-		ear2="Ethereal Earring",
-		back="Moonlight Cape",
+		ring1={ name="Petrov Ring",},
+		ring2={ name="Niqmaddu Ring",},
+		ear1={ name="Odnowa Earring +1"},
+		ear2={ name="Etiolation Earring",},
 	}
 
 	sets.Kiting = {
