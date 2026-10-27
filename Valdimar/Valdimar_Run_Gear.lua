@@ -27,7 +27,7 @@ function user_job_setup()
 	send_command('bind ^\\\\ input /ma "Phalanx" <me>')
 	send_command('bind @\\\\ input /ma "Aquaveil" <me>')
 	send_command('bind !\\\\ input /ma "Crusade" <me>')
-	send_command('bind ^!t input /ma "Regen IV" <st>')
+	send_command('bind !t input /ma "Regen IV" <st>')
 	send_command('bind @t input /ma "Refresh" <st>')
 	send_command('bind ^!\\\\ input /ma "Temper" <me>')
 		
@@ -948,7 +948,7 @@ function init_gear_sets()
 	}	
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {
-		ear1={ name="Brutal Earring"},
+		ear1={ name="Telos Earring"},
 	}
 	sets.AccMaxTP = {
 		ear1={ name="Telos Earring"},
@@ -961,7 +961,7 @@ function init_gear_sets()
     sets.engaged = {
 		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -972,12 +972,12 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
     sets.engaged.SomeAcc = {
 		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -988,12 +988,12 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
 	sets.engaged.Acc = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -1004,12 +1004,12 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
 	sets.engaged.HighAcc = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -1020,12 +1020,12 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
 	sets.engaged.FullAcc = {
 		sub={ name="Utu Grip"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -1036,7 +1036,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
     sets.engaged.DTLite = {
 		sub={ name="Utu Grip"},
@@ -1116,7 +1116,7 @@ function init_gear_sets()
 		ear2={ name="Sherida Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
 
 	sets.engaged.SomeAcc.Damage = sets.engaged.Damage
@@ -1127,7 +1127,7 @@ function init_gear_sets()
     sets.engaged.Tank = {
 		sub={ name="Refined Grip +1"},
 		ammo={ name="Staunch Tathlum +1"},
-		head={ name="Turms Cap +1"},
+		head={ name="Prestige Crown"},
 		body={ name="Runeist Coat +4",},
 		hands={ name="Turms Mittens +1"},
 		legs={ name="Eri. Leg Guards +3"},
@@ -1138,7 +1138,7 @@ function init_gear_sets()
 		ear2={ name="Eabani Earring"},
 		ring1={ name="Moonbeam Ring"},
 		ring2={ name="Murky Ring"},
-		back=gear.Ogma_DEXDA,
+		back=gear.Ogma_PARRY,
 	}
 
 	sets.engaged.SomeAcc.Tank = sets.engaged.Tank
