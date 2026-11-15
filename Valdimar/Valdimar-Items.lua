@@ -4,7 +4,10 @@ sets.Sheltered = {ring2="Sheltered Ring"}
 sets.Capacity = {back="Mecisto. Mantle",augments={'Cap. Point+46%','VIT+2','DEF+1'}}
 
 sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
-sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}
+sets.TreasureHunter = {
+		ammo={ "Per. Lucky Egg",},
+		waist="Chaac Belt",
+}
 
 sets.precast.Item['Hallowed Water'] = {}
 sets.precast.Item['Holy Water'] = {}
@@ -61,6 +64,7 @@ gear.merlinic_treasure_feet = {name="Merlinic Crackows",augments={'Accuracy+5','
 gear.merlinic_refresh_feet = {name="Merlinic Crackows",augments={'Pet: DEX+7','Pet: Mag. Acc.+7','"Refresh"+2','Accuracy+20 Attack+20',}}
 gear.merlinic_occult_feet = {name="Merlinic Crackows",augments={'"Occult Acumen"+11','INT+8','Mag. Acc.+4',}}
 
+gear.odyssean_wsd_body = { name="Odyss. Chestplate", augments={'Weapon skill damage +1%','STR+9','Accuracy+6','Attack+15',}}
 gear.odyssean_wsd_hands = {name="Odyssean Gauntlets",augments={'Accuracy+26','Weapon skill damage +4%','STR+6','Attack+14',}}
 gear.odyssean_wsd_legs = { name="Odyssean Cuisses", augments={'Attack+17','Weapon skill damage +4%','VIT+10','Accuracy+1',}}
 gear.odyssean_fc_legs = {name="Odyssean Cuisses",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+12',}}
@@ -76,6 +80,8 @@ gear.CarmineFeet_FC = { name="Carmine Greaves +1", augments={'HP+80','MP+80','Ph
 gear.Taeon_phalanx_legs = { name="Taeon Tights", augments={'DEF+19','"Fast Cast"+4','Phalanx +1',}}
 gear.Taeon_phalanx_feet = { name="Taeon Boots", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Spell interruption rate down -9%','Phalanx +1',}}
 
+-- Acro Body
+gear.acrobody_Br = {name="Acro Surcoat", augments={'Pet: "Mag.Atk.Bns."+22','Pet: Breath+6','Pet: Damage taken -4%',}}
 -- Acro Hands
 gear.acrohands_Br = {name="Acro Gauntlets", augments={'Pet: Breath+2',}}
 -- Acro Legs
@@ -94,6 +100,7 @@ gear.DigAxe_DoubleAtT = { name="Digirbalag", augments={'"Dbl.Atk."+2','Pet: Accu
 gear.valorous_magical_wsd_head = {name="Valorous Mask",augments={'"Mag.Atk.Bns."+17','Weapon skill damage +5%','Attack+10',}}
 gear.valorous_wsd_head = {name="Valorous Mask",augments={'Accuracy+10 Attack+10','Weapon skill damage +4%','STR+4','Attack+10',}}
 gear.valorous_pet_head = {name="Valorous Mask",augments={'Pet: "Mag.Atk.Bns."+25','Pet: "Regen"+3','Pet: INT+14','Pet: Accuracy+2 Pet: Rng. Acc.+2',}}
+gear.valorous_TH_head = {name="Valorous Mask", augments={'STR+3','DEX+8','"Treasure Hunter"+1','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
 -- Valor Body
 gear.valorous_pet_body = {name="Valorous Mail",augments={'Pet: "Mag.Atk.Bns."+26','"Dbl.Atk."+3','Pet: INT+8','Pet: Accuracy+13 Pet: Rng. Acc.+13','Pet: Attack+12 Pet: Rng.Atk.+12',}}
 gear.valorous_wsd_body = {name="Valorous Mail",augments={'Weapon skill damage +1%','Mag. Acc.+30','Quadruple Attack +3','Accuracy+18 Attack+18',}}
@@ -118,15 +125,16 @@ gear.Brig_STRcrit = {name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 
 gear.brig_STRDA = { name="Brigantia's mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
 gear.brig_DEXDA = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}
 gear.brig_STRWSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+gear.brig_VITREGEN = { name="Brigantia's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Pet: "Regen"+10','Pet: "Regen"+5',}}
 gear.updraft_Breath = { name="Updraft Mantle", augments={'STR+3','Pet: Breath+9','Pet: Damage taken -3%',}}
 
 -- Rune Fencer Capes
-gear.Ogma_Emnity = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
+gear.Ogma_Enmity = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 gear.Ogma_EM_SIRD = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+10','Enmity+10','Spell interruption rate down-10%',}}
 gear.Ogma_STRDA = { name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Spell interruption rate down-10%',}}
 gear.Ogma_STRWSD = { name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+5','Weapon skill damage +10%',}}
 gear.Ogma_DEXWSD = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
-gear.Ogma_DEXFITE = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+gear.Ogma_DEXDA = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 gear.Ogma_CASTEVADE = { name="Ogma's cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}}
 gear.Ogma_PARRY = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}}
 gear.Evasion_Cape = { name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+1',}}

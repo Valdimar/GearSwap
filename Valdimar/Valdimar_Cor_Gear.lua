@@ -99,9 +99,19 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        head="Carmine Mask +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body=gear.herculean_waltz_body,hands=gear.herculean_waltz_hands,ring1="Defending Ring",ring2="Valseur's Ring",
-        back="Moonlight Cape",waist="Flume Belt +1",legs="Dashing Subligar",feet=gear.herculean_waltz_feet}
+        head="Carmine Mask +1",
+		neck="Loricate Torque +1",
+		ear1="Etiolation Earring",
+		ear2="Sanare Earring",
+        body=gear.herculean_waltz_body,
+		hands=gear.herculean_waltz_hands,
+		ring1="Defending Ring",
+		ring2="Valseur's Ring",
+        back="Moonlight Cape",
+		waist="Flume Belt +1",
+		legs="Dashing Subligar",
+		feet=gear.herculean_waltz_feet
+	}
 		
 	sets.Self_Waltz = {head="Mummu Bonnet +2",body="Passion Jacket",ring1="Asklepian Ring"}
         
@@ -119,10 +129,16 @@ function init_gear_sets()
 	
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {ear2="Mendi. Earring"})
 
-    sets.precast.RA = {ammo=gear.RAbullet,
+    sets.precast.RA = {
+		ammo=gear.RAbullet,
         head="Chass. Tricorne +1",
-        body="Laksa. Frac +3",hands="Carmine Fin. Ga. +1",
-        back=gear.snapshot_jse_back,waist="Impulse Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +2"}
+        body="Laksa. Frac +3",
+		hands="Carmine Fin. Ga. +1",
+        back=gear.snapshot_jse_back,
+		waist="Impulse Belt",
+		legs="Laksa. Trews +3",
+		feet="Meg. Jam. +2"
+	}
 		
 	sets.precast.RA.Flurry = set_combine(sets.precast.RA, {})
 	sets.precast.RA.Flurry2 = set_combine(sets.precast.RA, {})
@@ -233,17 +249,41 @@ function init_gear_sets()
     sets.midcast.Utsusemi = sets.midcast.FastRecast
 
     -- Ranged gear
-    sets.midcast.RA = {ammo=gear.RAbullet,
-        head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",
-        body="Nisroch Jerkin",hands="Carmine Fin. Ga. +1",ring1="Rajas Ring",ring2="Ilabrat Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Adhemar Kecks",feet="Meg. Jam. +2"}
+    sets.midcast.RA = {
+		ammo=gear.RAbullet,
+        head="Meghanada Visor +2",
+		neck="Iskur Gorget",
+		ear1="Enervating Earring",
+		ear2="Telos Earring",
+        body="Nisroch Jerkin",
+		hands="Carmine Fin. Ga. +1",
+		ring1="Rajas Ring",
+		ring2="Ilabrat Ring",
+        back=gear.tp_ranger_jse_back,
+		waist="Yemaya Belt",
+		legs="Adhemar Kecks",
+		feet="Meg. Jam. +2"
+	}
 
-    sets.midcast.RA.Acc = {ammo=gear.RAbullet,
-        head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",
-        body="Laksa. Frac +3",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Dingir Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +2"}
+    sets.midcast.RA.Acc = {
+		ammo=gear.RAbullet,
+        head="Meghanada Visor +2",
+		neck="Iskur Gorget",
+		ear1="Enervating Earring",
+		ear2="Telos Earring",
+        body="Laksa. Frac +3",
+		hands="Meg. Gloves +2",
+		ring1="Regal Ring",
+		ring2="Dingir Ring",
+        back=gear.tp_ranger_jse_back,
+		waist="Yemaya Belt",
+		legs="Laksa. Trews +3",
+		feet="Meg. Jam. +2"
+	}
 		
-	sets.buff['Triple Shot'] = {body="Chasseur's Frac +1"}
+	sets.buff['Triple Shot'] = {
+		body="Chasseur's Frac +1",
+	}
     
     -- Sets to return to when not performing an action.
 	

@@ -72,7 +72,7 @@ send_command('bind ^@!backspace gs c buffup') --Buffup macro because buffs are l
 send_command('bind ^r gs c weapons Default') --Requips weapons and gear.
 send_command('bind ^z gs c toggle Capacity') --Keeps capacity mantle on and uses capacity rings.
 send_command('bind ^y gs c toggle AutoCleanupMode') --Uses certain items and tries to clean up inventory.
-send_command('bind ^t gs c cycle treasuremode') --Toggles hitting htings with your treasure hunter set.
+send_command('bind ^t gs c cycle treasuremode') --Toggles hitting things with your treasure hunter set.
 send_command('bind !t input /target <bt>') --Targets the battle target.
 send_command('bind ^o fillmode') --Lets you see through walls.
 send_command('bind @m gs c mount Omega')
@@ -92,3 +92,39 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Otomi Gloves','Kaabnax Hat','Kaabnax Trousers','Ejekamal Mask','Ejekamal Boots','Quiahuiz Helm','Quiahuiz Trousers',
 'Uk\'uxkaj Cap'}
 ]]
+
+-------------------------------------------------------------------------------------------------------------------
+-- Wardrobe 5-8 fixes: Sel-Utility only searches inventory + wardrobes 1-4 for items.
+-- An item stored in wardrobes 5-8 made main_weapon_is_one_handed() crash with
+-- "attempt to index field '?'" on any weaponskill set that uses Moonshade Earring.
+-- Lives in the character globals file so it applies to every job.
+-------------------------------------------------------------------------------------------------------------------
+local all_equip_bags = {'inventory','wardrobe','wardrobe2','wardrobe3','wardrobe4','wardrobe5','wardrobe6','wardrobe7','wardrobe8'}
+
+function item_name_to_id(name)
+	if not name or name == 'empty' then return nil end
+	for _, bag in ipairs(all_equip_bags) do
+		local item = player[bag] and player[bag][name]
+		if item then return item.id end
+	end
+	return nil
+end
+
+function item_available(item)
+	for _, bag in ipairs(all_equip_bags) do
+		if player[bag] and player[bag][item] then return true end
+	end
+	return false
+end
+
+function main_weapon_is_one_handed()
+	local item = get_item_table(player.equipment.main)
+	return (item and data.skills.one_handed_combat:contains(item.skill)) or false
+end
+
+function is_fencing()
+	if not main_weapon_is_one_handed() then return false end
+	if player.equipment.sub == 'empty' then return true end
+	local sub = get_item_table(player.equipment.sub)
+	return (sub and sub.shield_size) and true or false
+end

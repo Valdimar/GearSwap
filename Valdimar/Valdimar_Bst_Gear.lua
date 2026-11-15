@@ -53,57 +53,80 @@ end
 -- BST gearsets
 function init_gear_sets()
 	-- PRECAST SETS
+	
+	sets.AF {
+		head={ name="Totemic Helm +3",},
+		body={ name="Tot. Jackcoat +3",},
+		hands={ name="Totemic Gloves +3",},
+		legs={ name="Tot. Trousers +3",},
+		feet={ name="Tot. Gaiters +3",},
+	}
+	sets.Relic {
+		head={ name="Ankusa Helm +3",},
+		body={ name="An. Jackcoat +3",},
+		hands={ name="Ankusa Gloves +3",},
+		legs={ name="Ankusa Trousers +3",},
+		feet={ name="Ankusa Gaiters +3",},
+	}
+	sets.Empy {
+		head={ name="Nuk. Cabasset +2",},
+		body={ name="Nukumi Gausape +2",},
+		hands={ name="Nukumi Manoplas +2",},
+		legs={ name="Nukumi Quijotes +2",},
+		feet={ name="Nukumi Ocreae +2",},
+	}	
+
 	sets.precast.JA['Killer Instinct'] = {
-		head="Ankusa Helm +3"
+		head={ name="Ankusa Helm +3",},
 	}
 	sets.precast.JA['Bestial Loyalty'] = {
-		body="Mirke Wardecors",
-		hands="Ankusa Gloves +3"
+		body={ name="Mirke Wardecors",},
+		hands={ name="Ankusa Gloves +3",},
 	}
 	sets.precast.JA['Call Beast'] = sets.precast.JA['Bestial Loyalty']
 	sets.precast.JA.Familiar = {
-		legs="Ankusa Trousers +1"
+		legs={ name="Ankusa Trousers +3",},
 	}
 	sets.precast.JA.Tame = {
-		head="Totemic Helm +3"
+		head={ name="Totemic Helm +3",},
 	}
 	sets.precast.JA.Spur = {
-		back="Artio's Mantle",
-		feet="Nukumi Ocreae +2"
+		back={ name="Artio's Mantle",},
+		feet={ name="Nukumi Ocreae +2",},
 	}
 	sets.SpurAxe = {
-		main="Skullrender"
+		main={ name="Skullrender",},
 	}
 	sets.SpurAxesDW = {
-		main="Skullrender",
-		sub="Skullrender"
+		main={ name="Skullrender",},
+		sub={ name="Skullrender",},
 	}
 
 	sets.precast.JA['Feral Howl'] = {}
 
 	sets.precast.JA.Reward = {
-		neck="Phalaina Locket",
-		ear1="Etiolation Earring",
-		ear2="Domesticator's Earring",
-		head="Stout Bonnet",
-		body="Tot. Jackcoat +3",
-		hands="Regimen Mittens",
-		ring1="Stikini Ring +1",
-		ring2="Stikini Ring +1",
-		back="Pastoralist's Mantle",
-		waist="Klouskap Sash",
-		legs="Ankusa Trousers +1",
-		feet="Ankusa Gaiters +3"
+		neck={ name="Phalaina Locket",},
+		ear1={ name="Etiolation Earring",},
+		ear2={ name="Domesticator's Earring",},
+		head={ name="Stout Bonnet",},
+		body={ name="Tot. Jackcoat +3",},
+		hands={ name="Regimen Mittens",},
+		ring1={ name="Stikini Ring +1",},
+		ring2={ name="Stikini Ring +1",},
+		back={ name="Pastoralist's Mantle",},
+		waist={ name="Klouskap Sash",},
+		legs={ name="Ankusa Trousers +3",},
+		feet={ name="Ankusa Gaiters +3",},
 	}
 
 	sets.precast.JA.Reward.Theta = set_combine(sets.precast.JA.Reward, {
-		ammo="Pet Food Theta",
+		ammo={ name="Pet Food Theta",},
 	} )
 	sets.precast.JA.Reward.Zeta = set_combine(sets.precast.JA.Reward, {
-		ammo="Pet Food Zeta",
+		ammo={ name="Pet Food Zeta",},
 	} )
 	sets.precast.JA.Reward.Eta = set_combine(sets.precast.JA.Reward, {
-		ammo="Pet Food Eta",
+		ammo={ name="Pet Food Eta",},
 	} )
 	
 	sets.RewardAxe = {}
@@ -114,17 +137,17 @@ function init_gear_sets()
 	-- CURING WALTZ
 	sets.precast.Waltz = {
 		head=gear.valorous_pet_head,
-		neck="Loricate Torque +1",
-		ear1="Enmerkar Earring",
-		ear2="Handler's Earring +1",
-		body="Tot. Jackcoat +3",
-		hands="Regimen Mittens",
-		ring1="Valseur's Ring",
-		ring2="Asklepian Ring",
-		back="Moonlight Cape",
-		waist="Chaac Belt",
-		legs="Dashing Subligar",
-		feet="Valorous Greaves"
+		neck={ name="Loricate Torque +1",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Handler's Earring +1",},
+		body={ name="Tot. Jackcoat +3",},
+		hands={ name="Regimen Mittens",},
+		ring1={ name="Valseur's Ring",},
+		ring2={ name="Asklepian Ring",},
+		back={ name="Moonlight Cape",},
+		waist={ name="Chaac Belt",},
+		legs={ name="Dashing Subligar",},
+		feet={ name="Valorous Greaves",},
 	}
 
 		-- HEALING WALTZ
@@ -132,120 +155,121 @@ function init_gear_sets()
 
 		-- STEPS
 	sets.precast.Step = {
-		ammo="Voluspa Tathlum",
-		head="Gavialis Helm",
-		neck="Combatant's Torque",
-		ear1="Mache Earring +1",
-		ear2="Heartseeker Earring",
-		body="Malignance Tabard",
-		hands="Leyline Gloves",
-		ring1="Ramuh Ring +1",
-		ring2="Ramuh Ring +1",
-		back="Ground. Mantle +1",
-		waist="Olseni Belt",
-		legs="Flamma Dirs +2",
-		feet="Valorous Greaves"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Gavialis Helm",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Mache Earring +1",},
+		ear2={ name="Heartseeker Earring",},
+		body={ name="Malignance Tabard",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Ramuh Ring +1",},
+		ring2={ name="Ramuh Ring +1",},
+		back={ name="Ground. Mantle +1",},
+		waist={ name="Olseni Belt",},
+		legs={ name="Flamma Dirs +2",},
+		feet={ name="Valorous Greaves",},
 	}
 
 		-- VIOLENT FLOURISH
 	sets.precast.Flourish1 = {}
 	sets.precast.Flourish1['Violent Flourish'] = {
-		ammo="Voluspa Tathlum",
-		head="Gavialis Helm",
-		neck="Combatant's Torque",
-		ear1="Gwati Earring",
-		ear2="Digni. Earring",
-		body="Malignance Tabard",
-		hands="Leyline Gloves",
-		ring1="Ramuh Ring +1",
-		ring2="Ramuh Ring +1",
-		back="Ground. Mantle +1",
-		waist="Olseni Belt",
-		legs="Flamma Dirs +2",
-		feet="Valorous Greaves"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Gavialis Helm",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Gwati Earring",},
+		ear2={ name="Digni. Earring",},
+		body={ name="Malignance Tabard",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Ramuh Ring +1",},
+		ring2={ name="Ramuh Ring +1",},
+		back={ name="Ground. Mantle +1",},
+		waist={ name="Olseni Belt",},
+		legs={ name="Flamma Dirs +2",},
+		feet={ name="Valorous Greaves",},
 	}
 
 	sets.precast.FC = {
-		ammo="Impatiens",
-		neck="Voltsurge Torque",
-		ear1="Enchntr. Earring +1",
-		ear2="Loquac. Earring",
-		body="Jumalik Mail",
-		hands="Leyline Gloves",
-		ring1="Kishar Ring",
-		ring2="Prolix Ring"
+		ammo={ name="Impatiens",},
+		neck={ name="Voltsurge Torque",},
+		ear1={ name="Enchntr. Earring +1",},
+		ear2={ name="Loquac. Earring",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Kishar Ring",},
+		ring2={ name="Prolix Ring",},
 	}
-		sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"
+		sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {
+			neck={ name="Magoraga Beads",},
 	} )
 
 		-- MIDCAST SETS
 	sets.midcast.FastRecast = {
-		head="Gavialis Helm",
-		neck="Voltsurge Torque",
-		ear1="Enchntr. Earring +1",
-		ear2="Loquac. Earring",
-		body="Taeon Tabard",
-		hands="Leyline Gloves",
-		ring1="Defending Ring",
-		ring2="Prolix Ring",
-		back="Moonlight Cape",
-		waist="Klouskap Sash",
-		legs="Tali'ah Sera. +2",
-		feet="Tot. Gaiters +3"
+		head={ name="Gavialis Helm",},
+		neck={ name="Voltsurge Torque",},
+		ear1={ name="Enchntr. Earring +1",},
+		ear2={ name="Loquac. Earring",},
+		body={ name="Taeon Tabard",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Defending Ring",},
+		ring2={ name="Prolix Ring",},
+		back={ name="Moonlight Cape",},
+		waist={ name="Klouskap Sash",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Tot. Gaiters +3",},
 	}
 
 	sets.midcast.Utsusemi = set_combine(sets.midcast.FastRecast, {
-		back="Mujin Mantle"
+		back={ name="Mujin Mantle",},
 	} )
 
 	sets.midcast.Cure = {
-		head="Gavialis Helm",
-		neck="Phalaina Locket",
-		ear1="Enmerkar Earring",
-		ear2="Handler's Earring +1",
-		body="Jumalik Mail",
-		hands="Macabre Gaunt. +1",
-		ring1="Lebeche Ring",
-		ring2="Janniston Ring",
-		back="Pastoralist's Mantle",
-		waist="Klouskap Sash",
-		legs="Tali'ah Sera. +2",
-		feet="Tot. Gaiters +3"
+		head={ name="Gavialis Helm",},
+		neck={ name="Phalaina Locket",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Handler's Earring +1",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Macabre Gaunt. +1",},
+		ring1={ name="Lebeche Ring",},
+		ring2={ name="Janniston Ring",},
+		back={ name="Pastoralist's Mantle",},
+		waist={ name="Klouskap Sash",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Tot. Gaiters +3",},
 	}
 
 	sets.midcast.Curaga = sets.midcast.Cure
 
 	sets.Self_Healing = {
-		neck="Phalaina Locket",
-		hands="Buremte Gloves",
-		ring2="Kunaji Ring"
-		,waist="Gishdubar Sash"
+		neck={ name="Phalaina Locket",},
+		hands={ name="Buremte Gloves",},
+		ring2={ name="Kunaji Ring",},
+		waist={ name="Gishdubar Sash",},
 	}
 	sets.Cure_Received = {
-		neck="Phalaina Locket",
-		hands="Buremte Gloves",
-		ring2="Kunaji Ring",
-		waist="Gishdubar Sash"
+		neck={ name="Phalaina Locket",},
+		hands={ name="Buremte Gloves",},
+		ring2={ name="Kunaji Ring",},
+		waist={ name="Gishdubar Sash",},
 	}
 	sets.Self_Refresh = {
-		waist="Gishdubar Sash"
+		waist={ name="Gishdubar Sash",},
 	}
 
 	sets.midcast.Stoneskin = sets.midcast.FastRecast
 
 	sets.midcast.Cursna = set_combine(sets.midcast.FastRecast, {
-		neck="Debilis Medallion",
-		ring1="Haoma's Ring",
-		ring2="Menelaus's Ring"
+		neck={ name="Debilis Medallion",},
+		ring1={ name="Haoma's Ring",},
+		ring2={ name="Menelaus's Ring",},
 	} )
 
 	sets.midcast.Protect = set_combine(sets.midcast.FastRecast, {
-		ring2="Sheltered Ring"
+		ring2={ name="Sheltered Ring",},
 	} )
 	sets.midcast.Protectra = sets.midcast.Protect
 
 	sets.midcast.Shell = set_combine(sets.midcast.FastRecast, {
-		ring2="Sheltered Ring"
+		ring2={ name="Sheltered Ring",},
 	} )
 	sets.midcast.Shellra = sets.midcast.Shell
 
@@ -259,89 +283,89 @@ function init_gear_sets()
 		-- WEAPONSKILLS
 		-- Default weaponskill sets.
 	sets.precast.WS = {
-		ammo="Voluspa Tathlum",
-		head="Meghanada Visor +2",
-		neck="Combatant's Torque",
-		ear1="Brutal Earring",
-		ear2="Sherida Earring",
-		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
-		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
-		back="Bleating Mantle",
-		waist="Fotia Belt",
-		legs="Meg. Chausses +2",
-		feet="Meg. Jam. +2"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Meghanada Visor +2",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+		body={ name="Meg. Cuirie +2",},
+		hands={ name="Meg. Gloves +2",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Ilabrat Ring",},
+		back={ name="Bleating Mantle",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Meg. Chausses +2",},
+		feet={ name="Meg. Jam. +2",},
 	}
 
 	sets.precast.WS.SomeAcc = {
-		ammo="Voluspa Tathlum",
-		head="Meghanada Visor +2",
-		neck="Combatant's Torque",
-		ear1="Brutal Earring",
-		ear2="Sherida Earring",
-		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
-		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
-		back="Bleating Mantle",
-		waist="Fotia Belt",
-		legs="Meg. Chausses +2",
-		feet="Meg. Jam. +2"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Meghanada Visor +2",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+		body={ name="Meg. Cuirie +2",},
+		hands={ name="Meg. Gloves +2",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Ilabrat Ring",},
+		back={ name="Bleating Mantle",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Meg. Chausses +2",},
+		feet={ name="Meg. Jam. +2",},
 	}
 
 	sets.precast.WS.Acc = {
-		ammo="Voluspa Tathlum",
-		head="Meghanada Visor +2",
-		neck="Combatant's Torque",
-		ear1="Brutal Earring",
-		ear2="Sherida Earring",
-		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
-		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
-		back="Bleating Mantle",
-		waist="Fotia Belt",
-		legs="Meg. Chausses +2",
-		feet="Meg. Jam. +2"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Meghanada Visor +2",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+		body={ name="Meg. Cuirie +2",},
+		hands={ name="Meg. Gloves +2",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Ilabrat Ring",},
+		back={ name="Bleating Mantle",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Meg. Chausses +2",},
+		feet={ name="Meg. Jam. +2",},
 	}
 
 	sets.precast.WS.FullAcc = {
-		ammo="Voluspa Tathlum",
-		head="Meghanada Visor +2",
-		neck="Combatant's Torque",
-		ear1="Brutal Earring",
-		ear2="Sherida Earring",
-		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
-		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
-		back="Bleating Mantle",
-		waist="Fotia Belt",
-		legs="Meg. Chausses +2",
-		feet="Meg. Jam. +2"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Meghanada Visor +2",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+		body={ name="Meg. Cuirie +2",},
+		hands={ name="Meg. Gloves +2",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Ilabrat Ring",},
+		back={ name="Bleating Mantle",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Meg. Chausses +2",},
+		feet={ name="Meg. Jam. +2",},
 	}
 
 	sets.precast.WS.Fodder = {
-		ammo="Voluspa Tathlum",
-		head="Meghanada Visor +2",
-		neck="Combatant's Torque",
-		ear1="Brutal Earring",
-		ear2="Sherida Earring",
-		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
-		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
-		back="Bleating Mantle",
-		waist="Fotia Belt",
-		legs="Meg. Chausses +2",
-		feet="Meg. Jam. +2"
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Meghanada Visor +2",},
+		neck={ name="Combatant's Torque",},
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+		body={ name="Meg. Cuirie +2",},
+		hands={ name="Meg. Gloves +2",},
+		ring1={ name="Regal Ring",},
+		ring2={ name="Ilabrat Ring",},
+		back={ name="Bleating Mantle",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Meg. Chausses +2",},
+		feet={ name="Meg. Jam. +2",},
 	}
 
 	-- Specific weaponskill sets.
 	sets.precast.WS['Ruinator'] = set_combine(sets.precast.WS, {} )
 	sets.precast.WS['Ruinator'].Mekira = set_combine(sets.precast.WS['Ruinator'], {
-		head="Gavialis Helm",
+		head={ name="Gavialis Helm",},
 	} )
 	sets.precast.WS['Ruinator'].WSMidAcc = set_combine(sets.precast.WS.WSMidAcc, {} )
 	sets.precast.WS['Ruinator'].WSHighAcc = set_combine(sets.precast.WS.WSHighAcc, {} )
@@ -352,18 +376,18 @@ function init_gear_sets()
 	
 	sets.precast.WS['Decimation'] = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
-		neck="Bst. collar +1",
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Toro Cape",
-		waist="Fotia Belt",
-		legs="Gleti's Breeches",
-		feet={ name="Lustra. Leggings +1", augments={'Attack+20','STR+8','"Dbl.Atk."+3',}},
-		ring1="Gere Ring",
-		ring2={ name="Niqmaddu Ring",},
+		head={ name="Gleti's Mask",},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		legs={ name="Gleti's Breeches",},
+		feet={ name="Nukumi Ocreae +2",},
+		neck={ name="Bst. collar +1",},
+		waist={ name="Fotia Belt",},
+		ring1={ name="Gere Ring",},
+		ring2={ name="Sroda Ring",},
 		ear1={ name="Sroda Earring",},
 		ear2={ name="Sherida Earring",},
+		back={ name="Sacro Mantle",},
 	}
 	sets.precast.WS['Decimation'].WSMidAcc = set_combine(sets.precast.WSMidAcc, {} 
 	)
@@ -371,78 +395,84 @@ function init_gear_sets()
 	)
 
 	sets.precast.WS['Primal Rend'] = {
-		ammo="Dosis Tathlum",
-		head="Jumalik Helm",
-		neck="Baetyl Pendant",
-		ear1="Crematio Earring",
-		ear2="Friomisi Earring",
-		body="Jumalik Mail",
-		hands="Leyline Gloves",
-		ring1="Shiva Ring +1",
-		ring2="Shiva Ring +1",
-		back="Toro Cape",
-		waist="Fotia Belt",
-		legs="Tali'ah Sera. +2",
-		feet="Tot. Gaiters +3"
+		ammo={ name="Dosis Tathlum",},
+		head={ name="Jumalik Helm",},
+		neck={ name="Baetyl Pendant",},
+		ear1={ name="Crematio Earring",},
+		ear2={ name="Friomisi Earring",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Shiva Ring +1",},
+		ring2={ name="Shiva Ring +1",},
+		back={ name="Toro Cape",},
+		waist={ name="Fotia Belt",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Tot. Gaiters +3",},
 	}
 
 	sets.precast.WS['Cloudsplitter'] = set_combine(sets.precast.WS['Primal Rend'], {} )
 
 		-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Brutal Earring",ear2="Sherida Earring",}
-	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
+	sets.MaxTP = {
+		ear1={ name="Brutal Earring",},
+		ear2={ name="Sherida Earring",},
+	}
+	sets.AccMaxTP = {
+		ear1={ name="Mache Earring +1",},
+		ear2={ name="Telos Earring",},
+	}
 
 				-- PET SIC & READY MOVES
 	sets.midcast.Pet.WS = {
 		main=gear.PHYKumbha1,
 		sub=gear.PHYKumbha2,
-		ammo="Voluspa Tathlum",
-		head="Totemic Helm +3",
-		neck="Shulmanu Collar",
-		ear1="Enmerkar Earring",
-		ear2="Domesticator's Earring",
-		body="Taeon Tabard",
-		hands="Nukumi Manoplas +2",
-		ring1="Varar Ring +1",
-		ring2="C. Palug Ring",
-		back="Artio's Mantle",
-		waist="Incarnation Sash",
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Totemic Helm +3",},
+		neck={ name="Shulmanu Collar",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Domesticator's Earring",},
+		body={ name="Taeon Tabard",},
+		hands={ name="Nukumi Manoplas +2",},
+		ring1={ name="Varar Ring +1",},
+		ring2={ name="C. Palug Ring",},
+		back={ name="Artio's Mantle",},
+		waist={ name="Incarnation Sash",},
 		legs=gear.valorous_physical_pet_legs,
-		feet="Totemic Gaiters +1"
+		feet={ name="Totemic Gaiters +3",},
 	}
 
 	sets.midcast.Pet.SomeAcc = set_combine(sets.midcast.Pet.WS, {
-		main="Kerehcatl",
+		main={ name="Kerehcatl",},
 		sub=gear.PHYKumbha2,
-		hands="Regimen Mittens",
+		hands={ name="Regimen Mittens",},
 	} )
 	sets.midcast.Pet.Acc = set_combine(sets.midcast.Pet.WS, {
-		main="Kerehcatl",
-		sub="Hunahpu",
-		head="Totemic Helm +3",
-		hands="Regimen Mittens",
+		main={ name="Kerehcatl",},
+		sub={ name="Hunahpu",},
+		head={ name="Totemic Helm +3",},
+		hands={ name="Regimen Mittens",},
 	} )
 	sets.midcast.Pet.FullAcc = set_combine(sets.midcast.Pet.WS, {
-		main="Kerehcatl",
-		sub="Hunahpu",
-		head="Totemic Helm +3",
-		hands="Regimen Mittens",
+		main={ name="Kerehcatl",},
+		sub={ name="Hunahpu",},
+		head={ name="Totemic Helm +3",},
+		hands={ name="Regimen Mittens",},
 	} )
 				
 	sets.midcast.Pet.MagicReady = {
 		main=gear.MABKumbha,
 		sub=gear.PDTMABKumbha,
-		ammo="Voluspa Tathlum",
+		ammo={ name="Voluspa Tathlum",},
 		head=gear.valorous_pet_head,
-		neck="Adad Amulet",
-		ear1="Enmerkar Earring",
-		ear2="Domesticator's Earring",
+		neck={ name="Adad Amulet",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Domesticator's Earring",},
 		body=gear.valorous_pet_body,
-		hands="Nukumi Manoplas +2",
-		ring1="Varar Ring +1",
-		ring2="Varar Ring +1",
-		back="Artio's Mantle",
-		waist="Incarnation Sash",
+		hands={ name="Nukumi Manoplas +2",},
+		ring1={ name="Varar Ring +1",},
+		ring2={ name="Varar Ring +1",},
+		back={ name="Artio's Mantle",},
+		waist={ name="Incarnation Sash",},
 		legs=gear.valorous_magical_pet_legs,
 		feet=gear.valorous_magical_pet_feet
 	}
@@ -450,31 +480,37 @@ function init_gear_sets()
 	sets.midcast.Pet.DebuffReady = {
 		main=gear.MABKumbha,
 		sub=gear.PDTMABKumbha,
-		ammo="Voluspa Tathlum",
+		ammo={ name="Voluspa Tathlum",},
 		head=gear.valorous_pet_head,
-		neck="Adad Amulet",
-		ear1="Enmerkar Earring",
-		ear2="Domesticator's Earring",
+		neck={ name="Adad Amulet",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Domesticator's Earring",},
 		body=gear.valorous_pet_body,
-		hands="Nukumi Manoplas +2",
-		ring1="Varar Ring +1",
-		ring2="Varar Ring +1",
-		back="Artio's Mantle",
-		waist="Incarnation Sash",
+		hands={ name="Nukumi Manoplas +2",},
+		ring1={ name="Varar Ring +1",},
+		ring2={ name="Varar Ring +1",},
+		back={ name="Artio's Mantle",},
+		waist={ name="Incarnation Sash",},
 		legs=gear.valorous_magical_pet_legs,
 		feet=gear.valorous_magical_pet_feet
 	}
 
 	sets.midcast.Pet.ReadyRecast = {
-		legs="Desultor Tassets",
+		legs={ name="Desultor Tassets",},
 	}
 	sets.midcast.Pet.ReadyRecastDW = {
-		sub="Charmer's Merlin",
-		legs="Desultor Tassets",
+		sub={ name="Charmer's Merlin",},
+		legs={ name="Desultor Tassets",},
 	}
-	sets.midcast.Pet.Neutral = {head="Totemic Helm +3"}
-	sets.midcast.Pet.Favorable = {head="Nukumi Cabasset +2"}
-	sets.midcast.Pet.TPBonus = {hands="Nukumi Manoplas +2"}
+	sets.midcast.Pet.Neutral = {
+		head={ name="Totemic Helm +3",},
+	}
+	sets.midcast.Pet.Favorable = {
+		head={ name="Nukumi Cabasset +2",},
+	}
+	sets.midcast.Pet.TPBonus = {
+		hands={ name="Nukumi Manoplas +2",},
+	}
 
 	-- RESTING
 	sets.resting = {}
@@ -514,9 +550,9 @@ function init_gear_sets()
 	}
 		
 	sets.idle.Reraise = set_combine(sets.idle, {
-		head={ name="Twilight Helm",
-		body={ name="Twilight Mail"} 
-	)
+		head={ name="Twilight Helm",},
+		body={ name="Twilight Mail",},
+	} )
 
 	sets.idle.Pet = {
 		ammo={ name="Coiste Bodhar",},
@@ -527,9 +563,9 @@ function init_gear_sets()
 		feet={ name="Gleti's Boots",},
 		neck={ name="Warder's Charm +1",},
 		waist={ name="Isa Belt",},
-		ring1={ name="Moonbeam Ring"},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
 		back={ name="Artio's Mantle",},
 	}
@@ -546,124 +582,124 @@ function init_gear_sets()
 		waist={ name="Sailfi Belt +1",},
 		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
 		back={ name="Null Mantle",},
 	}
 
 	sets.idle.Pet.Engaged.DW = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
-		neck="Shulmanu Collar",
-		ear1={ name="Eabani Earring"},
+		head={ name="Gleti's Mask",},
+		neck={ name="Shulmanu Collar",},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
-		waist="Reiki Yotai",
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
+		waist={ name="Reiki Yotai",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	-- DEFENSE SETS
 	sets.defense.PDT = {
-		ammo="Staunch Tathlum +1",
-		head="Genmei Kabuto",
-		neck="Loricate Torque +1",
-		ear1="Sanare Earring",
-		ear2="Handler's Earring +1",
-		body="Jumalik Mail",
-		hands="Macabre Gaunt. +1",
-		ring1="Defending Ring",
-		ring2="C. Palug Ring",
-		back="Moonlight Cape",
-		waist="Flume Belt +1",
-		legs="Tali'ah Sera. +2",
-		feet="Nukumi Ocreae +2",
+		ammo={ name="Staunch Tathlum +1",},
+		head={ name="Genmei Kabuto",},
+		neck={ name="Loricate Torque +1",},
+		ear1={ name="Sanare Earring",},
+		ear2={ name="Handler's Earring +1",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Macabre Gaunt. +1",},
+		ring1={ name="Defending Ring",},
+		ring2={ name="C. Palug Ring",},
+		back={ name="Moonlight Cape",},
+		waist={ name="Flume Belt +1",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Nukumi Ocreae +2",},
 	}
 
 	sets.defense.PetPDT = {
-		ammo="Voluspa Tathlum",
-		head="Anwig Salade",
-		neck="Loricate Torque +1",
-		ear1="Enmerkar Earring",
-		ear2="Handler's Earring +1",
-		body="Tot. Jackcoat +3",
-		hands="Ankusa Gloves +3",
-		ring1="Defending Ring",
-		ring2="C. Palug Ring",
-		back="Pastoralist's Mantle",
-		waist="Isa Belt",
-		legs="Tali'ah Sera. +2",
-		feet="Ankusa Gaiters +3",
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Anwig Salade",},
+		neck={ name="Loricate Torque +1",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Handler's Earring +1",},
+		body={ name="Tot. Jackcoat +3",},
+		hands={ name="Ankusa Gloves +3",},
+		ring1={ name="Defending Ring",},
+		ring2={ name="C. Palug Ring",},
+		back={ name="Pastoralist's Mantle",},
+		waist={ name="Isa Belt",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Ankusa Gaiters +3",},
 	}
 
 	sets.defense.PetMDT = {
-		ammo="Voluspa Tathlum",
-		head="Anwig Salade",
-		neck="Loricate Torque +1",
-		ear1="Enmerkar Earring",
-		ear2="Handler's Earring +1",
-		body="Tot. Jackcoat +3",
-		hands="Ankusa Gloves +3",
-		ring1="Defending Ring",
-		ring2="C. Palug Ring",
-		back="Pastoralist's Mantle",
-		waist="Isa Belt",
-		legs="Tali'ah Sera. +2",
-		feet="Ankusa Gaiters +3",
+		ammo={ name="Voluspa Tathlum",},
+		head={ name="Anwig Salade",},
+		neck={ name="Loricate Torque +1",},
+		ear1={ name="Enmerkar Earring",},
+		ear2={ name="Handler's Earring +1",},
+		body={ name="Tot. Jackcoat +3",},
+		hands={ name="Ankusa Gloves +3",},
+		ring1={ name="Defending Ring",},
+		ring2={ name="C. Palug Ring",},
+		back={ name="Pastoralist's Mantle",},
+		waist={ name="Isa Belt",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Ankusa Gaiters +3",},
 	}
 
 	sets.defense.PetMEVA = sets.defense.PetMDT
 
 	sets.defense.PKiller = set_combine(sets.defense.PDT, {
-		body="Nukumi Gausape +2"} 
-		)
+		body={ name="Nukumi Gausape +2",},
+	} )
 	sets.defense.Reraise = set_combine(sets.defense.PDT, {
-		head="Twilight Helm",
-		body="Twilight Mail"} 
-	)
+		head={ name="Twilight Helm",},
+		body={ name="Twilight Mail",},
+	} )
 
 	sets.defense.MDT = {
-		ammo="Staunch Tathlum +1",
-		head="Genmei Kabuto",
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
-		ear2="Etiolation Earring",
-		body="Jumalik Mail",
-		hands="Macabre Gaunt. +1",
-		ring1="Defending Ring",
-		ring2="Shadow Ring",
-		back="Engulfer Cape +1",
-		waist="Engraved Belt",
-		legs="Tali'ah Sera. +2",
-		feet="Nukumi Ocreae +2"
+		ammo={ name="Staunch Tathlum +1",},
+		head={ name="Genmei Kabuto",},
+		neck={ name="Warder's Charm +1",},
+		ear1={ name="Sanare Earring",},
+		ear2={ name="Etiolation Earring",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Macabre Gaunt. +1",},
+		ring1={ name="Defending Ring",},
+		ring2={ name="Shadow Ring",},
+		back={ name="Engulfer Cape +1",},
+		waist={ name="Engraved Belt",},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Nukumi Ocreae +2",},
 	}
 
 	sets.defense.MEVA = {
-		head="Gavialis Helm",
-		neck="Warder's Charm +1",
-		ear1="Sanare Earring",
-		ear2="Etiolation Earring",
-		body="Jumalik Mail",
-		hands="Leyline Gloves",
-		ring1="Vengeful Ring",
-		ring2="Purity Ring",
-		back="Toro Cape",
-		waist="Engraved Belt",
-		legs="Flamma Dirs +2",
-		feet="Valorous Greaves"
+		head={ name="Gavialis Helm",},
+		neck={ name="Warder's Charm +1",},
+		ear1={ name="Sanare Earring",},
+		ear2={ name="Etiolation Earring",},
+		body={ name="Jumalik Mail",},
+		hands={ name="Leyline Gloves",},
+		ring1={ name="Vengeful Ring",},
+		ring2={ name="Purity Ring",},
+		back={ name="Toro Cape",},
+		waist={ name="Engraved Belt",},
+		legs={ name="Flamma Dirs +2",},
+		feet={ name="Valorous Greaves",},
 	}
 
 	sets.defense.MKiller = set_combine(sets.defense.MDT, {
-		body="Nukumi Gausape +2",
+		body={ name="Nukumi Gausape +2",},
 	} )
 
 	sets.Kiting = {
-		feet="Skd. Jambeaux +1"
+		feet={ name="Skd. Jambeaux +1",},
 	}
 	sets.DayIdle = {}
 	sets.NightIdle = {}
@@ -671,259 +707,259 @@ function init_gear_sets()
 	-- MELEE (SINGLE-WIELD) SETS
 	sets.engaged = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Null Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Null Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.SomeAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Null Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Null Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.Acc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Null Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Null Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.FullAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.Fodder = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	-- MELEE (SINGLE-WIELD) HYBRID SETS
 	sets.engaged.PDT = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.SomeAcc.PDT = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.Acc.PDT = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.FullAcc.PDT = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.Fodder.PDT = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	-- MELEE (DUAL-WIELD) SETS FOR DNC AND NIN SUBJOB
 	sets.engaged.DW = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.DW.SomeAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.DW.Acc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.DW.FullAcc = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 
 	sets.engaged.DW.Fodder = {
 		ammo={ name="Coiste Bodhar",},
-		head="Gleti's Mask",
+		head={ name="Gleti's Mask",},
 		neck={ name="Lissome Necklace",},
-		ear1={ name="Eabani Earring"},
+		ear1={ name="Eabani Earring",},
 		ear2={ name="Sherida Earring",},
-		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
-		back="Artio's Mantle",
+		body={ name="Gleti's Cuirass",},
+		hands={ name="Gleti's Gauntlets",},
+		back={ name="Artio's Mantle",},
 		waist={ name="Sailfi Belt +1",},
-		legs="Tali'ah Sera. +2",
-		feet="Gleti's Boots",
-		ring1={ name="Moonbeam Ring"},
+		legs={ name="Tali'ah Sera. +2",},
+		feet={ name="Gleti's Boots",},
+		ring1={ name="Moonbeam Ring",},
 		ring2={ name="Petrov Ring",},
-		legs="Gleti's Breeches",
+		legs={ name="Gleti's Breeches",},
 	}
 	
 	-- gear.valorous_pet_regen_body
@@ -931,16 +967,16 @@ function init_gear_sets()
 
 	-- MELEE (DUAL-WIELD) HYBRID SETS
 	sets.engaged.DW.PDT = set_combine(sets.engaged.PDT, {
-		ear1="Dudgeon Earring",
-		ear2="Heartseeker Earring",
+		ear1={ name="Dudgeon Earring",},
+		ear2={ name="Heartseeker Earring",},
 	} )
 	sets.engaged.DW.SomeAcc.PDT = set_combine(sets.engaged.SomeAcc.PDT, {
-		ear1="Dudgeon Earring",
-		ear2="Heartseeker Earring",
+		ear1={ name="Dudgeon Earring",},
+		ear2={ name="Heartseeker Earring",},
 	} )
 	sets.engaged.DW.Acc.PDT = set_combine(sets.engaged.Acc.PDT, {
-		ear1="Dudgeon Earring",
-		ear2="Heartseeker Earring",
+		ear1={ name="Dudgeon Earring",},
+		ear2={ name="Heartseeker Earring",},
 	} )
 	sets.engaged.DW.FullAcc.PDT = set_combine(sets.engaged.FullAcc.PDT, {} )
 
@@ -973,119 +1009,120 @@ function init_gear_sets()
 	sets.engaged.DW.PetTank.Fodder = set_combine(sets.engaged.DW.Fodder, {} )
 
 	sets.buff['Killer Instinct'] = {
-		body="Nukumi Gausape +2",
+		body={ name="Nukumi Gausape +2",},
 	}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {} )
 	sets.buff.Sleep = {
-		head="Frenzy Sallet",
+		head={ name="Frenzy Sallet",},
 	}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
+		head=gear.valorous_TH_head,
 		hands=gear.valorous_TH_hands,
 		legs=gear.valorous_TH_legs,
 		feet=gear.valorous_TH_feet,
-		waist="Chaac Belt",
-	})
+		waist={ name="Chaac Belt",},
+	} )
 	sets.Knockback = {}
 	sets.SuppaBrutal = {
-		ear1="Suppanomimi",
-		ear2="Sherida Earring"
+		ear1={ name="Suppanomimi",},
+		ear2={ name="Sherida Earring",},
 	}
 	sets.DWEarrings = {
-		ear1="Dudgeon Earring",
-		ear2="Heartseeker Earring"
+		ear1={ name="Dudgeon Earring",},
+		ear2={ name="Heartseeker Earring",},
 	}
 	
 	-- Weapons sets
 	sets.weapons.Dolichenus = {
-		main={ name="Dolichenus"},
-		sub={ name="Adapa Shield"},
+		main={ name="Dolichenus",},
+		sub={ name="Adapa Shield",},
 	}
 	sets.weapons.PetPDTAxe = {
-		main ="Izizoeksi"
+		main={ name="Izizoeksi",},
 	}
 	sets.weapons.DualWeapons = {
-		main={ name="Dolichenus"},
+		main={ name="Dolichenus",},
 		sub=gear.DigAxe_DoubleAtT,
 	}
 	-- sets.weapons.DualWeapons = {		
-	--	main={ name="Izizoeksi"},
-	--	sub={ name="Hunahpu"}
+	--	main={ name="Izizoeksi",},
+	--	sub={ name="Hunahpu",},
 	--} 
 	sets.weapons.NaegDolich = {
-		main={ name="Naegling"},
-		sub={ name="Dolichenus"}
+		main={ name="Naegling",},
+		sub={ name="Dolichenus",},
 	}
 
 -------------------------------------------------------------------------------------------------------------------
 -- Complete Lvl 76-99 Jug Pet Precast List +Funguar +Courier +Amigo
 -------------------------------------------------------------------------------------------------------------------
 
-	sets.precast.JA['Bestial Loyalty'].FunguarFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Seedbed Soil"} )
-	sets.precast.JA['Bestial Loyalty'].CourierCarrie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Fish Oil Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AmigoSabotender = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Sun Water"} )
-	sets.precast.JA['Bestial Loyalty'].NurseryNazuna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="D. Herbal Broth"} )
-	sets.precast.JA['Bestial Loyalty'].CraftyClyvonne = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Cng. Brain Broth"} )
-	sets.precast.JA['Bestial Loyalty'].PrestoJulio = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="C. Grass. Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SwiftSieghard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Mlw. Bird Broth"} )
-	sets.precast.JA['Bestial Loyalty'].MailbusterCetas = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Gob. Bug Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AudaciousAnna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="B. Carrion Broth"} )
-	sets.precast.JA['Bestial Loyalty'].TurbidToloi = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Auroral Broth"} )
-	sets.precast.JA['Bestial Loyalty'].LuckyLulush = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="L. Carrot Broth"} )
-	sets.precast.JA['Bestial Loyalty'].DipperYuly = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Wool Grease"} )
-	sets.precast.JA['Bestial Loyalty'].FlowerpotMerle = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Vermihumus"} )
-	sets.precast.JA['Bestial Loyalty'].DapperMac = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Briny Broth"} )
-	sets.precast.JA['Bestial Loyalty'].DiscreetLouise = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Deepbed Soil"} )
-	sets.precast.JA['Bestial Loyalty'].FatsoFargann = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="C. Plasma Broth"} )
-	sets.precast.JA['Bestial Loyalty'].FaithfulFalcorr = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Lucky Broth"} )
-	sets.precast.JA['Bestial Loyalty'].BugeyedBroncha = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Svg. Mole Broth"} )
-	sets.precast.JA['Bestial Loyalty'].BloodclawShasra = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Rzr. Brain Broth"} )
-	sets.precast.JA['Bestial Loyalty'].GorefangHobs = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="B. Carrion Broth"} )
-	sets.precast.JA['Bestial Loyalty'].GooeyGerard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Cl. Wheat Broth"} )
-	sets.precast.JA['Bestial Loyalty'].CrudeRaphie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Shadowy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SweetCaroline = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Aged Humus"} )
+	sets.precast.JA['Bestial Loyalty'].FunguarFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Seedbed Soil",},} )
+	sets.precast.JA['Bestial Loyalty'].CourierCarrie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Fish Oil Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AmigoSabotender = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Sun Water",},} )
+	sets.precast.JA['Bestial Loyalty'].NurseryNazuna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="D. Herbal Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].CraftyClyvonne = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Cng. Brain Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].PrestoJulio = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="C. Grass. Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SwiftSieghard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Mlw. Bird Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].MailbusterCetas = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Gob. Bug Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AudaciousAnna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="B. Carrion Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].TurbidToloi = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Auroral Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].LuckyLulush = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="L. Carrot Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].DipperYuly = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Wool Grease",},} )
+	sets.precast.JA['Bestial Loyalty'].FlowerpotMerle = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Vermihumus",},} )
+	sets.precast.JA['Bestial Loyalty'].DapperMac = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Briny Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].DiscreetLouise = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Deepbed Soil",},} )
+	sets.precast.JA['Bestial Loyalty'].FatsoFargann = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="C. Plasma Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].FaithfulFalcorr = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Lucky Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].BugeyedBroncha = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Svg. Mole Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].BloodclawShasra = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Rzr. Brain Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].GorefangHobs = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="B. Carrion Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].GooeyGerard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Cl. Wheat Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].CrudeRaphie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Shadowy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SweetCaroline = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Aged Humus",},} )
 
 	-------------------------------------------------------------------------------------------------------------------
 	-- Complete iLvl Jug Pet Precast List
 	-------------------------------------------------------------------------------------------------------------------
 
-	sets.precast.JA['Bestial Loyalty'].DroopyDortwin = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Swirling Broth"} )
-	sets.precast.JA['Bestial Loyalty'].PonderingPeter = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Vis. Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SunburstMalfik = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Shimmering Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AgedAngus = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Ferm. Broth"} )
-	sets.precast.JA['Bestial Loyalty'].WarlikePatrick = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Livid Broth"} )
-	sets.precast.JA['Bestial Loyalty'].ScissorlegXerin = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Spicy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].BouncingBertha = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Bubbly Broth"} )
-	sets.precast.JA['Bestial Loyalty'].RhymingShizuna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Lyrical Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AttentiveIbuki = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Salubrious Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SwoopingZhivago = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Windy Greens"} )
-	sets.precast.JA['Bestial Loyalty'].AmiableRoche = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Airy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].HeraldHenry = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Trans. Broth"} )
-	sets.precast.JA['Bestial Loyalty'].BrainyWaluis = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Crumbly Soil"} )
-	sets.precast.JA['Bestial Loyalty'].HeadbreakerKen = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Blackwater Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SuspiciousAlice = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Furious Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AnklebiterJedd = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Crackling Broth"} )
-	sets.precast.JA['Bestial Loyalty'].FleetReinhard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Rapid Broth"} )
-	sets.precast.JA['Bestial Loyalty'].CursedAnnabelle = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Creepy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SurgingStorm = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Insipid Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SubmergedIyo = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Deepwater Broth"} )
-	sets.precast.JA['Bestial Loyalty'].RedolentCandi = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Electrified Broth"} )
-	sets.precast.JA['Bestial Loyalty'].AlluringHoney = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Bug-Ridden Broth"} )
-	sets.precast.JA['Bestial Loyalty'].CaringKiyomaro = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Fizzy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].VivaciousVickie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Tant. Broth"} )
-	sets.precast.JA['Bestial Loyalty'].HurlerPercival = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Pale Sap"} )
-	sets.precast.JA['Bestial Loyalty'].BlackbeardRandy = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Meaty Broth"} )
-	sets.precast.JA['Bestial Loyalty'].GenerousArthur = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Dire Broth"} )
-	sets.precast.JA['Bestial Loyalty'].ThreestarLynn = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Muddy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].MosquitoFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Wetlands Broth"} )
-	sets.precast.JA['Bestial Loyalty']['Left-HandedYoko'] = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Heavenly Broth"} )
-	sets.precast.JA['Bestial Loyalty'].BraveHeroGlenn = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Wispy Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SharpwitHermes = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Saline Broth"} )
-	sets.precast.JA['Bestial Loyalty'].ColibriFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Sugary Broth"} )
-	sets.precast.JA['Bestial Loyalty'].ChoralLeera = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Glazed Broth"} )
-	sets.precast.JA['Bestial Loyalty'].SpiderFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Sticky Webbing"} )
-	sets.precast.JA['Bestial Loyalty'].GussyHachirobe = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Slimy Webbing"} )
-	sets.precast.JA['Bestial Loyalty'].AcuexFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Poisonous Broth"} )
-	sets.precast.JA['Bestial Loyalty'].FluffyBredo = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo="Venomous Broth"} )
+	sets.precast.JA['Bestial Loyalty'].DroopyDortwin = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Swirling Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].PonderingPeter = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Vis. Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SunburstMalfik = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Shimmering Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AgedAngus = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Ferm. Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].WarlikePatrick = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Livid Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].ScissorlegXerin = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Spicy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].BouncingBertha = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Bubbly Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].RhymingShizuna = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Lyrical Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AttentiveIbuki = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Salubrious Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SwoopingZhivago = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Windy Greens",},} )
+	sets.precast.JA['Bestial Loyalty'].AmiableRoche = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Airy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].HeraldHenry = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Trans. Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].BrainyWaluis = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Crumbly Soil",},} )
+	sets.precast.JA['Bestial Loyalty'].HeadbreakerKen = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Blackwater Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SuspiciousAlice = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Furious Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AnklebiterJedd = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Crackling Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].FleetReinhard = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Rapid Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].CursedAnnabelle = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Creepy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SurgingStorm = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Insipid Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SubmergedIyo = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Deepwater Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].RedolentCandi = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Electrified Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].AlluringHoney = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Bug-Ridden Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].CaringKiyomaro = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Fizzy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].VivaciousVickie = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Tant. Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].HurlerPercival = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Pale Sap",},} )
+	sets.precast.JA['Bestial Loyalty'].BlackbeardRandy = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Meaty Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].GenerousArthur = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Dire Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].ThreestarLynn = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Muddy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].MosquitoFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Wetlands Broth",},} )
+	sets.precast.JA['Bestial Loyalty']['Left-HandedYoko'] = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Heavenly Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].BraveHeroGlenn = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Wispy Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SharpwitHermes = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Saline Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].ColibriFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Sugary Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].ChoralLeera = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Glazed Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].SpiderFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Sticky Webbing",},} )
+	sets.precast.JA['Bestial Loyalty'].GussyHachirobe = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Slimy Webbing",},} )
+	sets.precast.JA['Bestial Loyalty'].AcuexFamiliar = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Poisonous Broth",},} )
+	sets.precast.JA['Bestial Loyalty'].FluffyBredo = set_combine(sets.precast.JA['Bestial Loyalty'], {ammo={ name="Venomous Broth",},} )
 
 end
 

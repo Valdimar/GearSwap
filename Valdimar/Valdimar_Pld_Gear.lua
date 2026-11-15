@@ -114,11 +114,23 @@ function init_gear_sets()
 	
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {
-		head="Sulevia's Mask +2",neck="Phalaina Locket",ear1="Nourish. Earring",ear2="Nourish. Earring +1",
-		body="Rev. Surcoat +3",hands="Cab. Gauntlets +1",ring1="Stikini Ring +1",ring2="Rufescent Ring",
-		back=gear.enmity_jse_back,waist="Luminary Sash",legs="Carmine Cuisses +1",feet="Carmine Greaves +1"}
+		head="Sulevia's Mask +2",
+		neck="Phalaina Locket",
+		ear1="Nourish. Earring",
+		ear2="Nourish. Earring +1",
+		body="Rev. Surcoat +3",
+		hands="Cab. Gauntlets +1",
+		ring1="Stikini Ring +1",
+		ring2="Rufescent Ring",
+		back=gear.enmity_jse_back,
+		waist="Luminary Sash",
+		legs="Carmine Cuisses +1",
+		feet="Carmine Greaves +1"
+	}
 
-	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {hands="Cab. Gauntlets +1"})		
+	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {
+		hands="Cab. Gauntlets +1"
+	} )		
     sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Warcry'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Palisade'] = set_combine(sets.Enmity, {})
@@ -127,7 +139,9 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
 	
-	sets.precast.JA['Shield Bash'].DT = set_combine(sets.Enmity.DT, {hands="Cab. Gauntlets +1"})		
+	sets.precast.JA['Shield Bash'].DT = set_combine(sets.Enmity.DT, {
+		hands="Cab. Gauntlets +1"
+	} )		
     sets.precast.JA['Provoke'].DT = set_combine(sets.Enmity.DT, {})
 	sets.precast.JA['Warcry'].DT = set_combine(sets.Enmity.DT, {})
 	sets.precast.JA['Palisade'].DT = set_combine(sets.Enmity.DT, {})
@@ -145,15 +159,37 @@ function init_gear_sets()
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
     
-    sets.precast.Step = {ammo="Aurgelmir Orb +1",
-        head="Founder's Corona",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
-        body="Tartarus Platemail",hands="Leyline Gloves",ring1="Ramuh Ring +1",ring2="Patricius Ring",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Founder's Greaves"}
+    sets.precast.Step = {
+		ammo="Aurgelmir Orb +1",
+        head="Founder's Corona",
+		neck="Combatant's Torque",
+		ear1="Mache Earring +1",
+		ear2="Telos Earring",
+        body="Tartarus Platemail",
+		hands="Leyline Gloves",
+		ring1="Ramuh Ring +1",
+		ring2="Patricius Ring",
+        back="Ground. Mantle +1",
+		waist="Olseni Belt",
+		legs="Carmine Cuisses +1",
+		feet="Founder's Greaves"
+	}
 		
-	sets.precast.JA['Violent Flourish'] = {ammo="Aurgelmir Orb +1",
-        head="Founder's Corona",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-        body="Found. Breastplate",hands="Leyline Gloves",ring1="Defending Ring",ring2="Stikini Ring +1",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Founder's Greaves"}
+	sets.precast.JA['Violent Flourish'] = {
+		ammo="Aurgelmir Orb +1",
+        head="Founder's Corona",
+		neck="Erra Pendant",
+		ear1="Gwati Earring",
+		ear2="Digni. Earring",
+        body="Found. Breastplate",
+		hands="Leyline Gloves",
+		ring1="Defending Ring",
+		ring2="Stikini Ring +1",
+        back="Ground. Mantle +1",
+		waist="Olseni Belt",
+		legs="Carmine Cuisses +1",
+		feet="Founder's Greaves"
+	}
 		
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
@@ -259,13 +295,32 @@ function init_gear_sets()
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring"
 	} )
-    sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {neck="Fotia Gorget",ear1="Mache Earring +1",ear2="Moonshade Earring"})
+    sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {
+		neck="Fotia Gorget",
+		ear1="Mache Earring +1",
+		ear2="Moonshade Earring"
+	} )
 
-	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {neck="Fotia Gorget",ear1="Brutal Earring",ear2="Moonshade Earring"})
-    sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {neck="Fotia Gorget",ear1="Mache Earring +1",ear2="Moonshade Earring"})
+	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
+		neck="Fotia Gorget",
+		ear1="Brutal Earring",
+		ear2="Moonshade Earring"
+	} )
+    sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {
+		neck="Fotia Gorget",
+		ear1="Mache Earring +1",
+		ear2="Moonshade Earring"
+	} )
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {neck="Fotia Gorget",ear1="Ishvara Earring",ear2="Moonshade Earring"})
-    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Mache Earring +1",ear2="Telos Earring"})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		neck="Fotia Gorget",
+		ear1="Ishvara Earring",
+		ear2="Moonshade Earring"
+	} )
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
+		ear1="Mache Earring +1",
+		ear2="Telos Earring"
+	} )
 	
 	sets.precast.WS['Flat Blade'] = {
 		ammo="Aurgelmir Orb +1",
@@ -283,30 +338,69 @@ function init_gear_sets()
 		feet="Founder's Greaves"
 	}
 
-	sets.precast.WS['Flat Blade'].Acc = {ammo="Aurgelmir Orb +1",
-        head="Flam. Zucchetto +2",neck="Sanctity Necklace",ear1="Gwati Earring",ear2="Digni. Earring",
-        body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-        back="Ground. Mantle +1",waist="Eschan Stone",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
+	sets.precast.WS['Flat Blade'].Acc = {
+		ammo="Aurgelmir Orb +1",
+        head="Flam. Zucchetto +2",
+		neck="Sanctity Necklace",
+		ear1="Gwati Earring",
+		ear2="Digni. Earring",
+        body="Flamma Korazin +2",
+		hands="Flam. Manopolas +2",
+		ring1="Ramuh Ring +1",
+		ring2="Ramuh Ring +1",
+        back="Ground. Mantle +1",
+		waist="Eschan Stone",
+		legs="Flamma Dirs +2",
+		feet="Flam. Gambieras +2"
+	}
 
-    sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
-        head="Jumalik Helm",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Crematio Earring",
-        body="Jumalik Mail",hands="Founder's Gauntlets",ring1="Metamor. Ring +1",ring2="Archon Ring",
-        back="Toro Cape",waist="Fotia Belt",legs="Flamma Dirs +2",feet="Founder's Greaves"}
+    sets.precast.WS['Sanguine Blade'] = {
+		ammo="Dosis Tathlum",
+        head="Jumalik Helm",
+		neck="Sanctity Necklace",
+		ear1="Friomisi Earring",
+		ear2="Crematio Earring",
+        body="Jumalik Mail",
+		hands="Founder's Gauntlets",
+		ring1="Metamor. Ring +1",
+		ring2="Archon Ring",
+        back="Toro Cape",
+		waist="Fotia Belt",
+		legs="Flamma Dirs +2",
+		feet="Founder's Greaves"
+	}
 
 	sets.precast.WS['Sanguine Blade'].Acc = sets.precast.WS['Sanguine Blade']
 
-    sets.precast.WS['Atonement'] = {ammo="Paeapua",
-		head="Loess Barbuta +1",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
-		body=gear.valorous_wsd_body,hands=gear.odyssean_wsd_hands,ring1="Defending Ring",ring2="Moonlight Ring",
-		back=gear.enmity_jse_back,waist="Fotia Belt",legs="Flamma Dirs +2",feet="Eschite Greaves"}
+    sets.precast.WS['Atonement'] = {
+		ammo="Paeapua",
+		head="Loess Barbuta +1",
+		neck="Fotia Gorget",
+		ear1="Moonshade Earring",
+		ear2="Ishvara Earring",
+		body=gear.valorous_wsd_body,
+		hands=gear.odyssean_wsd_hands,
+		ring1="Defending Ring",
+		ring2="Moonlight Ring",
+		back=gear.enmity_jse_back,
+		waist="Fotia Belt",
+		legs="Flamma Dirs +2",
+		feet="Eschite Greaves"
+	}
 
     sets.precast.WS['Atonement'].Acc = sets.precast.WS['Atonement']
     sets.precast.WS['Spirits Within'] = sets.precast.WS['Atonement']
     sets.precast.WS['Spirits Within'].Acc = sets.precast.WS['Atonement']
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Cessance Earring",ear2="Brutal Earring",}
-	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
+	sets.MaxTP = {
+		ear1="Cessance Earring",
+		ear2="Brutal Earring",
+	}
+	sets.AccMaxTP = {
+		ear1="Mache Earring +1",
+		ear2="Telos Earring"
+	}
 
 
 	--------------------------------------
