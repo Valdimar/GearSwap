@@ -69,7 +69,7 @@ function init_gear_sets()
 		body="Inyanga Jubbah +2",
 		hands="Gende. Gages +1",
 		ring1="Kishar Ring",
-		right_ring={ name="Veneficium Ring", bag="wardrobe1"},
+		right_ring={ name="Veneficium Ring", },
 		back="Perimede Cape",
 		waist="Witful Belt",
 		legs="Lengo Pants",
@@ -81,20 +81,20 @@ function init_gear_sets()
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {} )
 
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
-		main={ name="Queller Rod", bag="wardrobe1"},
-		sub={ name="Sors Shield", bag="wardrobe1"},
-		ammo={ name="Hydrocera", bag="wardrobe1"},
+		main={ name="Queller Rod", },
+		sub={ name="Sors Shield", },
+		ammo={ name="Hydrocera", },
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
-		body={ name="Ebers Bliaud +1", bag="wardrobe1"},
-		hands={ name="Theophany Mitts +3", bag="wardrobe1"},
+		body={ name="Ebers Bliaud +1", },
+		hands={ name="Theophany Mitts +3", },
 		legs=gear.chironic_cure_legs,
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
-		neck={ name="Clr. Torque +1", bag="wardrobe1"},
-		waist={ name="Korin Obi", bag="wardrobe1"},
-		left_ear={ name="Nourish. Earring", bag="wardrobe1"},
-		right_ear={ name="Glorious Earring", bag="wardrobe1"},
-		left_ring={ name="Stikini Ring", bag="wardrobe1"},
-		right_ring={ name="Veneficium Ring", bag="wardrobe1"},
+		neck={ name="Clr. Torque +1", },
+		waist={ name="Korin Obi", },
+		left_ear={ name="Nourish. Earring", },
+		right_ear={ name="Glorious Earring", },
+		left_ring={ name="Stikini Ring", },
+		right_ring={ name="Veneficium Ring", },
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	} )
 
@@ -173,7 +173,7 @@ function init_gear_sets()
 
     -- Midcast Sets
 
-    sets.Kiting = {feet="Herald's Gaiters"}
+    sets.Kiting = {}
     sets.latent_refresh = {waist="Fucho-no-obi"}
 	sets.latent_refresh_grip = {sub="Oneiros Grip"}
 	sets.TPEat = {neck="Chrys. Torque"}
@@ -488,8 +488,8 @@ function init_gear_sets()
 		ear2="Malignance Earring",
 		body="Ebers Bliaud +1",
 		hands="Fanatic Gloves",
-		ring1={ name="Ephedra ring", bag="wardrobe1"},
-		ring2={ name="Ephedra ring", bag="wardrobe1"},
+		ring1={ name="Ephedra ring", },
+		ring2={ name="Ephedra ring", },
 		back="Alaunus's Cape",
 		waist="Witful Belt",
 		legs="Th. Pant. +3",
@@ -880,21 +880,21 @@ function init_gear_sets()
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
-		main={ name="Queller Rod", bag="wardrobe1"},
-		sub={ name="Sors Shield", bag="wardrobe1"},
-		ammo={ name="Homiliary", bag="wardrobe1"},
-		head={ name="Inyanga Tiara +2", bag="wardrobe1"},
-		body={ name="Inyanga Jubbah +2", bag="wardrobe1"},
-		hands={ name="Inyanga Dastanas +2", bag="wardrobe1"},
-		legs={ name="Inyanga Shalwar +2", bag="wardrobe1"},
-		feet={ name="Inyanga Crackows +2", bag="wardrobe1"},
-		waist={ name="Bishop's Sash", bag="wardrobe1"},
-		neck={ name="Aceso's Choker +1", bag="wardrobe1"},
-		left_ear={ name="Beatific Earring", bag="wardrobe1"},
-		right_ear={ name="Healing Earring", bag="wardrobe1"},
-		left_ring={ name="Inyanga Ring", bag="wardrobe1"},
+		main={ name="Queller Rod",},
+		sub={ name="Sors Shield", },
+		ammo={ name="Homiliary", },
+		head={ name="Inyanga Tiara +2", },
+		body={ name="Ayanmo Corazza +2", },
+		hands={ name="Aya. Manopolas +2", },
+		legs={ name="Aya. Cosciales +2", },
+		feet={ name="Aya. Gambieras +2", },
+		waist={ name="Bishop's Sash", },
+		neck={ name="Aceso's Choker +1", },
+		ear1={ name="Alabaster Earring"},
+		ear2={ name="Healing Earring", },
+		ring1={ name="Inyanga Ring", },
 		ring2={ name="Murky Ring",},
-		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}, bag="wardrobe1"},
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}, },
 	}
 
 	sets.idle.PDT = {
@@ -1028,20 +1028,20 @@ function init_gear_sets()
 		-- waist="Goading Belt",
 		-- legs="Gendewitha Spats",
 		-- feet="Gendewitha Galoshes"
-		sub={ name="Sors Shield", bag="wardrobe1"},
-		ammo={ name="Homiliary", bag="wardrobe1"},
-		head={ name="Inyanga Tiara +2", bag="wardrobe1"},
-		body={ name="Inyanga Jubbah +2", bag="wardrobe1"},
-		hands={ name="Inyanga Dastanas +2", bag="wardrobe1"},
-		legs={ name="Inyanga Shalwar +2", bag="wardrobe1"},
-		feet={ name="Inyanga Crackows +2", bag="wardrobe1"},
-		waist={ name="Bishop's Sash", bag="wardrobe1"},
-		neck={ name="Aceso's Choker +1", bag="wardrobe1"},
-		left_ear={ name="Beatific Earring", bag="wardrobe1"},
-		right_ear={ name="Healing Earring", bag="wardrobe1"},
-		left_ring={ name="Inyanga Ring", bag="wardrobe1"},
-		right_ring={ name="Veneficium Ring", bag="wardrobe1"},
-		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}, bag="wardrobe1"},
+		sub={ name="Sors Shield", },
+		ammo={ name="Homiliary", },
+		head={ name="Inyanga Tiara +2", },
+		body={ name="Inyanga Jubbah +2", },
+		hands={ name="Inyanga Dastanas +2", },
+		legs={ name="Inyanga Shalwar +2", },
+		feet={ name="Inyanga Crackows +2", },
+		waist={ name="Bishop's Sash", },
+		neck={ name="Aceso's Choker +1", },
+		left_ear={ name="Beatific Earring", },
+		right_ear={ name="Healing Earring", },
+		left_ring={ name="Inyanga Ring", },
+		right_ring={ name="Veneficium Ring", },
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}, },
 	}
 
     sets.engaged.Acc = {
@@ -1136,6 +1136,6 @@ end
 
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
-	set_macro_page(1, 1)
-	send_command('@wait 5;input /lockstyleset 1')
+	set_macro_page(1, 2)
+	send_command('@wait 5;input /lockstyleset 20')
 end

@@ -562,20 +562,21 @@ end
 function select_default_macro_book()
 	-- Default macro set/book
 	if player.sub_job == 'DNC' then
-		set_macro_page(4, 2)
+		set_macro_page(1, 2)
 	elseif player.sub_job == 'NIN' then
-		set_macro_page(5, 2)
+		set_macro_page(1, 2)
 	elseif player.sub_job == 'WAR' then
-		set_macro_page(7, 2)
+		set_macro_page(1, 2)
 	elseif player.sub_job == 'RUN' then
-		set_macro_page(3, 2)
+		set_macro_page(1, 2)
 	elseif player.sub_job == 'THF' then
-		set_macro_page(2, 2)
+		set_macro_page(1, 2)
 	elseif player.sub_job == 'RDM' then
 		set_macro_page(1, 2)
 	else
 		set_macro_page(6, 2)
 	end
+		send_command('@wait 5;input /lockstyleset 19')
 end
 
 --Job Specific Trust Override
